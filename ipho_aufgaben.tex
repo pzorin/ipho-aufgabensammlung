@@ -1567,7 +1567,7 @@ Wenn man nun gedanklich die Erdmasse von außen nach innen vorgehend ins Unendli
 \[
 \Delta m = \frac{G}{2 c^2} \int\limits_{0}^{R} \frac1r \tdif{}{r} \left( m^2(r) \right) \dif r
 \]
-In der Klausuur war zusätzlich $\rho(r)$ als Graph angegeben. Es bestand also die Möglichkeit über verschiedene Näherungen den numerischen Wert auszurechnen.
+In der Klausur war zusätzlich $\rho(r)$ als Graph angegeben. Es bestand also die Möglichkeit über verschiedene Näherungen den numerischen Wert auszurechnen.
 \end{solution}
 
 \end{problem}
@@ -1603,26 +1603,40 @@ Massenerhaltung:\vspace{-1ex}\[
 m_E + m_D + m_W = 3m
 \]
 Volumenerhaltung:\vspace{-1ex}\[
-V_{ges}=\frac{m RT}{m_m p} + \frac{m}{\rho_E} + \frac{m}{\rho_W} = \frac{m_D RT}{m_m p} + \frac{m_E}{\rho_E} + \frac{m_W}{\rho_W}
+V=\frac{m RT}{m_m p} + \frac{m}{\rho_E} + \frac{m}{\rho_W} = \frac{m_D RT}{m_m p} + \frac{m_E}{\rho_E} + \frac{m_W}{\rho_W}
 \]
 Energieerhaltung:\vspace{-1ex}\[
-\Delta W = \frac{m-m_E}{\lambda_E} + \frac{m_D-m}{\lambda_V}
+\Delta W = \frac{m-m_E}{\lambda_S} + \frac{m_D-m}{\lambda_V}
+\]
+oder\vspace{-1ex}\[
+\begin{pmatrix}
+3m \\ V \\ \Delta W + m / \lambda_V - m / \lambda_S
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 & 1 \\
+\frac{RT}{m_m p} & \frac{1}{\rho_W} & \frac{1}{\rho_E} \\
+\frac{1}{\lambda_V} & 0 & - \frac{1}{\lambda_S}
+\end{pmatrix}
+\begin{pmatrix}
+m_D \\ m_W \\ m_E
+\end{pmatrix}
 \]
 Damit bekommt man die Massen für alle 3 Zustände direkt:
 \[
 \begin{split}
 \begin{pmatrix}
-m_E \\ m_D \\ m_W
+m_D \\ m_W \\ m_E
 \end{pmatrix}
 &=
-\frac{1}{\lambda_V (1/\rho_W - 1/\rho_W) + \lambda_S (1/\rho_W - \frac{RT}{m_m p})}\\
+\frac{1}{(1/\rho_E - 1/\rho_W) / \lambda_V - (1/\rho_W - \frac{RT}{m_m p}) / \lambda_S}\\
 &\begin{pmatrix}
-\frac{\lambda_V}{\rho_W} & -\frac{1}{\rho_W}+\frac{RT}{m_m p} & -\lambda_V \\
-\frac{\lambda_S}{\rho_W} & \frac{1}{\rho_W}-\frac{1}{\rho_E} & -\lambda_S \\
--\frac{\lambda_S RT}{m_m p} - \frac{\lambda_V}{\rho_E} & -\frac{RT}{m_m p}+\frac{1}{\rho_E} & \lambda_V+\lambda_S
+-\frac{1}{\rho_W \lambda_S} & \frac{1}{\lambda_S} & \frac{1}{\rho_E} - \frac{1}{\rho_W} \\
+\frac{RT}{m_m p} \frac{1}{\lambda_S}+\frac{1}{\rho_E}\frac{1}{\lambda_V}  & -\frac{1}{\lambda_S}-\frac{1}{\lambda_V} & -\frac{1}{\rho_E}+\frac{RT}{m_m p} \\
+-\frac{1}{\rho_W \lambda_V} & \frac{1}{\lambda_V} & \frac{1}{\rho_W}-\frac{RT}{m_m p}
 \end{pmatrix}
 \begin{pmatrix}
-3m \\ \Delta W + m\lambda_V - m\lambda_S \\ V_{ges}
+3m \\ V \\ \Delta W + m / \lambda_V - m / \lambda_S
 \end{pmatrix}
 \end{split}
 \]
