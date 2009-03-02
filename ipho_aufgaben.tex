@@ -939,24 +939,28 @@ C=4\pi \varepsilon_0 \left( \frac{ab}{b-a}+\frac{bd}{d-b} \right)=4 \pi \varepsi
 Zwei identische Teilchen mit Masse $m$ und Ladung $q$ befinden sich jeweils auf einem starren endlich langen Stab, der einen Winkel $\alpha$ mit der Horizontalen einschließt. Auf diesen Stäben können die Teilchen reibungsfrei gleiten.\\
 Bis zu welcher Höhe über ihrer Anfangsposition werden sie steigen, wenn sie anfangs einen Abstand $L$ voneinander besitzen und eine Strecke $l$ vom Ende des jeweiligen Stabes entfernt sind?
 \begin{solution}
-% ?
-Diese Formeln könnten Sinn ergeben (oder auch nicht).
+Falls die Teilchen auf den Stäben bleiben liefert Energieerhaltung
 \[
-\Delta h=\frac{q^2}{8 \pi \varepsilon_0 m g L}-\frac L2 \tan\alpha
+\Delta h=\frac{q^2}{8 \pi \varepsilon_0 m g L}-\frac{L}{2 \tan\alpha}.
 \]
+Ansonsten kann man mittels Energieerhaltung die Geschwindigkeit am Ende des Stabes bestimmen:
 \[
-\Delta h=l \sin\alpha \cos^2 \alpha+ \frac{2 q^2 l \cos\alpha}{4 \pi \varepsilon_0 m g L (L+2 l \cos\alpha)}
+v^2 = \frac{q^2}{4 \pi \varepsilon_0 m} \left( \frac1{L} - \frac1{L+2 l \cos\alpha} \right),
+\]
+und die vertikale Komponente dieser Geschwindigkeit benutzen um die maximale Höhe zu bestimmen.
+\[
+\Delta h=l \sin\alpha \cos^2 \alpha+ \frac{q^2 l \cos\alpha \sin^2 \alpha}{4 \pi \varepsilon_0 m g L (L+2 l \cos\alpha)}
 \]
 \end{solution}
 \end{problem}
 
 \begin{problem}{Statit}{5}
-Eine vollständig reflektierende Kugel mit mittlerer Dichte $\rho=1000 \unit{kg\cdot m^{-3}}$ wird durch den Einfluss der Gravitation und der Strahlung der Sonne (Masse $m_S=1.99 \ee{30} \unit{kg}$, Leistung $P_S=3.83 \ee{26} \unit{W}$) an einem festen Punkt in unserem Sonnensystem gehalten. Bei welchem Abstand zur Sonne ist dies möglich? Wie groß ist jeweils der Radius der Kugel?\\
+Eine vollständig reflektierende Kugel mit mittlerer Dichte $\rho=1000 \unit{kg\cdot m^{-3}}$ wird durch den Einfluss der Gravitation und der Strahlung der Sonne (Masse $M=1.99 \ee{30} \unit{kg}$, Leistung $P=3.83 \ee{26} \unit{W}$) an einem festen Punkt in unserem Sonnensystem gehalten. Bei welchem Abstand zur Sonne ist dies möglich? Wie groß ist jeweils der Radius der Kugel?\\
 \hinweis $\int \dif x \cos^3 x \sin x=-\frac 14 \cos^4 x$ 
 
 \begin{solution}
 \[
-r=\frac{3 P_S}{16 \pi G m_S \rho c}
+r=\frac{3 P}{16 \pi G M \rho c}
 \]
 \end{solution}
 \end{problem}
@@ -1222,22 +1226,21 @@ v_h=\frac{b\sqrt{\frac{g}{2}}}{\sqrt{h}+\sqrt{h+b}}
 }
 Ein unendlich langer gerader Draht hat einen kreisförmigen Durchschnitt des Radius $3a$, in dem stets ein Kreis des Radius $a$ im Abstand $\vec a$ von der Drahtachse fehlt. Der Draht wird entlang seiner selbst von einem homogenen Strom der Gesamtstärke $\vec I$ durchflossen. Man bestimme das vom Draht erzeugte Magnetfeld in jedem Punkt des Raumes.
 \begin{solution}
-Stromdichte im Draht
+Stromdichte im Draht beträgt
 \[
-\vec{j}:=\frac{1}{8\pi a^2}\vec{I}
+\vec{j}:=\frac{1}{8\pi a^2}\vec{I}.
 \]
-Ergebisse:\\
-Außerhalb des Drahtes
+Man fasse den Strom als überlagerung zweier entgegengerichteter zylinderförmiger Ströme auf. Es folgt für das Feld außerhalb des Drahtes
 \[
-\vec{B}=\frac{9 a^2 \mu_0}{2} \frac{\vec{j}\times\vec{r}}{r^2}-\frac{a^2 \mu_0}{2}\frac{\vec{j} \times (\vec{r}-\vec{a})}{(\vec{r}-\vec{a})^2}
+\vec{B}=\frac{9 a^2 \mu_0}{2} \frac{\vec{j}\times\vec{r}}{r^2}-\frac{a^2 \mu_0}{2}\frac{\vec{j} \times (\vec{r}-\vec{a})}{(\vec{r}-\vec{a})^2},
 \]
 im Draht
 \[
 \vec{B}=\frac{\mu_0}{2} \vec{j}\times\vec{r}-\frac{a^2 \mu_0}{2}\frac{\vec{j} \times (\vec{r}-\vec{a})}{(\vec{r}-\vec{a})^2}
 \]
-im Loch
+und im Loch
 \[
-\vec{B}=\frac{\mu_0}{2} \vec{j}\times\vec{a}
+\vec{B}=\frac{\mu_0}{2} \vec{j}\times\vec{a}.
 \]
 \end{solution}
 \end{problem}
@@ -1268,12 +1271,16 @@ im Loch
 }
 Ein Fadenpendel der Länge $R$ wird in der Höhe $h$ losgelassen und soll eine Kreisbewegung um einen im Abstand $r=0.7 R$ senkrecht unter dem Aufhängepunkt angebrachten Nagel ausführen. Unter welchen Bedingungen an $h$ ist solche Bewegung möglich? Man vernachlässige die Effekte der Aufwicklung des Fadens auf den Nagel.
 \begin{solution}
-\begin{tabular}{lc}
-Energieerhaltung: & $mgh = mg\cdot 2(R-r)+\frac12 mv^2$\\
-Zentripedalbeschleunigung: & $\frac{v^2}{R-r} = g$
-\end{tabular}
+Energieerhaltung:
 \[
- h = \frac 5 2 (R-r) = \frac 3 4 R
+mgh = mg\cdot 2(R-r)+\frac12 mv^2
+\]
+Zentripedalbeschleunigung:
+\[
+\frac{v^2}{R-r} = g
+\]
+\[
+h = \frac 5 2 (R-r) = \frac 3 4 R
 \]
 \end{solution}
 \end{problem}
@@ -1298,6 +1305,7 @@ Zentripedalbeschleunigung: & $\frac{v^2}{R-r} = g$
 }
 Der in der Abbildung angegebener Kreisprozess besteht aus zwei isobaren und zwei adiabatischen Zustandsänderungen, die im Uhrzeigersinn abgelaufen werden. Das Arbeitsmedium ist dabei ein ideales Gas. Geben Sie den Wirkungsgrad des Prozesses in Abhängigkeit von $p_1$, $p_2$ und $c_p$ an.
 %\begin{solution}
+% ?
 %\end{solution}
 \end{problem}
 
@@ -1345,19 +1353,19 @@ Der in der Abbildung angegebener Kreisprozess besteht aus zwei isobaren und zwei
 Der oberste und unterste Punkt der Schaltung ist jeweils geerdet. An den drei Eingängen links kann das Potenzial $0\unit{V}$ oder $1\unit{V}$ angelegt werden, wobei $0\unit{V}$ Erdung bedeutet. Man berechne das Ausgangspotenzial für alle möglichen Kombinationen der Eingangsspannungen.
 
 \begin{solution}
-3 mal Knotenregel ($\sum\frac U R = 0$):\\
+Man bezeichne das Potential in der vertikalen Widerstandskette rechts von $\varphi_2$ mit $\varphi_5$ und rechts von $\varphi_3$ mit $\varphi_6$. Dreimalige Anwendung der Knotenregel ($\sum\frac U R = 0$) liefert:
 \[
- \frac 1 2 (0-\varphi_{\textnormal{aus}}) + \frac 1 2 (\varphi_1-\varphi_{\textnormal{aus}}) + (\varphi_5-\varphi_{\textnormal{aus}}) = 0
+ \frac 1 2 (0-\varphi_{\mathrm{aus}}) + \frac 1 2 (\varphi_1-\varphi_{\mathrm{aus}}) + (\varphi_5-\varphi_{\mathrm{aus}}) = 0
 \]
 \[
- (\varphi_{\textnormal{aus}}-\varphi_5) + \frac 1 2 (\varphi_2-\varphi_5) + (\varphi_6-\varphi_5) = 0
+ (\varphi_{\mathrm{aus}}-\varphi_5) + \frac 1 2 (\varphi_2-\varphi_5) + (\varphi_6-\varphi_5) = 0
 \]
 \[
  (\varphi_5-\varphi_6) + \frac 1 2 (\varphi_3-\varphi_6) + \frac 1 2 (0-\varphi_6) = 0
 \]
 
 \[
- \varphi_{\textnormal{aus}} = \frac 1 3 \left(\varphi_1+\frac 1 2 \varphi_2+\frac 1 4 \varphi_3\right)
+ \varphi_{\mathrm{aus}} = \frac 1 3 \left(\varphi_1+\frac 1 2 \varphi_2+\frac 1 4 \varphi_3\right)
 \]
 \end{solution}
 \end{problem}
@@ -1366,6 +1374,7 @@ Der oberste und unterste Punkt der Schaltung ist jeweils geerdet. An den drei Ei
 \begin{problem}{Rotierende Zylinder}{4}
 Zwei gleich lange Zylinder bekannter Radien und Massen rotieren um parallele Achsen mit bekannten Winkelgeschwindigkeiten. Nun wird eine der Rotationsachsen solange verschoben, bis sich die zwei Zylinder berühren. Welche Winkelgeschwindigkeiten stellen sich dabei ein? Was passiert im Spezialfall gleicher Zylinder und gleicher Anfangswinkelgeschwindigkeiten?
 \begin{solution}
+% ?
 Trägheitsmomente:
 \[
  J_1 = \frac 1 2 m_1\,r_1^2 \qquad\qquad J_2 = \frac 1 2 m_2\,r_2^2
@@ -1386,29 +1395,24 @@ Bei gleichen Ausgangsbedingungen: $\omega_1' = \omega_2' = 0$
 \end{problem}
 
 \begin{problem}{Lichtbrechung}{7}
-Der Brechungsindex der Luft bei Atmosphärendruck und $300\unit{K}$ beträgt $1.0003$. Man nehme an, $n-1 \sim \rho$. Um wie viel Mal dichter müsste die Luft an der Erdoberfläche sein, damit sich ein Lichtstrahl in Meereshöhe um die Erde herum bewegen kann? Die Temperatur der Atmosphäre sei als konstant anzunehmen. Der Luftdruck fällt mit der Höhe exponentiell ab, wobei dieser in der Höhe $8700\unit{m}$ $\frac 1e$ des Normaldrucks beträgt. Der Radius der Erde beträgt $R=6370\unit{km}$.
+Der Brechungsindex der Luft bei Atmosphärendruck und $300\unit{K}$ beträgt $1+\tilde n = 1.0003$. Man nehme an, $n-1 \sim \rho$. Um wie viel Mal dichter müsste die Luft an der Erdoberfläche sein, damit sich ein Lichtstrahl in Meereshöhe um die Erde herum bewegen kann? Die Temperatur der Atmosphäre sei als konstant anzunehmen. Der Luftdruck fällt mit der Höhe exponentiell ab, wobei dieser in der Höhe $\tilde h = 8700\unit{m}$ $\frac 1e$ des Normaldrucks beträgt. Der Radius der Erde beträgt $R=6370\unit{km}$.
 \begin{solution}
-Wenn die Luftdichte um den Faktor $k$ vergrößert wird, beträgt diese:
+Wenn die Luftdichte um den Faktor $k$ vergrößert wird, gilt für die Brechzahl der Luft:
 \[
- \varrho(h) = k\cdot\varrho_0 \cdot e^{-\frac{h}{8.7\unit{km}}}
+n(h) = 1 + k \tilde n  e^{-h / \tilde h}
 \]
-Da $n-1\sim \varrho$ und $n(0) = 1.0003$ gilt für die Brechzahl der Luft:
+Nach dem Prinzip von \textsc{Fermat} läuft das Licht immer den lokal schnellsten Weg, die Umlaufzeit des Lichts sollte also in erster Ordnung der Höhe konstant sein. Für diese gilt:
 \[
- n-1 = k\cdot 0.0003\cdot e^{-\frac{h}{8.7\unit{km}}}
-\]
-Nach dem Prinzip von \textsc{Fermat} läuft das Licht immer den schnellsten Weg, weshalb eine geringe Wegänderung die Laufzeit nur minimal ändern darf. Somit gilt bei einer Erdumrundung in der geringen Höhe $h$:
-\begin{eqnarray*}
- t(0) &=& t(h) \\
- \frac{2\pi\,r}{c/(1+k\cdot0.0003)} &=& \frac{2\pi\,(r+h)}{c/(1+k\cdot0.0003\cdot e^{-\frac{h}{8.7\unit{km}}})} \\
- r\cdot(1+k\cdot0.0003) &=& (r+h)\cdot(1+k\cdot0.0003\cdot e^{-\frac{h}{8.7\unit{km}}})\\
- k\cdot0.0003\cdot\left(r-(r+h)\cdot e^{-\frac{h}{8.7\unit{km}}}\right) &=& h \\
- k &=& \frac{h}{0.0003\cdot\left(r-(r+h)\cdot e^{-\frac{h}{8.7\unit{km}}}\right)}
-\end{eqnarray*}
-\[
- \lim_{h\rightarrow0} k = \frac{1}{0.0003\cdot\left(\frac{r}{8.7\unit{km}}-1\right)}
+T(h) = \frac{2 \pi (R+h) n(h)}{c},
 \]
 \[
- k = \frac{1}{0.0003\cdot\left(\frac{6370\unit{km}}{8.7\unit{km}}-1\right)} = 4,6
+T'(h) \sim \tdif{}{h} (R+h)(1 + k \tilde n  e^{-h / \tilde h}) = (1 + k \tilde n  e^{-h / \tilde h})+(R+h)(k (-1/\tilde h) \tilde n  e^{-h / \tilde h})
+\]
+\[
+0 = \left. T'(h) \right|_{h=0} \sim (1 + k \tilde n)+R (k (-1/\tilde h) \tilde n)
+\]
+\[
+k = \frac{1}{\tilde n (R/ \tilde h - 1)} \approx 4.6
 \]
 \end{solution}
 \end{problem}
@@ -1416,6 +1420,7 @@ Nach dem Prinzip von \textsc{Fermat} läuft das Licht immer den schnellsten Weg,
 \begin{problem}{Bleistift mit Unschaerfe}{8}
 Aufgrund der Heisenbergschen Unschärferelation ist es nicht möglich, einen Bleistift für eine längere Zeit auf der Spitze stehen zu lassen. Wie lange kann es maximal dauern, bis ein Bleistift der Länge $15\unit{cm}$ mit der Masse $5\unit{g}$ um $5^\circ$ von der Vertikallage ausgelenkt wird?
 %\begin{solution}
+% ?
 %\end{solution}
 \end{problem}
 
@@ -1423,6 +1428,7 @@ Aufgrund der Heisenbergschen Unschärferelation ist es nicht möglich, einen Ble
 Auf einem Planeten führt ein Außerirdischer Versuche zum freien Fall durch. Er wirft Gegenstände mit der Geschwindigkeit $u$ unter dem Winkel $\alpha$ zur Oberfläche des Planeten. Sie beobachten diese aus einem Raumschiff, das sich in der gleichen Ebene parallel zur Planetenoberfläche mit der Geschwindigkeit $v$ bewegt. Zu Ihrem großen Erstaunen stellen Sie fest, dass der beobachtete Geschwindigkeitsanteil der Gegenstände senkrecht zur Oberfläche des Planeten größer als $c$ ist. Man berechne diesen. Wie groß kann er maximal werden?\\
 Den Geheimberichten zufolge beträgt die Anfangsgeschwindigkeit der Gegenstände $u=300 \unit{\frac{m}{s}}$ und der Anfangswinkel $\alpha=\frac{\pi}{4}$. Sie beobachten, dass die Gegenstände nach der Zeit $6\unit{s}$ wieder auf der Planetenoberfläche aufschlagen. Wie groß ist die Gravitationsbeschleunigung an der Oberfläche (sie darf als konstant angenommen werden)?
 %\begin{solution}
+% ?
 %\end{solution}
 \end{problem}
 
