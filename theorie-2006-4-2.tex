@@ -1,0 +1,168 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2006 -- 4. Runde -- Theoretische Klausur II (21.4.06)}
+
+\begin{problem}{Kondensatoren}{3}
+Zwei identische Plattenkondensatoren der Kapazität $C$ sind parallel geschaltet. Dabei befindet sich eine Platte des ersten Kondensators zu $\frac{2}{3}$ in der Mitte des zweiten. Die Flächen der Kondensatoren dürfen als groß angenommen und Randeffekte vernachlässigt werden.\\
+Wie groß ist dann die Kapazität der Schaltung?
+\begin{solution}
+\[
+C_\mathrm{neu}=\frac{1}{3}C+\frac{2}{3}\cdot 2\cdot C+\frac{1}{3}C=2C
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Variierende Objektgroesse}{3}
+Eine kurzsichtige Person sieht ein kleines Objekt und nimmt ihre Brille ab. Sobald sie die Brille langsam zum Objekt hinbewegt, erscheint dieses immer kleiner. Bei einem bestimmten Abstand erscheint das Objekt am kleinsten, bei weiterer Annäherung der Brille scheint es wieder größer zu werden.\\
+Bei welchem Abstand der Brille zum Objekt erscheint dieses am kleinsten?
+\begin{solution}
+% ?
+Die Brille ist eine Streulinse mit Brennweite $f$;\qquad $g$ und $b$ sind auf die Augenlinse bezogen.
+\[
+\frac{B}{G}=\frac{b f}{g(x+f)-x^2}
+\]
+\[
+\tdif{}{x}\frac{B}{G}=\frac{b f\cdot (2x-g)}{(g(x+f)-x^2)^2}=0
+\]
+\[
+x=\frac{g}{2}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Magnetische Induktion}{3}
+An einem regelmäßigen geschlossenem Sechseck aus einem homogenen dünnen Draht liegt an zwei benachbarten Ecken eine Spannung an.\\
+Wie groß ist das Magnetfeld $\vec{B}$ in Betrag und Richtung, welches im Mittelpunkt des Sechsecks induziert wird?\\
+Der Einfluss der Zuleitungen darf dabei vernachlässigt werden. Führen Sie, wenn nötig, geeignete Variablen ein.
+\begin{solution}
+\[
+\vec{B}=\vec{0}\unit{T}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Rotierende Scheibe mit Auflage}{4}
+\skizze{
+\begin{pspicture}(-3,-1)(2.5,1.5)
+\psline[linewidth=1pt](-2.5,0)(2.5,0)
+\psline[linewidth=0.75pt,linestyle=dashed](0,0.27)(0,1.5)
+\psellipticarc[linewidth=1pt]{->}(0,0.93)(0.4,0.2){120}{65}\uput[r](0.4,1){$\omega$}
+\pspolygon[linewidth=1pt](-2,0)(-0.8,0)(-0.8,0.4)(-2,0.4)\uput[u](-1.4,-0.1){$M$}
+\pscircle[linewidth=1pt](-0.1,0.1){0}
+\pscircle[linewidth=1pt](-0.1,0.1){0.1}
+\psline[linewidth=0.5pt](-0.8,0.2)(-0.1,0.2)
+\psline[linewidth=0.5pt](0,0.1)(0,-0.6)
+%\psarc[linewidth=0.5pt]{-}(-0.1,0.1){0.1008775}{0}{90}
+\pspolygon[linewidth=1pt](-0.3,-1)(0.3,-1)(0.3,-0.6)(-0.3,-0.6)\uput[u](0,-1.05){$m$}
+\end{pspicture}
+}
+Ein dünner Stab mit Länge $d$ und Masse $M$ liegt in radialer Richtung auf einem ebenen horizontalen Teller, der sich mit $\omega$ um seine vertikale Achse dreht. An dem Stab ist ein masseloser Faden befestigt, an dem ein Gewicht der Masse $m$ hängt. Zwischen Stab und Tisch herrscht der Reibungsfaktor $f$.\\
+In welchen Entfernungen von der Drehachse darf der Stab liegen, damit er sich nicht bewegt?
+\begin{solution}
+\[
+\frac{g}{\omega^2}\left(\frac{m}{M}-f\right)-\frac{d}{2}\quad\leq\quad x
+\quad\leq\quad\frac{g}{\omega^2}\left(\frac{m}{M}+f\right)-\frac{d}{2}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Druckbetrachtungen}{5}
+In einem Zylinder mit Kolben befindet sich ein ideales Gas ($\kappa=\frac{7}{5}$) unter dem Druck $p_1$. Das Gas wird nun adiabatisch bis zum Druck $\tilde{p}$ komprimiert. Daraufhin wird es isobar abgekühlt bis zu der Temperatur, die es am Anfang hatte. Danach wird weiter adiabatisch komprimiert bis zum Druck $p_2$.\\
+Wieviel Energie braucht man dafür?\\
+Wie muss $\tilde{p}$ gewählt werden, damit die Arbeit minimal wird?
+\begin{solution}
+\[
+\Delta W =\frac{p_1\cdot V_1}{\kappa-1}\cdot\left(\left(\frac{\tilde{p}}{p_1}\right)^{1-\frac{1}{\kappa}} +\left(\frac{p_2}{\tilde{p}}\right)^{1-\frac{1}{\kappa}}-2\right)
++ \tilde p V_1 \left( \left(\frac{\tilde{p}}{p_1}\right)^{\frac{1}{\kappa}} - \frac{\tilde{p}}{p_1} \right)
+\]
+\[
+\tilde{p} = \kappa^{- \frac{\kappa}{2(\kappa-1)}} \sqrt{p_1\cdot p_2}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Zerfalendes Proton}{4}
+Nach einer Theorie ist es möglich, dass ein Proton spontan in ein Meson und ein Positron zerfällt. Die Wahrscheinlichkeit ist äußerst gering, jedoch von $0$ verschieden. Um das zu überprüfen, hat man Tanks aufgebaut, die mit $3.3\ee{3}\unit{t}$ reinem Wasser gefüllt sind. An den Tanks sind Detektoren angebracht, die jeden Zerfall registrieren. Schätzen Sie die Halbwertszeit des Zerfalls ab, wenn innerhalb eines Jahres kein einziger Zerfall registriert wurde. Wie groß ist die Halbwertszeit, wenn innerhalb eines Jahres mit $95\%$ Wahrscheinlichkeit mindestens ein Proton zerfällt?
+\begin{solution}
+% ?
+Die Anzahl der Protonen beträgt
+\[
+N=\frac{10}{18}\cdot\frac{3.3\ee{3}\unit{t}}{1u}\approx 1.1\ee{33}.
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Bewaesserungsanlage}{4}
+\skizze{
+\begin{pspicture}(-2.75,-1.7)(2.75,1)
+\psline[linewidth=1pt](-1.5,0)(-1,0)
+\psline[linewidth=1pt](-1,0)(-0.1,-0.9)(-0.1,-1.2)
+\psline[linewidth=1pt](0.1,-1.2)(0.1,-0.9)(1,0)
+\psline[linewidth=1pt](1,0)(1.5,0)
+\psline[linewidth=1pt,arrows=->](0,-1.6)(0,-1.2)
+\psarc[linewidth=1pt,linestyle=dashed]{-}(0,-1){1.414}{45}{135}
+\psline[linewidth=0.5pt,arrows=->](-0.89,0.33)(-1.11,0.66)
+\psline[linewidth=0.5pt,arrows=->](-0.31,0.57)(-0.39,0.96)
+\psline[linewidth=0.5pt,arrows=->]( 0.31,0.57)( 0.39,0.96)
+\psline[linewidth=0.5pt,arrows=->]( 0.89,0.33)( 1.11,0.66)
+\psline[linewidth=0.5pt](0,-0.5)(0,0.414)
+\psline[linewidth=0.5pt](-0.4,-0.307)(-0.6,0.039)
+\psarc[linewidth=1pt]{-}(0,-1){1}{90}{120}\uput[l](0.1,-0.3){$\alpha$}
+\end{pspicture}
+}
+Eine Bewässerungsanlage besteht aus einem hohlen kugelsegmentförmigen Kopf, in den von unten Wasser gepumpt wird. In der oberen Schale befinden sich fein verteilte Löcher, durch die das Wasser überall gleich schnell ausströmt. Die lokale Lochdichte $\rho$ soll überall so groß sein, dass die Rasenfläche gleichmäßig beregnet werden kann. Das Kugelsegment hat einen Öffnungswinkel von $90\degr$ und darf als sehr klein angenommen werden.\\
+Wie muss dann die Lochdichte $\rho$ in Abhängigkeit vom Winkel $\alpha$ beschaffen sein? Es genügt die Angabe einer Funktion $f(\alpha)\sim\rho$.
+\begin{solution}
+\[
+f(\alpha)=\frac{\sin{4\alpha}}{4\sin{\alpha}}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Parallelschwingkreis}{6}
+\skizze{
+\psset{unit=0.75cm}
+\begin{pspicture}(-1,-0.1)(6,4)
+\pnode(0,0){A}
+\pnode(3,0){B}
+\pnode(0,3){C}
+\pnode(3,3){D}
+\resistor(C)(D){$R$}
+\wire(A)(B)
+\capacitor[labeloffset=1](B)(D){$C$}
+\coil[parallel,labeloffset=1](D)(B){$L$}
+%\battery(C)(A){$U$}
+\tension(C)(A){$U$}
+\end{pspicture}
+}
+Ein Stromkreis ist wie in der Skizze dargestellt aufgebaut, d.h. ein Widerstand ist in Reihe mit dem Schwingkreis geschaltet.
+\begin{abcenum}
+\item
+Am Anfang ist die Stromquelle ausgeschaltet, also leitend verbunden mit $U(t) = 0$. Welche Beziehungen müssen dann $R,C,L$ erfüllen, damit freie gedämpfte Schwingungen möglich sind? Wie groß ist dabei die Eigenfrequenz $\omega$ und der Dämpfungsfaktor?
+\item Nun wird eine Spannung $U(t)=U_0\cdot e^{i\omega t}$ angelegt. Wie groß ist die Impedanz $Z(\omega)$ der Schaltung? Bei welcher Frequenz liegt ein Sperrkreis vor?
+\item Im Gegensatz zu a) und b) soll nun die Einschwingphase betrachtet werden. Zum Zeitpunkt $t = 0$ wird die Gleichspannung $U(t)=U_0$ eingeschaltet. Wie groß sind dann $I_R(t)$, $I_L(t)$ und $I_C(t)$ für $t>0$?
+\end{abcenum}
+
+\begin{solution}
+\begin{abcenum}
+% ?
+\item $\omega=\frac{1}{\sqrt{LC}}$
+\item Die Impedanz der Schaltung beträgt
+\[
+Z(\omega)=R+\frac{i}{\frac{1}{\omega L}-\omega C}, \quad
+|Z(\omega)|=\sqrt{R^2+\frac{1}{\left(\frac{1}{\omega L}-\omega C\right)^2}}.
+\]
+Bei Sperrfrequenz wird die Impedanz unendlich groß: $ \omega=\omega_0=\frac{1}{\sqrt{LC}} $.
+%\item ?
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

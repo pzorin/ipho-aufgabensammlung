@@ -1,0 +1,156 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2006 -- 3. Runde -- Theoretische Klausur II (30.1.06)}
+
+\begin{problem}{Temperaturmessung}{3}
+\skizze{
+\begin{pspicture}(-1.5,-2.8)(3,1)
+\pscircle(0,0){1}
+%\psframe[linecolor=white,fillstyle=solid,fillcolor=white](-0.2,0)(0.2,-1.1) 
+
+\psline[linearc=0.2,linecolor=white,fillstyle=hlines](0.2,-0.98)(0.2,-1.8)(2.1,-1.8)(2.1,-0.98)(2.5,-0.98)(2.5,-2.2)(-0.2,-2.2)(-0.2,-0.98)
+
+\psline[linearc=0.2](0.2,-0.98)(0.2,-1.8)(2.1,-1.8)(2.1,0.7)
+\psline[linearc=0.2](-0.2,-0.98)(-0.2,-2.2)(2.5,-2.2)(2.5,0.7)
+\psline[linestyle=dashed](-0.2,-0.98)(2.5,-0.98)
+\end{pspicture}
+}
+Eine Glaskugel mit einem Volumen von $7\unit{l}$ ist mit Luft bei einer Temperatur
+von $27\cel$ gefüllt. Das anschließende U-förmige Rohr mit einem Querschnitt von $10\unit{cm^2}$
+ist mit Quecksilber gefüllt, so dass dessen Höhe in beiden Schenkeln gleich ist. Der Außendruck
+beträgt $760\unit{mmHg}$. Die Luft wird nun erwärmt, so dass der Quecksilberspiegel im rechten Rohr
+um $5\unit{mm}$ ansteigt.\\
+Welche Temperatur hat die Luft in der Kugel?
+\begin{solution}
+% ?
+Die neue Temperatur beträgt $31.2\cel$
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Bremsmanoever}{6}
+Eine Raumsonde umkreist mit der Geschwindigkeit $u$ einen Planeten mit Masse $M$.
+Während einer sehr kurzen Zeit wird die Sonde um $\Delta u_1$ in Flugrichtung abgebremst.
+Im zum Planeten gegenüberliegenden Punkt wird die Sonde nochmals um $\Delta u_2$ abgebremst,
+so dass sie sich wieder auf einer Kreisbahn bewegt.
+\begin{abcenum}
+\item Bestimmen Sie $\Delta u_2$.
+\item Bestimmen Sie $u/\tilde u$, wenn $\tilde u$ die Geschwindigkeit auf der neuen Kreisbahn ist. Ist das Verhältnis größer, kleiner oder gleich 1?
+\end{abcenum}
+\begin{solution}
+Energie- und Drehimpulserhaltung:
+\[
+\Delta u_2=\frac{(u^2+2u\Delta u_1-\Delta u_1^2)-u\sqrt{u^2+2u\Delta u_1-\Delta u_1^2}}{u-\Delta u_1}
+\]
+\[
+\frac{u}{\tilde{u}}=\frac{u-\Delta u_1}{\sqrt{u^2+2u\Delta u_1-\Delta u_1^2}}
+\]
+Es gilt $u/\tilde u<1$.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Polarisatoren}{4}
+Zwischen zwei um $\frac{\pi}{2}$ gegeneinander verdrehte Polarisatoren werden $k$ ($k=0,1,2...$)
+weitere Polarisatoren gestellt, so dass jeder Polarisator gegenüber dem vorigen um
+$\frac{\pi}{2(k+1)}$ verdreht ist.\\
+Bestimmen Sie den Anteil vom auf den ersten Polarisator einfallenden unpolarisierten Licht,
+welcher durch das System durchgelassen wird.\\
+Betrachten Sie insbesondere die Grenzfälle.
+\begin{solution}
+\[
+\alpha=\frac{1}{2}\left( \cos^2\frac{\pi}{2(k+1)} \right)^{k+1}
+\]
+\[
+k=0 \implies \alpha=0
+\]
+\[
+k\to\infty \implies \alpha=\frac{1}{2}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Manipulation von Elektronen}{5}
+\skizze{
+  \begin{pspicture}(-0.5,-1.5)(5,1.5)
+\psline{->}(0,-1.3)(0,1.3)\uput[l](0,1){$\rho$}
+\psline{->}(-0.2,0)(4.5,0)\uput[d](4.5,0){$x$}
+\psplot[linewidth=0.5pt,plotpoints=400, arrows=->]{1}{3.5}{1 x sqrt div}\uput[ur](2,0.7){$- \vec{E}$}
+\psplot[linewidth=0.5pt,plotpoints=300, arrows=->]{0.25}{3.5}{0.5 x sqrt div}
+\psplot[linewidth=0.5pt,plotpoints=200, arrows=->]{0.0625}{3.5}{0.25 x sqrt div}
+\psplot[linewidth=0.5pt,plotpoints=100, arrows=->]{0.015625}{3.5}{0.125 x sqrt div}
+\psplot[linewidth=0.5pt,plotpoints=100, arrows=->]{0.015625}{3.5}{0.125 neg x sqrt div}
+\psplot[linewidth=0.5pt,plotpoints=200, arrows=->]{0.0625}{3.5}{0.25 neg x sqrt div}
+\psplot[linewidth=0.5pt,plotpoints=300, arrows=->]{0.25}{3.5}{0.5 neg x sqrt div}
+\psplot[linewidth=0.5pt,plotpoints=400, arrows=->]{1}{3.5}{1 neg x sqrt div}
+\psline[linewidth=0.5pt]{|-|}(3.8,0)(3.8,0.3)\uput[r](3.8,0.15){$r$}
+\end{pspicture}
+}
+\begin{abcenum}
+\item Elektronen durchlaufen eine Beschleunigungsspannung von $U_\mathrm{B}$ und kommen dann
+unter einem Winkel $\varphi$ durch das Loch in einer der Platten in das Feld eines Plattenkondensators,
+an dem eine Spannung $U_\mathrm{K}$ anliegt.\\
+Welche Geschwindigkeit hat das Elektron, wenn es durch ein zweites Loch den Kondensator wieder verlässt?
+\item In einem bestimmten ladungsfreien Bereich herrscht ein radialsymmetrisches elektrisches Feld. Die $x$-Komponente des Feldes hängt dabei nur von $x$ ab und beträgt $E_x(x) = -2 a x$ mit $a=2\ee{6}\unit{V/m^2}$. Man bestimme die Radialkomponente des Feldes im achsennahen Bereich und insbesondere im Abstand $r=3\unit{mm}$ von der $x$-Achse.
+\end{abcenum}
+
+\begin{solution}
+\begin{abcenum}
+\item Die Geschwindigkeit beträgt (nicht-relativistisch) $\sqrt{\frac{2e(U_\mathrm{B}+U_\mathrm{K})}{m}}$, falls das Elektron die gegen\-über\-liegende Platte erreicht, und $\sqrt{\frac{2eU_\mathrm{B}}{m}}$, falls das Elektron im Kondensator umkehrt und wieder durch die gleiche Platte geht. Dies ist für $\cos\varphi<\sqrt{\frac{U_\mathrm{K}}{U_\mathrm{B}}}$
+der Fall, falls das $U_\mathrm{K}$ so anliegt, dass die Platte, durch die das Elektron eintritt, positiv geladen ist.\\
+\item Divengenzfreiheit des statischen elektrischen Feldes in Abwesenheit von Ladungen liefert
+\[
+0 = \nabla \vec E = \pdif{}{x} E_x + \frac1\rho \pdif{}{\rho} (\rho E_\rho) = -2 a + E_\rho' + \frac{1}{\rho} E_\rho.
+\]
+Die Lösung dieser Gleichung mit $E_\rho \to 0$ bei $\rho \to 0$ ist $E_\rho(\rho) = a \rho$, die exakte Lösung stimmt also mit der achsennahen Näherung überein. Im Abstand $r$ bekommt man schließlich
+\[
+E_\rho(r)=6\ee{3}\unit{V/m}.
+\]
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Ionisiertes Helium}{6}
+Das ionisierte Helium He$^+$ verhält sich wasserstoffähnlich. Es hat die Energieniveaus
+$-\frac{54,4\unit{eV}}{n^2}$ mit $n=(1,2,\ldots)$. Ein He$^+$-Gas wird aus einer bestimmten Richtung
+mit Licht der Wellenlängen $24\unit{nm}\leq\lambda\leq50\unit{nm}$ bestrahlt.
+\begin{abcenum}
+\item Wie viele Absorptionslinien sieht man, wenn man entgegen der Strahlungsrichtung blickt? Welche Wellenlängen haben sie?
+\item Welche Emissionslinien beobachtet man entgegen bzw. senkrecht zur Strahlungsrichtung?
+\end{abcenum}
+\begin{solution}
+\begin{abcenum}
+\item Man sieht 3 Absorbtionslinien: $24,3\unit{nm}$, $25,6\unit{nm}$, $30,4\unit{nm}$
+\item senkrecht 6 Emissionslinien: $24,3\unit{nm}$, $25,6\unit{nm}$, $30,4\unit{nm}$, $121,6\unit{nm}$, $164,1\unit{nm}$, $468,9\unit{nm}$, entgegen: die selben, außer die von (a)
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Fallender Magnet}{7}
+Ein Stabmagnet mit dem magnetischen Moment $\mu$ fällt mit dem Nordpol nach unten in einem engen isolierenden Zylinder. Um diesen herum befindet sich ein zweiter isolierender Zylinder mit dem Radius $r$, auf dem in regelmäßigen Abständen $h$ Leiterschleifen aufgewickelt sind, die einen Widerstand von je $R$ haben. Der Magnet hat die Masse $m$ und erreicht nach kurzer Zeit eine konstante Geschwindigkeit $v$, die von $m$, $\mu$, $h$, $R$, $r$, $\mu_0$ abhängt.\\
+Wie ändert sich $v$, wenn man jeweils eine der Größen $m$, $\mu$, $h$, $R$, $r$ verdoppelt und die anderen dabei konstant lässt?\\
+Die Luftreibung, das Erdmagnetfeld sowie Selbst- und Gegeninduktion der Leiterschleifen können vernachlässigt werden.
+\begin{solution}
+Die Änderung von $v$ durch die Parameter lässt sich mit einer Einheitenanalyse bestimmen.
+\[
+\Rightarrow\qquad v \sim \frac{m\cdot g\cdot h\cdot R \cdot r^3}{\mu^2\cdot \mu_0^2}
+\]
+Alternativ kann man auch die vertikale Komponente des Magnetfeldes des Stabmagneten $B_z(z,r)$ bestimmen, dann hat man für die Spannung an einem Ring im Abstand $z$ vom Magneten
+\[
+U(z) = \tdif{}{t} \int\limits_{\rho \leq r} B(z,\rho) \dif A = v \tdif{}{z} \int\limits_{\rho \leq r} B(z,\rho) \dif A
+\]
+Wenn man nun eine Zeit $\Delta t = h/v$ und die zugehörigen Energieverluste an allen Leiterschleifen betrachtet, bekommt man
+\[
+\Delta E = \sum_{i=-\infty}^{+\infty} \int\limits_{t=0}^{\Delta t} \frac{U^2(z_i(t))}{R} \dif t
+= \frac{1}{Rv} \int\limits_{z=-\infty}^{+\infty} U^2(z) \dif z = mgh
+\]
+Es reicht dann bei $\Delta E$ einen der Terme (sinnvollerweise den einfachsten) zu integrieren um die Exponenten der Parameter zu bekommen.
+
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

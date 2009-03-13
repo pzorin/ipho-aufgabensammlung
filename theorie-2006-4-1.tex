@@ -1,0 +1,171 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2006 -- 4. Runde -- Theoretische Klausur I (19.4.06)}
+
+\begin{problem}{Masse des Seils}{3}
+\skizze{
+\psset{unit=1cm}
+\begin{pspicture}(-0.5,-1)(5,3.8)
+\psline[linewidth=0pt,linecolor=white,fillstyle=hlines](-0.4,-0.5)(0,-0.5)(0,3.8)(-0.4,3.8)
+\psline[linewidth=1pt](0,-0.5)(0,3.8)
+\psplot[linewidth=1.5pt,plotpoints=400,arrows=*-|]{0}{4}{2 x 4 sub 0.498 mul exp 2 x 4 sub neg 0.498 mul exp add 2 sub 0.69 div}
+\psline{->, linewidth=2.5pt}(4,0)(5,0)\uput[u](4.5,0){$F$}
+\end{pspicture}
+}
+Ein homogenes flexibles Seil ist fest an einer Wand aufgehängt. Es wird von einer Kraft $F=20\unit{N}$ in horizontaler Richtung gehalten und hängt dabei in Ruhe. Die Skizze ist maßstabsgetreu und darf für Berechnungen verwendet werden.\\
+Wie groß ist dann die Masse des Seiles?
+
+
+\begin{solution}
+Winkel an der Wand $\alpha\approx28\degr$.
+\[
+m=\frac{20\unit{N}}{g\cdot\tan{\alpha}}\approx3,8\unit{kg}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Beschichtete Glasplatte}{4}
+Eine dicke Glasplatte $(n=1,5)$ ist mit einer dünnen Folie $(n=1,3)$ beschichtet und befindet sich in Luft. Abgebildet ist das Transmissionsspektrum bei senkrechtem Einfall von Strahlung:\\
+\begin{center}
+\psset{xunit=0.05cm,yunit=0.04cm}
+\begin{pspicture}(-20,-20)(185,120)
+\psaxes[arrows=->,Ox=480,Dx=20,dx=20,Dy=20,dy=20,ticksize=0.04](0,0)(0,0)(160,115)
+\uput[dr](160,0){$f$, $\unit{THz}$}\uput[l](0,115){$I$}
+%\psplot[linewidth=0.5pt,plotpoints=2000]{0}{150}{x 5 mul sin 30 mul x 100 mul sin 8 mul add 40 add}
+\psplot[linewidth=0.8pt,plotpoints=2000]{0}{150}{
+48
+x 12 div sub
+6.76 x mul 9.45 add cos 10 mul sub
+2.58 x mul cos 20 mul sub
+0.4 x x mul mul 90 x mul add cos 5 mul sub}
+\end{pspicture}
+\end{center}
+Bestimmen Sie die Dicke der Folie!
+\begin{solution}
+% ?
+etwa $50\unit{\mu m}$ (zumindest die Größenordnung sollte stimmen)
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Draht im homogenen Gravitationsfeld}{4}
+Ein homogener Draht der Dichte $\rho$ mit maximaler Zugspannung $\sigma$ hängt im homogenen Schwerefeld der Stärke $g$. Am Aufhängepunkt besitzt der Draht den Radius $r_0$, und sein Querschnitt ist überall kreisförmig.\\
+Welche Form muss der Draht haben, wenn er überall bis zur maximalen Belastung gespannt sein soll?
+\begin{solution}
+\[
+r(x)=r_0\cdot \exp\left( -\frac{\rho g}{2\sigma}\cdot x\right)
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Fette Robbe}{5}
+Eine Robbe (Länge $1,5\unit{m}$, Umfang $1,5\unit{m}$) befindet sich im Wasser bei $0\cel$. Die Robbe besitzt eine Wärmeleistung von $100\unit{W}$ und eine Körpertemperatur von $37\cel$. Sie ist mit einer Fettschicht mit dem Wärmeleitungskoeffizienten $\lambda = 0,14\unit{\frac{W}{m\cdot K}}$ umgeben.\\
+Schätzen Sie die Dicke der Fettschicht ab, und geben dabei alle gemachten Näherungen an.
+\begin{solution}
+\skizze{
+\psset{unit=1cm}
+\begin{pspicture}(0,0)(4,1)
+\psline[linewidth=1pt](0.477,0)(2.523,0)
+\psline[linewidth=1pt](0.477,0.955)(2.523,0.955)
+\psarc[linewidth=1pt]{-}(0.477,0.477){0.477}{90}{270}
+\psarc[linewidth=1pt]{-}(2.523,0.477){0.477}{270}{90}
+\psellipticarc[linewidth=1pt]{-}(0.477,0.477)(0.2,0.477){90}{270}
+\psellipticarc[linewidth=1pt,linestyle=dashed,dash=2pt 4pt]{-}(0.477,0.477)(0.2,0.477){270}{90}
+\psellipticarc[linewidth=1pt]{-}(2.523,0.477)(0.2,0.477){90}{270}
+\psellipticarc[linewidth=1pt,linestyle=dashed,dash=2pt 3pt]{-}(2.523,0.477)(0.2,0.477){270}{90}
+\psline[linewidth=0.5pt,linestyle=dashed,dash=2pt 2pt](0.477,0.175)(2.523,0.175)
+\psline[linewidth=0.5pt,linestyle=dashed,dash=2pt 2pt](0.477,0.780)(2.523,0.780)
+\psarc[linewidth=0.5pt,linestyle=dashed,dash=2pt 2pt]{-}(0.477,0.477){0.302}{90}{270}
+\psarc[linewidth=0.5pt,linestyle=dashed,dash=2pt 2pt]{-}(2.523,0.477){0.302}{270}{90}
+\psellipse[linewidth=0.5pt,linestyle=dashed,dash=2pt 2pt](0.477,0.477)(0.1,0.302)
+\psellipse[linewidth=0.5pt,linestyle=dashed,dash=2pt 2pt](2.523,0.477)(0.1,0.302)
+\end{pspicture}
+}
+Beispiel: Zylinder mit Halbkugeln. $O_0=2,25\unit{m^2}$
+\[
+\int_{r_0-d}^{r_0}\frac{\dif r}{O(r)}=\frac{\lambda\cdot\Delta T}{P}
+\qquad\Rightarrow\qquad
+d\approx 9\unit{cm}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Stromstaerke}{6}
+In einem sehr großen Plattenkondensator mit Plattenabstand $d=1\unit{cm}$ befindet sich in einer Platte ein kleines Loch, durch das ein Laserstrahl der Wellenlänge $405\unit{nm}$ senkrecht eintritt. Auf der gegenüberliegenden Platte werden dadurch Elektronen energetisch angeregt. Nach dem Überwinden der Ablösearbeit $1,87\unit{eV}$ fliegen die Elektronen mit gleicher Wahrscheinlichkeit in alle Richtungen. Am Kondensator liegt eine Spannung $U$ an.
+\begin{abcenum}
+  \item Berechnen Sie den Strom zwischen den beiden Platten in Abhängigkeit von $U$.
+  \item Was geschieht qualitativ, wenn man
+  \begin{enumerate}
+    \item die Annahme wegfallen lässt, dass alle Elektronen die gleiche Energie besitzen?
+    \item die endlichen Ausmaße des Kondensators berücksichtigt?
+  \end{enumerate}
+\end{abcenum}
+\begin{solution}
+% ?
+\[
+E=\frac{h\cdot c}{\lambda}-1,87\unit{eV}=1,19\unit{eV}, \quad E_y=1,19\unit{eV}\cdot \cos^2\alpha
+\]
+Raumwinkelanteil:
+\[
+\frac{\Omega}{2\pi} = 1-\cos{\alpha} \implies I=I_0\cdot\left(1-\sqrt{\frac{U}{1,19\unit{V}}}\right)
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Strahl und Spiegel}{6}
+\skizze{
+\psset{unit=1.1cm}
+\begin{pspicture}(-1,0)(3,2.5)
+\psline[linewidth=0pt,linestyle=none,fillstyle=hlines](1.4,0.6)(0,2)(0,1.6)(1.2,0.4)
+\psline[linewidth=1pt](2,0)(0,2)
+\psline[linewidth=1pt,linestyle=dashed](1,1)(2,2)
+\psline[linewidth=1pt,arrows=-](1.2,2.5)(1,1)
+\psline[linewidth=1pt,arrows=->](1.2,2.5)(1.15,2.125)
+\psline[linewidth=1pt,arrows=->](1,1)(2.5,1.4)
+\psline[linewidth=1pt,linestyle=dashed](0,0)(3,0)
+\psarc{-}(2,0){0.8}{135}{180}\uput[ul](1.7,0){$\theta$}
+\psarc{-}(1,1){0.9}{45}{82.4}\uput[ur](1.05,1.4){$\alpha$}
+\psarc{-}(1,1){1}{14.9}{45}\uput[r](1.3,1.3){$\beta$}
+\psline[linewidth=1.5pt,arrows=->](-0.2,0.7)(0.5,0.7)\uput[u](0.15,0.7){$v$}
+\end{pspicture}
+\psset{unit=1.1cm}
+\noindent\begin{pspicture}(-1,-0.1)(3,2.8)
+\psline[linewidth=0pt,linestyle=none,fillstyle=hlines](1,0.7)(1,2.5)(0.7,2.5)(0.7,0.7)
+\psline[linewidth=1pt](1,0)(1,2.5)
+\psline[linewidth=1pt,linestyle=dashed](1,1.3)(2.5,1.3)
+\psline[linewidth=1pt,arrows=-](2.3,2.05)(1,1.3)
+\psline[linewidth=1pt,arrows=->](2.3,2.05)(2,1.8625)
+\psline[linewidth=1pt,arrows=->](1,1.3)(2.3,0.21)
+\psline[linewidth=1pt,linestyle=dashed](0,0)(3,0)
+\psarc{-}(1,0){0.65}{90}{180}\uput[ul](1.1,0){$90^\circ$}
+\psarc{-}(1,1.3){1.1}{0}{30}\uput[ur](1.5,1.3){$\alpha$}
+\psarc{-}(1,1.3){1}{-40}{0}\uput[dr](1.5,1.3){$\beta$}
+\psline[linewidth=1.5pt,arrows=<-](-0.2,1)(0.5,1)\uput[u](0.15,1){$v$}
+\end{pspicture}
+}
+Ein Spiegel bewegt sich wie in der Skizze mit relativistischer Geschwindigkeit. Es lässt sich zeigen, dass dabei folgende Beziehung gilt:
+\[
+\sin{\alpha}-\sin{\beta}=\frac{v}{c}\cdot \sin{\theta}\cdot \sin{(\alpha + \beta)}
+\]
+\begin{abcenum}
+\item Man zeige ohne Verwendung der Lorentz-Transformation, dass dann in folgender Skizze die Beziehung gelten muss:
+\[
+\cos \beta = \frac{(1+(\frac{v}{c})^2)\cos \alpha -2\frac{v}{c}}{1-2\frac{v}{c}\cos \alpha + (\frac{v}{c})^2}
+\]
+\item Entsprechend der 2. Skizze mit $v=0.6 c$ fällt Laserlicht der Frequenz $f$ unter einem Winkel von $\alpha=30^\circ$ ein. Wie groß ist dann die Frequenz des reflektierten Strahls, und wie groß ist die relative änderung $\frac{\Delta f}{f}$?
+\end{abcenum}
+
+\begin{solution}
+% ?
+\[
+f' \approx 0.505 f, \qquad \frac{\Delta f}{f} \approx 49.5\,\%
+\]
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

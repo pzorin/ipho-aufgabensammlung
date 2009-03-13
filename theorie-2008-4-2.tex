@@ -1,0 +1,112 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+\begin{problem}{Oberflaechentemperatur der Sonne}{3,5}
+Man schätze die Temperatur der Sonnenoberfläche ausschließlich unter Verwendung der mittleren Erdoberflächentemperatur $T_E = 288 \unit{K}$ und des Winkeldurchmessers der Sonne bei der Betrachtung von der Erde aus $\phi = 32'$ ab.
+\begin{solution}
+\[
+T_S = \frac{2 T_E}{\phi^{1/2}} \approx 5800 \unit{K}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Wechselstromverbraucher}{6}
+Es gibt mehrere einfache Schaltungen, die an das Stromnetz ($230 \unit{V}$, $50 \unit{Hz}$) angeschlossen eine elektrische Leistung von $400 \unit{W}$ umsetzen und dabei einen effektiven Strom von $8 \unit{A}$ durchlassen.
+\begin{abcenum}
+\item Man gebe alle möglichen Schlatungen dieser Art an, die aus minimal möglicher Anzahl von Elementen bestehen und gebe auch die entsprechenden Kennzahlen an.
+\item Bei einer dieser Schaltungen eilt der Strom der Spannung voraus. Wenn man die Netzfrequenz verdoppelt, steigt der Phasenvorsprung um $8\%$. Um welche der Schaltungen handelt es sich dabei?
+\end{abcenum}
+
+\begin{solution}
+\begin{abcenum}
+\item Für den Gesamtwiderstand gilt
+\[
+|Z| = V_\mathrm{eff} / I_\mathrm{eff}
+\]
+\[
+\Re Z = P / I_\mathrm{eff}^2
+\]
+Zu den 2 möglichen Impedanzen hat man jeweils eine Parallel- bzw. serielle Schaltung mit entweder Kondensator oder Spule und Widerstand.
+\item $\Im Z < 0$ $\Rightarrow$ eine der Kondensatorschaltungen, wobei man leicht rausfinden kann, welche es ist.
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Mondabstandsmessung}{3,5}
+Der Abstand zum Mond kann zentimetergenau mit einem Laserstrahl bestimmt werden, der an einem auf dem Mond aufgestellten Spiegel reflektieret wird. Eine der Fehlerquellen ist dabei die Atmosphäre, die einen von $1$ unterschiedlichen Brechungsindex besitzt und die Laufzeit damit verlängert. Wie groß ist die Auswirkung dieses Effekts auf das Messergebnis, wenn der Brechungsindex der Luft sich mit $n = 1 + \rho \eta$, $\eta = 0.00021 \unit{m^3/kg}$ ändert und der Luftdruck an der Oberfläche $p_0 = 101.3 \unit{kPa}$ beträgt?
+
+\begin{solution}
+Der Abstand scheint um
+\[
+\Delta l = \int_0^{+\infty} (n-1) \dif h = \int_0^{+\infty} \rho \eta \dif h = \frac{\eta}{g} \underbrace{\int_0^{+\infty} \rho g \dif h}_{=p_0} = \frac{p_0 \eta}{g}
+\]
+größer als in Wirklichkeit.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Kosmische Strahlung}{5,5}
+Protonen können unter Abstrahlung eines Pions (Ruhemasse $135 \unit{MeV}$) an Photonen gestreut werden:
+\[
+p + \gamma \rightarrow p + \pi^0.
+\]
+Durch diesen Prozess wird die maximale Energie der Protonen kosmischer Strahlung begrenzt, da das Universum mit der Hintergrundstrahlung der Wellenlänge $1.9 \unit{mm}$ gefüllt ist. Wo liegt diese Obergrenze?
+
+\begin{solution}
+Die kleinste Energie wird benötigt wenn die entstehenden Teilchen nach dem Stoß zusammen weiterfliegen. Wenn $E$ die Energie des Protons, $E_p$ seine Ruheenergie und $p = \frac1c \sqrt{E^2 - E_p^2}$ sein Impuls bezeichnet, gilt dann
+\[
+(E+hf)^2 = (E_p + E_\pi)^2 + (p- h/\lambda)^2 c^2.
+\]
+Auflösen nach $E$ ergibt
+\[
+E = \frac{E_\pi (2 E_p + E_\pi)}{4 f h} + \frac{E_p^2 f h}{E_\pi (2 E_p +E_\pi)} \approx \frac{E_\pi (2 E_p + E_\pi)}{4 f h} \approx 1.2\ee{20} \unit{eV}.
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Membranenpotential}{5,5}
+Eine Zellmembran lässt Kaliumkationen durch. Die Stromdichte hängt dabei vom Konzentrationsgradienten und vom elektrischen Feld ab:
+\[
+j = \mu E - D \tdif{c}{x}
+\]
+Die Dimension des Diffusionskoeffizienten ist dabei $\unit{m^2/s}$.
+\begin{abcenum}
+\item Leitfähigkeitskoeffizient $\mu$ hängt im Wesentlichen vom Diffusionskoeffizienten, der Ladung der einzelnen Ionen, ihrer Konzentration, der Temperatur und der Boltzmannkonstante ab. Man leite mittels einer Dimensionsanalyse diesen Zusammenhang her. Die auftretenden numerischen Koeffizienten sind zu vernachlässigen.
+\item Was ist dann die Gesamtstromdichte?
+\item Wie groß ist die Spannung an der Zellmembrag in einem Gleichgewichtszustand wenn die Kaliumkationenkonzentration im Inneren der Zelle $135 \unit{mol/m^3}$ und außerhalb der Zelle $5 \unit{mol/m^3}$ beträgt, die Membran für keine anderen Ionen durchlässig ist und die Umgebungstemperatur $300 \unit{K}$ beträgt?
+\end{abcenum}
+
+\begin{solution}
+\begin{abcenum}
+\item $\mu \sim \frac{cDq_e}{kT}$
+\item $j = D \left( \frac{cq}{kT} \tdif{\phi}{x} - \tdif{c}{x} \right)$
+\item $j=0$, $\frac{cq}{kT} \tdif{\phi}{x} = \tdif{c}{x}$
+\[
+\frac{q}{kT} \dif\phi = \frac{\dif c}{c} \quad | \int
+\]
+\[
+\Delta \phi = \frac{kT}{q_e} \ln \frac{c_\mathrm{innen}}{c_\mathrm{außen}} \approx 0.085 \unit{V}
+\]
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Huepfender Ball}{7}
+Ein Ball fällt ohne zu rotieren mit einer Geschwindigkeit $v=10 \unit{m/s}$ unter einem Winkel $\alpha = \frac\pi4$ auf den Boden. Wie weit wird er nach dem Stoß fliegen, wenn der Gleitreibungskoefizient zwischen Ball und Boden $\mu = 0.1$ beträgt? Wie ändert sich dieses Ergebnis, wenn $\mu = 0.8$ ist?\\
+\hinweis Der Ball kann als dünne Kugelschale (Trägheitsmoment um eine Schwerpunktachse $\frac23 m r^2$), der Stoß als kurz und die Luftreibung als unwesentlich angesehen werden.
+\begin{solution}
+Für den übertragenen Impuls in horizontale Richtung gilt
+\[
+\frac{\Delta p_h}{m} \leq \frac{\Delta p_v}{m}, \quad \frac{\Delta p_h}{m} \leq \frac23 \omega R
+\]
+In den beiden Fällen tritt bei einer der Ungleichungen Gleichheit ein. Wenn man nun noch Energie- und Impulserhaltung verwendet, bekommt man genügend Gleichungen um die Geschwindigkeit des Balls und ihre Richtung nach dem Stoß zu berechnen. Man bekommt schließlich\\
+$\mu = 0.1$ $\Rightarrow$ $l \approx 8.2 \unit{m},$\\
+$\mu = 0.8$ $\Rightarrow$ $l \approx 6.1 \unit{m}.$
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

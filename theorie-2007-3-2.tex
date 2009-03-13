@@ -1,0 +1,111 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2007 -- 3. Runde -- Theoretische Klausur II (28.01.2007)}
+
+\begin{problem}{Punktladungen}{4}
+\skizze{
+\psset{xunit=0.8cm,yunit=1.0cm}
+\begin{pspicture}(-3.5,0)(3.5,4)
+\psline(-3,0)(3,0)
+\psline(0,0)(-2.7,2.7)
+\psline(0,0)(2.7,2.7)
+\psline[linestyle=dashed]{<->}(-1.6,1.6)(1.6,1.6)
+\psdots[dotsize=0.12](-1.6,1.6)(1.6,1.6)
+\uput[45](-2,2){$l$}
+\uput[135](2,2){$l$}
+
+\uput[210](-1.6,1.6){$m,\,q$}
+\uput[-30](1.6,1.6){$m,\,q$}
+\uput[90](0,1.6){$L$}
+\rput(-0.5,0.2){$\alpha$}
+\rput(0.5,0.2){$\alpha$}
+\end{pspicture} 
+\psset{xunit=1.0cm,yunit=1.0cm}
+}
+Zwei identische Teilchen mit Masse $m$ und Ladung $q$ befinden sich jeweils auf einem starren endlich langen Stab, der einen Winkel $\alpha$ mit der Horizontalen einschließt. Auf diesen Stäben können die Teilchen reibungsfrei gleiten.\\
+Bis zu welcher Höhe über ihrer Anfangsposition werden sie steigen, wenn sie anfangs einen Abstand $L$ voneinander besitzen und eine Strecke $l$ vom Ende des jeweiligen Stabes entfernt sind?
+\begin{solution}
+Falls die Teilchen auf den Stäben bleiben liefert Energieerhaltung
+\[
+\Delta h=\frac{q^2}{8 \pi \varepsilon_0 m g L}-\frac{L}{2 \tan\alpha}.
+\]
+Ansonsten kann man mittels Energieerhaltung die Geschwindigkeit am Ende des Stabes bestimmen:
+\[
+v^2 = \frac{q^2}{4 \pi \varepsilon_0 m} \left( \frac1{L} - \frac1{L+2 l \cos\alpha} \right),
+\]
+und die vertikale Komponente dieser Geschwindigkeit benutzen um die maximale Höhe zu bestimmen.
+\[
+\Delta h=l \sin\alpha \cos^2 \alpha+ \frac{q^2 l \cos\alpha \sin^2 \alpha}{4 \pi \varepsilon_0 m g L (L+2 l \cos\alpha)}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Statit}{5}
+Eine vollständig reflektierende Kugel mit mittlerer Dichte $\rho=1000 \unit{kg\cdot m^{-3}}$ wird durch den Einfluss der Gravitation und der Strahlung der Sonne (Masse $M=1.99 \ee{30} \unit{kg}$, Leistung $P=3.83 \ee{26} \unit{W}$) an einem festen Punkt in unserem Sonnensystem gehalten. Bei welchem Abstand zur Sonne ist dies möglich? Wie groß ist jeweils der Radius der Kugel?\\
+\hinweis $\int \dif x \cos^3 x \sin x=-\frac 14 \cos^4 x$ 
+
+\begin{solution}
+\[
+r=\frac{3 P}{16 \pi G M \rho c}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Einfangsquerschnitt}{5}
+Man betrachte einen aus dem fernen All kommenden großflächigen Strahl parallel fliegender Teilchen der Masse $m$, die eine anfängliche Geschwindigkeit $v_0=10 \unit{km \cdot s^{-1}}$ haben. Welche dieser Teilchen werden auf dem Jupiter (Masse $M=1.90 \ee{27} \unit{kg}$, Radius $R=71500 \unit{km}$) aufschlagen?
+
+\begin{solution}
+\[
+r<\sqrt{R^2+\frac{2 GMR}{v_0^2}}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Rechteckpuls}{4}
+\skizze{
+\psset{unit=0.75cm}
+\begin{pspicture}(0.5,0.8)(6,4.5)
+ \pnode(2,3){A}
+ \pnode(5,3){X}
+ \pnode(2,1){B}
+ \pnode(5,1){Y}
+ \resistor(X)(Y){$R$}
+ \capacitor[labeloffset=1](A)(X){$C$}
+ \wire(B)(Y)
+ \tension(A)(B){$U(t)$}
+\end{pspicture}
+}
+Im abgebildeten Schaltkreis wird die Spannungsquelle ($U=5 \unit{V}$) für eine kurze Zeit von $t_0 = 0 \unit{ms}$ bis $t_1 = 1 \unit{ms}$ eingeschaltet. Man finde die Spannung am Widerstand in Abhängigkeit von der Zeit. Charakteristische Größen der Bauelemente: $C=1 \unit{\mu F}$, $R=1 \unit{k\Omega}$.
+
+\begin{solution}
+\[
+U_R=U_0 e^{-\frac t \tau} (\Theta(t)-\Theta(t-\tau))-U_0 (1-\frac 1e) e^{-\frac t \tau} \Theta(t-\tau)
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Ballonvergleich}{7,5}
+Man vergleiche folgende zwei Ballons: Der Erste ist mit heißer Luft (molare Masse $M_L = 0.029 \unit{kg \cdot mol^{-1}}$) der Temperatur $100^\circ \unit{C}$ gefüllt, während der Zweite Wasserdampf (molare Masse $M_W = 0.018 \unit{kg \cdot mol^{-1}}$) der gleichen Temperatur enthält. Jeder der Ballons kann an der Erdoberfäche ($T_0 = 20^\circ \unit{C}$, $p_0 = 1 \ee{5} \unit{Pa}$) eine Gesamtlast von $300 \unit{kg}$ heben. Man nehme an, dass die Ballons die gleiche Form besitzen und aus dem gleichen gasundurchlässigen Material gefertigt sind. Am unteren Ende besitzen beide eine kleine Öffnung.
+\begin{abcenum}
+ \item Welche Volumina besitzen die Ballons?
+ \item Welche Energie ist jeweils notwendig, um das zum Befüllen notwendige Material von Umgebungstemperatur auf $100^\circ \unit{C}$ aufzuheizen?
+ \item Die Verringerung der Auftriebskraft des ersten Ballons direkt nach Befüllung beträgt $0.3 \unit{N \cdot s^{-1}}$. Wie groß ist die Verringerung für den zweiten Ballon, wenn kein Kondenswasser den Ballon verlässt?
+\end{abcenum}
+\hinweis spezifische Wärmekapazität von Wasser beträgt $c_W = 4200 \unit{J \cdot kg^{-1} \cdot K^{-1}}$, spezifische Verdampfungswärme $q_W = 2.3 \ee{6} \unit{J \cdot kg^{-1}}$.
+
+\begin{solution}
+\begin{itemize}
+ \item[a)] $V_L = \frac{m_L R}{p_0 M_L}\frac{TT_0}{T-T_0}=1175 \unit{m^3}$
+ \item[]   $V_W = \frac{m_L R}{p_0}\frac{TT_0}{M_L T-M_W T_0}=492 \unit{m^3}$
+ \item[b)] $E_L = \frac{7 m_L T_0 R}{2 M_L} = 88.2 \unit{MJ}$
+ \item[]   $E_W = \frac{m_L T_0 M_W}{M_L T-M_W T_0} (c_W (T-T_0)+q_W) = 752 \unit{MJ}$
+ \item[c)] $\dif F_1=g \rho_0 \dif V_1=g \rho_0 \frac{nR}{p_0} \dif T=g \rho_0 \frac{nR}{p_0} \frac{\dot{Q}_1}{n c_p} \dif t$
+ \item[]   $\dot{Q}_2=\left( \frac{V_2}{V_1} \right)^\frac 23 \dot{Q}_1$
+ \item[]   $\dot{F}_2=-0.44 \unit{Ns^{-1}}$
+\end{itemize}
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

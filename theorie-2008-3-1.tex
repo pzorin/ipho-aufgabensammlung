@@ -1,0 +1,128 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2008 -- 3. Runde -- Theoretische Klausur I (26.01.2008)}
+
+\begin{problem}{Drei Geschenke}{3,5}
+\skizze{
+\psset{unit=0.65cm}
+\begin{pspicture}(1,0)(9,4.1)
+\psframe(3,0)(6,3)
+\rput(4.5,1.5){$m$}
+\psframe(6,1)(7,2)
+\rput(6.5,1.5){$m_2$}
+\psframe(4,3)(5,4)
+\rput(4.5,3.5){$m_1$}
+\pscircle(6.3,3.3){0.2}
+\psline(6,3)(6.3,3.3)
+\psline(5,3.5)(6.3,3.5)
+\psline(6.5,2)(6.5,3.3)
+\psline{->}(1,1.5)(3,1.5)
+\uput[90](2,1.5){$F$}
+\psline(1,0)(9,0)
+\psline{->}(8,3)(8,1)
+\uput[0](8,2){$g$}
+\end{pspicture}
+}
+Drei Gewichte sind wie in der Abbildung dargestellt angeordnet und können reibungsfrei aneinander und am Tisch gleiten. Man bestimme unter Vernachlässigung der Masse des Seiles die Kraft $F$, bei der die Gewichte relativ zueinander in Ruhe bleiben.
+
+\begin{solution}
+\[
+F = \frac{m_2 (m+m_1+m_2) g}{m_1}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Quecksilberspiegel}{4,5}
+\skizze{
+\psset{unit=0.68cm}
+\begin{pspicture}(-4,-1.5)(4,4)
+\psline(-3,3)(-3,0)
+\psellipticarc[linestyle=dashed](0,0)(3,0.5){0}{180}
+\psellipticarc(0,0)(3,0.5){180}{360}
+\psline(3,3)(3,0)
+\psellipse(0,2)(3,0.5)
+\psellipticarc[linestyle=dashed](0,2)(3,0.75){180}{360}
+\psline[linestyle=dashed](0,-1.5)(0,4)
+\psellipticarc{->}(0,-1)(0.25,0.1){180}{450}
+\uput{0.5}[0](0,-1){$\omega$}
+\end{pspicture}
+}
+\glqq Large Zenith Telescope\grqq\ in Kanada besteht aus einem Gefäß mit Durchmesser $6 \unit{m}$, welches mit Quecksilber gefüllt ist. Das Gefäß rotiert mit einer konstanten Winkelgeschwindigkeit $\omega$. Wie groß muss diese sein damit die Brennweite des Spiegels etwa $f=12.5 \unit{m}$ beträgt?
+
+\begin{solution}
+Durch die Rotation und die Gravitation nimmt die Quuecksilberoberfläche die Form eines Paraboloids an.
+\[
+h(r) = \frac12 \frac{\omega^2}{g} r^2 + h_0
+\]
+Die Brennweite einer Parabel der Form $ax^2$ beträgt $1/(4a)$, damit ist die benötigte Rotationsfrequenz
+\[
+\omega = \sqrt\frac{g}{2 f}
+\]
+\end{solution}
+
+\end{problem}
+
+\begin{problem}{Messbereicherweiterung}{6}
+Zwei identische Drehspulmesswerke schlagen bei einem Strom von $I_0 = 200 \unit{\mu A}$ voll aus. Diesen wird ein Widerstand nachgeschaltet bzw. parallelgeschaltet, um einen Voltmeter mit Messbereich bis $U_m = 20 \unit{V}$ bzw. einen Amperemeter mit Messbereich bis $I_m = 20 \unit{mA}$ zu erhalten. Diese Instrumente werden anschließend benutzt um einen unbekannten Widerstand $R$ zu vermessen. Einmal wird der Amperemeter direkt an den Widerstand angeschlossen, wobei ein Widerstand von $R_1 = 460 \unit{\Omega}$ beobachtet wird und ein anderes Mal wird der Voltmeter parallel zum Widerstand geschaltet, wobei sich ein Widerstand von $R_2 = 450 \unit{\Omega}$ ergibt. Man bestimme den Widerstand $R$ sowie die Werte der in den Messgeräten verwendeten Widerstände.
+
+\begin{solution}
+$R_D$ sei der Widerstand des Drehspulmesswerkes, $R_A$ und $R_V$ die im Amperemeter bzw. Voltmeter verwendeten Widerstände. Um die vorgegebenen Messbereiche zu erreichen muss für diese folgendes gelten:
+\[
+U_m = I_0 (R_D + R_V), \quad R_D I_0 = I_m \frac{R_D R_A}{R_D+R_A}
+\]
+Weiterhin sind folgende Widerstände gemessen worden:
+\[
+R_1 = R + \frac{R_D R_A}{R_D+R_A}
+\]
+\[
+R_2 = \frac{R (R_D+R_V)}{R+R_D+R_V}
+\]
+damit bekommt man
+\[
+\frac1R = \frac1{R_2} - \frac{I_0}{U_m}, \quad R \approx 452 \unit{\Omega}
+\]
+\[
+R_D = \frac{I_m}{I_0} (R_1 - R), \quad R_D = 796 \unit{\Omega}
+\]
+\[
+R_V = \frac{U_m}{I_0} - R_D, \quad R_V = 99203 \unit{\Omega}
+\]
+\[
+R_A = \frac{R_D I_0}{I_m - I_0}, \quad R_A = 8 \unit{\Omega}
+\]
+
+\end{solution}
+
+\end{problem}
+
+\begin{problem}{Bimetallstreifen}{4}
+Ein geklebter Bimetallstreifen besteht aus zwei gleich dicken Metallenschichten (jeweils $x/2$) mit Wärmeausdehnungskoeffizienten $\alpha_i$, wobei $\alpha_2 > \alpha_1$ ist. Im Ausgangszustand ist der Streifen gerade. Man berechne den Krümmungsradius des Streifens wenn dieser um $\Delta T$ erwärmt wird.
+
+\begin{solution}
+Bei gleichen Elastizitätsmodulen bekommt man
+\[
+R = \frac{x}{2 \Delta T (\alpha_2-\alpha_1)}
+\]
+\end{solution}
+
+\end{problem}
+
+\begin{problem}{Masssendefekt der Erde}{7}
+Die Masse der Erde ist kleiner als die Summe der Massen ihrer Bestandteile, da diese in einem unendlichen Abstand voneinander mehr Energie besitzen würden. Man berechne den durch gravitative Wechselwirkungen entstehenden Massendefekt der Erde. Gegeben ist die Dichteverteilung des Erdmaterials als Funktion des Abstandes zum Erdmittelpunkt $\rho(r)$.
+
+\begin{solution}
+Man bezeichne die Masse des in der Sphäre vom Raidus $r$ mit Zentrum im Mittelpunkt der Erde eingeschlossenen Erdmaterials mit
+\[
+m(r) := \int\limits_0^r 4\pi r^2 \rho(r) \dif r
+\]
+Wenn man nun gedanklich die Erdmasse von außen nach innen vorgehend ins Unendliche abtransportiert und die dafür notwendige Energie als Massendefekt der Erde interpretiert, bekommt man
+\[
+\Delta m = \frac{G}{2 c^2} \int\limits_{0}^{R} \frac1r \tdif{}{r} \left( m^2(r) \right) \dif r
+\]
+In der Klausur war zusätzlich $\rho(r)$ als Graph angegeben. Es bestand also die Möglichkeit über verschiedene Näherungen den numerischen Wert auszurechnen.
+\end{solution}
+
+\end{problem}
+
+\input{previewending.tex}

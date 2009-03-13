@@ -1,0 +1,162 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2008 -- 3. Runde -- Theoretische Klausur II (29.01.2008)}
+
+\begin{problem}{Radioaktiver Zerfall}{3}
+$_{92}^{238}U$ zerfällt sodass am Ende $_{82}^{206}Pb$ entsteht. Man bestimme die minimal dafür notwendige Anzahl von $\alpha$- bzw. $\beta$-Zerfällen.
+\begin{solution}
+Mindestens $8$ $\alpha$-Zerfälle und $6$ $\beta^-$-Zerfälle.
+\end{solution}
+\end{problem}
+
+\begin{problem}{Tripelpunkt}{6}
+In einem Behälter befinden sich jeweils $1 \unit{g}$ Wasserdampf, Wasser und Eis am Tripelpunkt ($612 \unit{Pa}$, $0.010^\circ \unit{C}$). Nun wird dem Behälter $250 \unit{J}$ Wärme zugeführt. Man bestimme die Massen des in den jeweiligen Zuständen befindlichen Wassers nach der Erwärmung.
+\begin{solution}
+Massenerhaltung:\vspace{-1ex}\[
+m_E + m_D + m_W = 3m
+\]
+Volumenerhaltung:\vspace{-1ex}\[
+V=\frac{m RT}{m_m p} + \frac{m}{\rho_E} + \frac{m}{\rho_W} = \frac{m_D RT}{m_m p} + \frac{m_E}{\rho_E} + \frac{m_W}{\rho_W}
+\]
+Energieerhaltung:\vspace{-1ex}\[
+\Delta W = \frac{m-m_E}{\lambda_S} + \frac{m_D-m}{\lambda_V}
+\]
+oder\vspace{-1ex}\[
+\begin{pmatrix}
+3m \\ V \\ \Delta W + m / \lambda_V - m / \lambda_S
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 & 1 \\
+\frac{RT}{m_m p} & \frac{1}{\rho_W} & \frac{1}{\rho_E} \\
+\frac{1}{\lambda_V} & 0 & - \frac{1}{\lambda_S}
+\end{pmatrix}
+\begin{pmatrix}
+m_D \\ m_W \\ m_E
+\end{pmatrix}
+\]
+Damit bekommt man die Massen für alle 3 Zustände direkt:
+\[
+\begin{split}
+\begin{pmatrix}
+m_D \\ m_W \\ m_E
+\end{pmatrix}
+&=
+\frac{1}{(1/\rho_E - 1/\rho_W) / \lambda_V - (1/\rho_W - \frac{RT}{m_m p}) / \lambda_S}\\
+&\begin{pmatrix}
+-\frac{1}{\rho_W \lambda_S} & \frac{1}{\lambda_S} & \frac{1}{\rho_E} - \frac{1}{\rho_W} \\
+\frac{RT}{m_m p} \frac{1}{\lambda_S}+\frac{1}{\rho_E}\frac{1}{\lambda_V}  & -\frac{1}{\lambda_S}-\frac{1}{\lambda_V} & -\frac{1}{\rho_E}+\frac{RT}{m_m p} \\
+-\frac{1}{\rho_W \lambda_V} & \frac{1}{\lambda_V} & \frac{1}{\rho_W}-\frac{RT}{m_m p}
+\end{pmatrix}
+\begin{pmatrix}
+3m \\ V \\ \Delta W + m / \lambda_V - m / \lambda_S
+\end{pmatrix}
+\end{split}
+\]
+Eine gültige Lösungsmöglichkeit besteht auch darin, die Änderung der Masse des Dampfes zu vernachlässigen, da die gasige Phase den Großteil des Volumens einnimmt und bei konstanten Bedingungen keine weitere Masse aufnehmen kann. Damit bekommt man sofort, dass sich die Masse des Eises um $\frac{\Delta W}{\lambda_S}$ verringert und die Masse des flüssigen Wassers entsprechend größer wird.
+\end{solution}
+\end{problem}
+
+\begin{problem}{Peitschenschnur}{8}
+\skizze{
+\psset{unit=0.7cm}
+\begin{pspicture}(-0.6,-0.6)(5.5,1.5)
+\psline{->}(0,0)(5,0)
+\psline(0,1)(2,1)
+\pscircle*(2,1){2\pslinewidth}
+\psarc(0,.5){.5}{90}{270}
+\uput[r](2,1){$m$}
+\uput[90](5,0){$v$}
+\end{pspicture}
+}
+Eine Peitsche hat die Länge $l=2.5 \unit{m}$ und die konstante lineare Dichte $\sigma = 0.2 \unit{kg/m}$. An einem Ende ist ein kleiner Knoten der Masse $m = 10 \unit{g}$ befestigt. Nachdem die Schnur ausgebreitet wurde, zieht man an dem anderen Ende sodass sich dieses mit der konstanten Gerschwindigkeit $v = 3 \unit{m/s}$ bewegt (s. Abb.).
+\begin{abcenum}
+\item Welche maximale Geschwindigkeit erreicht der Knoten? Wann wird diese erreicht?
+\item Mit welcher Kraft muss am Seil gezogen werden? Wie groß ist die maximale Kraft?
+\item Wie verhalten sich die maximale Geschwindigkeit des Knotens und die maximale Kraft wenn die Masse des Knotens sehr klein wird?
+\end{abcenum}
+\hinweis Die Lösung erfordert nicht den Einsatz von Differentialgleichungen.
+\begin{solution}
+Man betrachte die Peitsche in dem Bezugssystem des Endes, an dem gezogen wird. In diesem wird keine Arbeit verrichtet, da die Kraft an einem ruhenden Punkt angreift. Man verwende nun Energieerhaltung in diesem System. Am Anfang bewegt sich die gesamte Peitsche mit $v$, hat also die Energie $\frac12 (l\sigma +m) v^2$. Am Ende ruht die ganze Peitsche mit der Ausnahme des Knotens, also ist die Energie $\frac12 m u^2$. Da außerdem das Bezugssystem gewechselt wurde, beträgt die vom Knoten erreichte Maximalgeschwindigkeit
+\[
+v_\mathrm{max} = v - v \sqrt\frac{l\sigma+m}{m}
+\]
+Die Kraft lässt sich über Impulserhaltung bestimmen. Die maximale Kraft ist
+\[
+F_\mathrm{max} = \frac{\sigma v^2}{2} \left( 1 + \frac{\sigma l}{m} \right)
+\]
+Wenn die Masse des Knotens klein wird, wachsen sowohl die Geschwindigkeit als auch die für deren Erreichen notwendige maximale Kraft in diesem Modell unbegrenzt.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Doppelspalt}{3,5}
+Ein Doppelspalt wird mit Licht der Wellenlänge $500 \unit{nm}$ bestrahlt. Wenn man vor einen der Spalte eine dünne Folie mit Brechungsindex $1.2$ hält, verschiebt sich das Interferenzbild, sodass das Hauptmaximum an der Stelle des ehemaligen Maximums 4. Ordnung liegt. Man bestimme die Dicke der Folie.
+\begin{solution}
+Die Änderung der optischen Weglänge durch das Hinzufügen des Streifens muss 4 Wellenlängen des einfallenden Lichtes betragen:
+\[
+a= \frac{4 \lambda}{n-1}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Pseudokomplexer Stromkreis}{4,5}
+\skizze{
+\psset{unit=0.75cm}
+\begin{pspicture}(-1,-1)(6,4)
+\pnode(0,0){A}
+\pnode(3,0){B}
+\pnode(0,3){C}
+\pnode(3,3){D}
+\resistor(C)(D){$R_1$}
+\switch(A)(B){}
+\resistor(B)(D){$R_2$}
+\coil[parallel,labeloffset=1](D)(B){$L$}
+\battery[labeloffset=1](C)(A){$U$}
+\end{pspicture}
+}
+Im abgebildeten Schaltkreis ist der Schalter am Anfang geöffnet. Es fließen dabei keine Ströme.
+\begin{abcenum}
+\item Der Schalter wird geschlossen und eine längere Zeit geschlossen gehalten. Man bestimme die dabei an $R_2$ umgesetzte Energie.
+\item Nun wird der Schalter wieder geöffnet. Man bestimme wiederum die dabei an $R_2$ umgesetzte Energie.
+\end{abcenum}
+
+\begin{solution}
+\begin{abcenum}
+\item Die Ströme durch $R_1$, $R_2$, $L$ seien mit $I_1$, $I_2$ und $I_L$ bezeichnet. Dann hat man folgendes Anfangswertproblem zu Lösen:
+\[
+I_1 = I_2 + I_L \quad \mathrm{(Knotenregel)}
+\]
+\[
+U = I_1 R_1 + I_2 R_2
+\]
+\[
+I_2 R_2 = L \tdif{I_L}{t}
+\]
+Dabei ist $I_L(0)=0$. Daraus ergibt sich
+\[
+I_L(t) = \frac{U}{R_1} \left( 1-\exp\left( -\frac{R_1 R_2}{L (R_1+R_2)} t \right) \right)
+\]
+Die am 2. Widerstand umgesetzte Energie ist dann
+\[
+E = \int\limits_{t=0}^{\infty} I_2^2 R_2 \dif t
+= \frac{L^2}{R_2} \int\limits_{t=0}^{\infty} \left( \tdif{I_L}{t} \right)^2 \dif t
+= \frac{U^2 L}{2 R_1 (R_1+R_2)}
+\]
+\item Die am Widerstand umgesetzte Energie ist genau die in der Spule gespeicherte Energie:
+\[
+E = \frac{U^2 L}{2 R_1^2}
+\]
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+\begin{problem}{Elektronenstrahl im Oszilloskop}{5}
+In einem nicht abgeschirmten Oszilloskop werden Elektronen mit einer Spannung von $300 \unit{V}$ beschleunigt und treffen nach Durchlauf einer Strecke von $30 \unit{cm}$ auf einen Schirm. Am Äquator ist das Erdmagnetfeld horizontal gerichtet und besitzt eine Flussdichte von etwa $1.75\ee{-5} \unit{T}$. Welche Bahn beschreibt der Elektronenstrahl auf dem Schirm, wenn das Oszilloskop langsam in der horizontalen Ebene gedreht wird? Wie ändert sich das Ergebnis, falls das Experiment an einem Ort durchgeführt wird, wo ein gleich starkes Magnetfeld den Winkel $60^\circ$ mit der Horizontalen einschließt?
+\begin{solution}
+Die Torsion der Elektronenflugbahnen kann bei der gegebenen Feldstärke und Geschwindigkeit vernachlässigt werden, die Bahnen sind also als Parabeln zu nähern. Dabei erhält man am Äquator eine vertikale Linie durch den Nullpunkt des Schirmes. Wenn das Magnetfeld einen Winkel $60^\circ$ mit der Horizontalen einschließen soll, kann mann dieses in eine vertikale und eine (2 Mal kleinere) horizontale Komponente zerlegt werden. Die horizontale bewirkt dabei ebenfalls eine vertikale Auslenkung (2 Mal kleiner) und die vertikale eine konstante Auslenkung in horizontale Richtung, man bekommt also einen parallel verschobenen vertikalen Streifen.
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

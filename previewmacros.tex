@@ -1,0 +1,18 @@
+\ifx \envfinal \undefined
+
+%\documentclass[12pt,a4paper]{article}
+\newcounter{numlabel}
+\setcounter{numlabel}{0}
+
+\newcommand{\problemlabel}{}
+\newenvironment{problem}[2]{
+\stepcounter{numlabel}
+\renewcommand{\problemlabel}{Aufgabe \the\value{numlabel}: #1}
+\subsubsection*{\problemlabel \emph{(#2 Punkte)}}
+}{}
+\newenvironment{solution}{\subsubsection*{\problemlabel}}{}
+\newenvironment{expsolution}{\subsubsection*{\problemlabel}}{}
+
+\begin{document}
+
+\fi

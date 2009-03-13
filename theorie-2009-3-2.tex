@@ -1,0 +1,141 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2009 -- 3. Runde -- Theoretische Klausur II}
+
+\begin{problem}{Federn am Haken}{3,5}
+Es werden $n$ identische Punktmassen $m$ durch ideale Federn der Ruhelänge $l$ und Federkonstanten $k_1,\dots, k_n$ in eine Kette verbunden sodass die erste Feder noch an einem Haken befestigt ist. Wenn die Kette im Weltall mit Winkelgeschwindigkeit $\omega$ um den Haken rotiert haben alle Federn wieder die gleiche Länge $L$. Man bestimme alle Federkonstanten.
+\begin{solution}
+Die Spannung der $i$-ten Feder ist
+\[
+(L-l) k_i = \sum_{j=i}^n m \omega^2 (jL).
+\]
+Damit bekommt man für die Federkonstanten
+\[
+k_i = \frac{m \omega^2 L}{2 (L-l)} \left( n(n+1) - i(i-1) \right)
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Logarithmisches Potentiometer}{4,5}
+Für eine Gravizapa braucht man ein Potentiometer, bei dem sich der Widerstand logarithmisch mit dem Abgriff ändert: $R(x) = R_0 \ln(1+x/k)$, wobei $R_0 = 1 \unit{\Omega}$. Diese werden üblicherweise von Pazaken aus Metallstreifen mit dem spezifischen Widerstand $\rho = 1.5\ee{-6} \unit{\Omega\cdot m}$, Länge $a = 1\unit{m}$ und Breite $b = 1\unit{mm}$ geschliffen.
+\begin{abcenum}
+\item Wie muss das Dickeprofil des fertigen Potentiomenters $h(x)$ beschaffen sein wenn man $k=a$ voraussetzt?
+\item (Bonusfrage) Wie viel KC kostet eine Gravizapa? Es muss nämlich $k=1000 a$ gelten. Wie genau muss ein Pazak arbeiten um das entsprechende Potentiometer herstellen zu können? Zur Auswahl stehende Herstellungsmethoden: Gießen, Fräsen, Ätzen, Lithographie, Maxwelldämon.
+\end{abcenum}
+%\begin{solution}
+%\end{solution}
+\end{problem}
+
+
+\begin{problem}{Teilchendetektion}{4,5}
+In einem Teilchenbeschleuniger wird ein kurzlebiges Teilchen erzeugt das fast sofort in zwei andere zerfällt. Diese werden von Detektoren aufgefangen und als Elektron bzw. Positron identifiziert. Deren Impulse werden dabei registriert, die Ergebnisse sind hier komponentenweise angegeben:
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Teilchen & $c \cdot p_x, \unit{GeV}$ & $c \cdot p_y, \unit{GeV}$ & $c \cdot p_z, \unit{GeV}$ \\
+\midrule
+Elektron & -12 & 49 & -50 \\
+Positron & 21 & -32 & -31 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Welchen Impuls, Energie und Ruheenergie besaß das zerfallene Teilchen? Welches der aufgeführten Teilchen könnte es gewesen sein?
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Teilchen & Ruheenergie, $\unit{MeV}$ & Ladung & Spin \\
+\midrule
+Elektron & 0.51 & -1 & 1/2 \\
+Positron & 0.51 & +1 & 1/2 \\
+Proton & 940 & +1 & 1/2 \\
+Up-Quark & 2 & +2/3 & 1/2 \\
+Myon & 105 & -1 & 1/2 \\
+$W^+$ & 80400 & +1 & 1 \\
+$W^-$ & 80400 & -1 & 1 \\
+$Z_0$ & 91100 & 0 & 1 \\
+Photon & 0 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{solution}
+Der Impuls des Teilchens betrug
+\[
+\vec p = \vec p_\mathrm{Elektron} + \vec p_\mathrm{Positron} = (9,\, 17,\, -81)^T \unit{GeV}/c.
+\]
+Die Ruheenergie des Elektrons bzw. des Positrons kann vernachlässigt werden. Die Energie des Teilchens betrug also etwa
+\[
+E \approx (|\vec p_\mathrm{Elektron}| + |\vec p_\mathrm{Positron}|) c \approx 120 \unit{GeV}.
+\]
+Für die Ruhemasse bekommt man
+\[
+m^2 c^2 \approx 2 |\vec p_\mathrm{Elektron}|  |\vec p_\mathrm{Positron}| - 2 \vec p_\mathrm{Elektron} \cdot \vec p_\mathrm{Positron}, \quad m \approx 87 \unit{GeV} / c^2
+\]
+Von der Masse her kommen also $W^+$, $W^-$ und $Z_0$ in Frage. Da die elektrische Ladung erhalten ist muss es also $Z_0$ sein.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Fata Morgana}{5}
+Eine Wüste, aber auch eine lange gerade Straße erscheint bei extremer Hitze oft nass. Dies liegt an der heißen Luftschicht direkt über dem Boden, die flach einfallendes Licht z.B. von Himmel reflektiert. Wie heiß muss die Luft direkt an der Oberfläche sein damit man bei einer Augenhöhe von $H = 1.5 \unit{m}$ in einer Entfernung von $L = 200 \unit{m}$ den Anfang der Spiegelung beobachtet? Man gehe davon aus dass die Temperatur der Luft nur von der Höhe abhängt. Der Brechungsindex hängt mit der Luftdichte über $n-1 \sim \rho$ zusammen. Die Temperatur der Luft auf Augenhöhe beträgt $T_0 = 20 \cel$, die Dichte $\rho_0 = 1.204 \unit{kg \cdot m^{-3}}$, Brechungsindex $n_0 = 1 + n_\Delta$, $n_\Delta = 2.92\ee{-4}$. \hinweis Die Druckänderung über die betrachtete Höhe kann vernachlässigt werden, der Druck ist also konstant $p = 1 \unit{atm}$.
+\begin{solution}
+Man betrachte einen Lichtstrahl, der vom Betrachter ausgeht und scheinbar in Entfernung $L$ endet. Für den Winkel den dieser mit der Vertikalen einschließt gilt
+\[
+\tan\alpha = \frac{L}{H}, \quad \sin\alpha = \frac{L}{\sqrt{L^2 + H^2}}
+\]
+Da die Isothermen parallel zum Boden verlaufen, kann das Brechungsgesetz verwendet werden. Die Bedingung dass der Strahl am Boden gerade noch umkehrt lässt sich schreiben als
+\[
+n_0 \sin\alpha = n_\mathrm{Boden} \sin\frac\pi2 = n_\mathrm{Boden}.
+\]
+Da die Luftdichte bei konstantem Druck umgekehrt proportional zur Temperatur ist, gilt
+\[
+n_\mathrm{Boden} = 1 + n_\Delta \frac{\rho_\mathrm{Boden}}{\rho_0} = 1 + n_\Delta \frac{T_0}{T_\mathrm{Boden}}
+\]
+und damit
+\[
+T_\mathrm{Boden} = \frac{ n_\Delta T_0 }{ n_0 \sin\alpha - 1 }
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Feder als Spule}{5}
+Durch eine spiralförmige Feder mit Radius $r = 5 \unit{cm}$, Federkonstante $k = 1 \unit{N/m}$) und $N = 400$ Windungen fließt ein Strom $I = 1 \unit{A}$. Die Länge der Feder beträgt dabei $L = 40 \unit{cm}$. Wie groß ist die Ruhelänge $l$ der Feder?
+\begin{solution}
+Die Magnetische Feldstärke innerhalb der Spule ist in erster Näherung konstant
+\[
+B = \frac{\mu_0 I N}{L}.
+\]
+Die Energie des Magnetfeldes ist
+\[
+E_f = \int \frac{B^2}{2 \mu_0} \dif V = \frac{\pi r^2 \mu_0 I^2 N^2 }{2 L}
+\]
+und die Spannenergie der Feder
+\[
+E_s = \frac12 k \left( L - l \right)^2.
+\]
+Da in diesem Fall die Lagrangefunktion $\mathcal L =E_f - E_s + \frac12 m_\mathrm{eff} \dot L^2$ lautet, ist die Gleichgewichtsbedingung
+\[
+0 = \ddot L \sim \tdif{}{t} \pdif{}{\dot L} \mathcal L = \pdif{}{L} \mathcal L =  - \frac{\pi r^2 \mu_0 I^2 N^2 }{2 L^2} - k \left( L - l \right),
+\]
+was auf die Ruhelänge
+\[
+l  =  L + \frac{\pi r^2 \mu_0 I^2 N^2 }{2 k L^2}
+\]
+führt.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Wasserrakete}{7,5}
+Eine Flasche (Volumen $V_g = 2  \unit{l}$, Masse $M = 200 \unit{g}$) wird zur Hälfte mit Wasser gefüllt. Der restliche Teil enthält komprimierte Luft. Die Flasche wird mit dem Verschluss (Radius $r = 1 \unit{cm}$) nach unten auf Meereshöhe aufgestellt. Dieser wird anschließend geöffnet.
+\begin{abcenum}
+\item Wie groß muss der Druck in der Flasche sein damit diese abhebt?
+\item Wie groß muss der Druck sein damit die Flasche weiter beschleunigt bis das Wasser ausgeht?
+\end{abcenum}
+Die Reibung kann vernachlässigt werden. Weiterhin ist der Durchmesser der Flasche als groß gegenüber dem des Verschlusses anzunehmen. Diese Aufgabe zeigt übrigens eindrucksvoll warum ein Pepelaz ohne Gravizapa nutzlos ist.
+%\begin{solution}
+%\end{solution}
+\end{problem}
+
+\input{previewending.tex}

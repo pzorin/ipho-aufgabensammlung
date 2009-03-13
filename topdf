@@ -3,6 +3,7 @@ FILENAME1="ipho_aufgaben"
 
 echo $'\e[0;32m' 1 LATEX $' \e[0m'
 time latex -interaction=batchmode $FILENAME1.tex
+#time latex $FILENAME1.tex
 
 echo $'\e[0;32m' 2 dvips+ps2pdf $' \e[0m'
 time dvips -q -Ppdf -o $FILENAME1-pics.ps $FILENAME1.dvi
@@ -12,6 +13,6 @@ echo $'\e[0;32m' 3 PDFLATEX $' \e[0m'
 time pdflatex -interaction=batchmode $FILENAME1.tex
 
 echo $'\e[0;32m' 4 Delete junk $' \e[0m'
-rm $FILENAME1.aux $FILENAME1.dvi $FILENAME1.log $FILENAME1.toc $FILENAME1-pics.ps $FILENAME1-pics.pdf AUTO_LOESUNGSDATEI.tex AUTO_LOESUNGSDATEI_EXP.tex
+rm $FILENAME1.aux $FILENAME1.dvi *.log $FILENAME1.toc $FILENAME1-pics.ps $FILENAME1-pics.pdf AUTO_LOESUNGSDATEI.tex AUTO_LOESUNGSDATEI_EXP.tex
 
 exit 0

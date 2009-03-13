@@ -1,0 +1,153 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2006 -- 3. Runde -- Theoretische Klausur I (29.1.06)}
+
+\begin{problem}{Cola mit Eiswuerfel}{3}
+Auf einer Party wirft der Gastgeber in Ihr Glas Cola ($m_\mathrm{Cola} = 200\unit{g}$, $T_\mathrm{Cola} = 20\cel$) einen Eiswürfel ($m_\mathrm{Eis} = 40\unit{g}$, $T_\mathrm{Eis} = -1\cel$).
+\begin{abcenum}
+\item Welche Temperatur hat Ihr Getränk, nachdem das gesamte Eis geschmolzen ist?
+\item (Zusatzfrage) Was halten Sie von Ihrem Gastgeber?
+\end{abcenum}
+Wärmeaustausch mit der Umgebung kann vernachlässigt werden.\\
+Die Wärmekapazität von Cola gleicht der des Wassers, $c_{\mathrm{Cola}} = 4200\unit{\frac{J}{kg \cdot K}}$; Wärmekapazität von Eis ist $c_{\mathrm{Eis}} = 2130\unit{\frac{J}{kg \cdot K}}$, latente Schmelzwärme beträgt $3,36\ee{5}\unit{\frac{J}{kg}}$.
+\begin{solution}
+Der Eiswürfel schmilzt vollständig. Die Endtemperatur beträgt $3,24\cel$
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Licht im Gitter}{4}
+Licht von einer Lichtquelle, welche ein festes Linienspektrum 
+erzeugt, fällt senkrecht auf ein optisches Gitter mit $300$ Strichen 
+pro mm. Unter einem Winkel von $24,46\degr$ beobachtet man Maxima 
+für zwei Linien, eine aus dem roten und eine aus dem blauen Bereich des Spektrums.\\
+Gibt es andere Winkel, unter denen man Maxima für beide Linien beobachtet?\\
+\hinweis\\
+rotes Licht: $640\unit{nm}\leq\lambda\leq750\unit{nm}$\\
+blaues Licht: $360\unit{nm}\leq\lambda\leq490\unit{nm}$
+\begin{solution}
+Die rote und die blaue Linie liegen bei $690\unit{nm}$ bzw. $460\unit{nm}$. Die Maxima fallen für\\
+$\alpha=0\degr$, $\pm24\degr,46\degr$ und $\pm55,89\degr$ zusammen.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Amperemeter}{5}
+\skizze{
+\psset{yunit=0.6366cm}
+\psset{xunit=0.9cm}
+\begin{pspicture}(-1,-1)(5.5,2.5)
+\psline{<->}(0,2)(0,0)(5.2,0)
+\uput[l](0,2){$I$}
+\uput[d](5.2,0){$t$}
+\psline[linewidth=1.5pt](0,1)(5,1)
+\uput[r](-1,1){\Large I}
+\end{pspicture}
+
+\begin{pspicture}(-1,-1)(5.5,2.5)
+\psline{<->}(0,2)(0,0)(5.2,0)
+\uput[l](0,2){$I$}
+\uput[d](5.2,0){$t$}
+\uput[r](-1,1){\Large II}
+\psplot[linewidth=1.5pt,plotpoints=400]{0}{5}{x 90 mul sin x 90 mul sin abs add 2 div}
+\end{pspicture}
+
+\begin{pspicture}(-1,-1)(5.5,2.5)
+\psline{<->}(0,2)(0,0)(5.2,0)
+\uput[l](0,2){$I$}
+\uput[d](5.2,0){$t$}
+\psline[linewidth=1.5pt](0,0)(1,1)(3,-1)(5,1)
+\uput[r](-1,1){\Large III}
+\end{pspicture}
+}
+Die abgebildeten Signale I-III werden mit drei verschiedenen Amperemetern gemessen.
+Das erste Amperemeter misst den Effektivwert. In allen drei Fällen zeigt es $2\unit{A}$ an.\\
+Die Amperemeter 2 und 3 haben Gleichrichter eingebaut (für den gleichgerichteten Strom gilt: $I'=I$ für $I \geq 0$, $I' = 0$ für $I < 0$). Die Anzeige des 2. Amperemeters ist zur Amplitude und die des 3. Amperemeters zum zeitlichen Mittelwert des gleichgerichteten Stroms proportional. Beide Amperemeter sind so geeicht, dass sie bei sinusförmigem Wechselstrom jeweils den Effektivwert anzeigen.\\
+Was zeigen die Amperemeter in jedem der Fälle I-III an?
+\begin{solution}
+% ?
+\[
+I_{S,I}=2\unit{A},\quad I_{S,II}=\sqrt{2}\cdot 4\unit{A},\quad I_{S,III}=\sqrt{3}\cdot 2\unit{A}
+\]
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Flummis}{5}
+\skizze{
+\psset{unit=0.6cm}
+\begin{pspicture}(-2,-0.1)(2,5)
+\psline[linewidth=2pt](-1.5,0)(1.5,0)
+\pscircle(0,3.7){0.6}\uput{0.9}[l](0,3.7){$m_1$}
+\pscircle(0,4.6){0.3}\uput{0.6}[l](0,4.6){$m_2$}
+\psline{<->|}(1.2,0)(1.2,4.3)\uput[r](1.2,2){$h$}
+\end{pspicture}
+}
+Zwei Flummis fallen aus einer (großen) Höhe $h$ auf den Boden. Der untere Flummi hat die Masse $m_1$ und der obere $m_2$. Welche Höhe erreicht der obere Flummi nach dem Stoß?\\
+Nehmen Sie an, dass alle Stöße elastisch sind.\\
+Betrachten Sie den Fall $m_1 > m_2$.\\
+Was gilt im Fall $m_1 \gg m_2$?
+\begin{solution}
+Der obere Flummi erreicht die Höhe $h'=h\left(\frac{3m_1-m_2}{m_1+m_2}\right)^2$. Für $m_1\gg m_2$ ist $h' \approx 9h$.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Stromdurchflossene Leiterschleife}{5}
+\skizze{
+\begin{pspicture}(-1,0.5)(4.5,3.5)
+\psline[linewidth=1.5pt](0,1)(0,4)
+\psline[linewidth=1.5pt]{->}(0,2)(0,3)\uput[l](0,3){$I_0$}
+\psframe(1,1.5)(3.5,3.5)
+\psline{|<->|}(0,1.3)(1,1.3)\uput[d](0.5,1.3){$d$}
+\psline{|<->|}(1,1.3)(3.5,1.3)\uput[d](2.25,1.3){$a$}
+\psline{|<->|}(3.7,1.5)(3.7,3.5)\uput[r](3.7,2.5){$b$}
+\psline[linewidth=2pt]{->}(2.5,1.5)(3,1.5)\uput[u](2.75,1.5){$I_L$}
+\end{pspicture}
+}
+Eine stromdurchflossene Leiterschleife befindet sich in einer Ebene mit einem stromdurchflossenen
+unendlich langen Leiter. Welche Kraft wirkt auf die Leiterschleife?
+\begin{solution}
+Die auf die horizontalen Leiterabschnitte wirkenden Kräfte heben sich genau auf. Damit reicht es die vertikalen Abschnitte zu betrachten, was eine Integration überflüssig (oder trivial) macht, denn dort ist die Längenkraftdichte konstant. Damit ergibt sich
+\[
+F=\frac{\mu_0 I_0 I_L b}{2\pi} \left( \frac{1}{d}-\frac{1}{d+a} \right).
+\]
+Die resultierende Kraft liegt in der Schleifenebene senkrecht zum Leiter, und zeigt vom Leiter weg.
+\end{solution}
+\end{problem}
+
+
+\begin{problem}{Herunterfallende Kette}{7}
+Eine lose zusammengelegte offene Kette mit der Länge $1\unit{m}$ liegt auf einer Tischkante $1\unit{m}$ über dem Boden. Zum Zeitpunkt $t = 0$ fängt ein Ende der Kette an, reibungslos über die Tisschkante nach unten zu gleiten.\\
+Nach welcher Zeit liegen beide Kettenenden auf dem Boden?\\
+Nehmen Sie an, dass die Beschleunigung der Kette konstant bleibt, während die Kette über die Tischkante gleitet.
+\begin{solution}
+Man betrachte zunächst die Phase in der das obere Ende noch auf dem Tisch liegt und bezeichne die Höhe des Tisches und die Länge der Kette mit $h$, die lineare Dichte der Kete mit $\lambda$ und die Länge des bereits fallenden Abschnittes der Kette mit $l$. Impulserhaltung liefert
+\[
+\lambda l g = \tdif{p}{t}  = \tdif{}{t} (\lambda l l'),
+\]
+oder umgeschrieben
+\[
+g l = l l'' + l'^2.
+\]
+Eine Lösung dieser Gleichung ist
+\[
+l = \frac a2 t^2, \quad a = \frac g3.
+\]
+Man sieht leicht dass diese mit den Randbedingungen verträglich ist. $a$ ist die Beschleunigung, die die Kette in dieser Phase erfährt. Diese Phase dauert also
+\[
+t_1 = \sqrt{\frac{2 h}{a}} = \sqrt{\frac{6 h}{g}}.
+\]
+Anschließend fällt das obere Ende der Kette frei mit der Beschleunigung $g$ und der Anfangsgeschwindigkeit $a t_1$ die Strecke $h$. Die dafür benötigte Zeit beträgt
+\[
+t_2 = \frac{-at_1 + \sqrt{a^2 t_1^2 + 2 g h}}{g} = \sqrt\frac{2 h}{3 g}
+\]
+und die Gesamtzeit damit
+\[
+t = t_1 + t_2 = \frac{4 \sqrt 6}{3} \sqrt\frac{h}{g} \approx 1,04\unit{s}.
+\]
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

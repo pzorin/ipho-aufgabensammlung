@@ -1,0 +1,218 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2007 -- 4. Runde -- Theoretische Klausur I (10.04.2007)}
+\begin{problem}{Kondensatorreihenschaltung}{3}
+\skizze{
+\psset{unit=0.5cm}
+\begin{pspicture}(-1,-2.5)(10,2.1)
+\psline(1,0)(2,0)
+\psline(2,-1)(2,1)
+\psline(3,-1)(3,1)
+\psline(3,0)(5,0)
+\psline(5,-1)(5,1)
+\psline(7,-1)(7,1)
+\psline(7,0)(8,0)
+\psline{|<->|}(2,1.3)(7,1.3)
+\psline{|<->|}(3,-1.3)(5,-1.3)
+\uput[ul](1,0){$A$}
+\uput[ur](8,0){$B$}
+\uput[90](4.5,1.3){$a$}
+\uput[-90](4,-1.3){$b$}
+\psdots[dotsize=0.12cm](1,0)(8,0)
+\end{pspicture}
+}
+Die Abbildung zeigt zwei in Reihe geschaltete Plattenkondensatoren, wobei das Mittelstück der Länge $b$ horizotal verschiebbar ist. Die Fläche jeder Platte ist $F$. Wie groß ist die Gesamtkapazität zwischen $A$ und $B$?
+
+\begin{solution}
+\[
+C=\frac{\varepsilon_0 F}{a-b}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Schlittenziehen}{4}
+Ein Kind zieht einen Schlitten der Masse $m$ mit konstanter Geschwindigkeit eine schiefe Ebene hinauf, die einen Winkel $\alpha$ mit der Horizontalen einschließt. Das Seil, an dem das Kind zieht, schließt mit der schiefen Ebene einen Winkel $\beta$ ein. Wie muss $\beta$ gewählt werden, wenn die vom Kind aufzubringende Kraft minimal werden soll? Wie groß ist die Kraft in diesem Fall? Der Gleitreibungskoeffizient zwischen Schnee und Schlitten sei $\mu$.
+\begin{solution}
+\[
+F_{\perp}=mg \cos\alpha - F \sin\beta>0
+\]
+\[
+F_{\parallel}=-mg \sin\alpha +F \cos\beta =F_{\perp} \mu
+\]
+\[
+\mu\left(mg \cos\alpha-F \sin\beta \right)=-mg \sin\alpha+F \cos\beta
+\]
+mit $k:=\frac{F}{mg}$ folgt
+\[
+\mu \cos\alpha - \mu k \sin\beta=-\sin\alpha+k \cos\beta
+\]
+\[
+k=\frac{\mu \cos\alpha+\sin\alpha}{\cos\beta + \mu\cos\beta} 
+\]
+mit $\gamma:=\arccos\frac{\mu}{\sqrt{1+\mu^2}}$ folgt
+\[
+k=\frac{\cos\gamma\cos\alpha+\sin\gamma\sin\alpha}{\sin\gamma\cos\beta + \cos\gamma\cos\beta}=\frac{\cos(\gamma-\alpha)}{\sin(\gamma+\beta)}
+\]
+Der Zähler ist positiv, folglich tritt ein Minimum bei $\sin(\gamma+\beta)=1$ ein. Damit gilt
+\[
+\beta=\frac\pi 2-\arccos\frac{\mu}{\sqrt{1+\mu^2}}=\arctan\mu
+\]
+\[
+F=mg \cos(\gamma-\alpha)
+\]
+Danach sollte noch überprüft werden, dass der zur schiefen Ebene senkrechter Anteil der Kraft positiv ist. Dies ist bei $\gamma \geq \alpha$ der Fall. Wenn $\mu$ zu groß wird, ist das Hochziehen nicht mehr möglich, man muss den Schlitten anheben.
+\end{solution}
+\end{problem}
+
+\begin{problem}{Interferenz}{4,5}
+\skizze{
+\psset{unit=0.40cm}
+\begin{pspicture}(-1.5,-1.5)(11,5)
+\psline(0,0)(10,0)
+\psline(10,-.5)(10,5)
+
+\psdots(0,1)
+\psline{->}(0,1)(2,0)
+\psline{->}(2,0)(10,4)
+\psline{->}(0,1)(10,4)
+%\psline[linestyle=dashed](2,0)(10,-4)
+\psline{<->}(-0.3,1)(-0.3,0)
+\uput[l](-0.3,0.5){$d$}
+\rput(5,3.5){$l_1$}
+%\rput(5,-3){$l_2$}
+\uput[r](10,2){$x$}
+\uput[d](5,0){$L$}
+
+\end{pspicture}
+}
+In einem Experiment trifft monochromatisches Licht von einer Lichtquelle auf einen Schirm. Ein Teil des Lichtes wird vor dem Auftreffen auf den Schirm an einem Spiegel reflektiert. Der Abstand $d$ zwischen Lichtquelle und Spiegel ist sehr viel kleiner als $L=1 \unit{m}$. Der Abstand zwischen den auf dem Schirm entstehenden Maxima beträgt nahe dem Spiegel $\Delta x=0.5 \unit{mm}$. Vergrößert man den Abstand $d$ um $\Delta d = 0.3 \unit{mm}$, so verringert sich der Abstand $\Delta x$ auf $\frac 23$ des ursprünglichen Wertes. Wie groß ist die Wellenlänge $\lambda$ des einfallenden Lichtes?
+\begin{solution}
+\skizze{
+\psset{unit=0.40cm}
+\begin{pspicture}(-1.5,-5)(11,5)
+\psline(0,0)(10,0)
+\psline(10,-5)(10,5)
+
+\psdots(0,1)
+\psline{->}(0,1)(2,0)
+\psline{->}(2,0)(10,4)
+\psline{->}(0,1)(10,4)
+\psline[linestyle=dashed]{->}(2,0)(10,-4)
+\psline{<->}(-0.3,1)(-0.3,0)
+\uput[l](-0.3,0.5){$d$}
+\rput(5,3.5){$l_1$}
+\rput(5,-3){$l_2$}
+\uput[r](10,2){$x$}
+\uput[r](10,-2){$x$}
+\uput[d](5,0){$L$}
+
+\end{pspicture}
+}
+Die Weglänge des reflektierten Lichtes lässt sich anhand der Zeichnung leicht bestimmen:
+\[
+l_2=\sqrt{L^2+(x+2d)^2}, \quad l_1=\sqrt{L^2+x^2}
+\]
+\[
+\tdif{}{x}(l_2-l_1)=\frac{x+2d}{\sqrt{L^2+(x+2d)^2}}-\frac{x}{\sqrt{L^2+x^2}}=\frac{\lambda}{\Delta x}
+\]
+Wenn man nun $d$ durch $d+\Delta d$ ersetzt, bekommt man die Gleichung für den Fall der verschobenen Lichtquelle:
+\[
+\frac{x+2(d+\Delta d)}{\sqrt{L^2+(x+2(d+\Delta d))^2}}-\frac{x}{\sqrt{L^2+x^2}}=\frac{\lambda}{\frac 23 \Delta x}
+\]
+Wenn man diese Gleichungen voneinander abzieht erhält man folgendes:
+\[
+\frac{x+2 d+2 \Delta d}{\sqrt{L^2+(x+2(d+\Delta d))^2}} - \frac{x+2d}{\sqrt{L^2+(x+2d)^2}} = \frac{\lambda}{2 \Delta x}
+\]
+Da $d<<L$ gilt, kann man die Wurzeln mit $L$ nähern. Dann kommt
+\[
+\frac{2 \Delta d}{L}=\frac{\lambda}{2 \Delta x}
+\]
+raus, also
+\[
+\lambda=\frac{4 \Delta d \Delta x}{L}=600\unit{nm}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Asteroidentemperatur}{7}
+Ein kugelförmiger schwarzer Asteroid mit Radius $100 \unit{km}$ ist aus dem Sonnensystem herausgeschleudert worden. Im Inneren des Asteroiden produzieren radioaktive Elemente Wärme mit einer Rate von $\dot{q}=1 \ee{-10} \unit{J\cdot kg^{-1} \cdot s^{-1}}$, die im gesamten Asteroiden gleich ist. Die Dichte des Asteroiden beträgt $\rho=3500 \unit{kg \cdot m^{-3}}$ und dessen Wärmeleitfähigkeit $\lambda=2.1 \unit{W \cdot m^{-1} \cdot K^{-1}}$. Bestimmen Sie die Kern- und Oberflächentemperatur des Asteroiden nach einer langen Zeit.
+\begin{solution}
+Gesamtwärmeabgabe mit Oberflächenabstrahlung gleichgesetzt:
+\[
+\frac43 \pi R^3 \rho \dot{q}=\sigma T_O^4 \cdot 4\pi R^2
+\]
+\[
+T_O=\left( \frac{R\rho \dot{q}}{3\sigma} \right)^\frac14
+\]
+Nun betrachte man eine dünne Kugelschale mit Radius $r$, Dicke $\dif r$. Diese muss die gesamte in derem Inneren erzeugte Wärme nach außen abführen:
+\[
+\frac43 \pi r^3 \rho \dot{q}=\lambda \cdot 4\pi r^2 \frac{T(r)-T(r+\dif r)}{\dif r}
+\]
+\[
+\frac{\rho \dot{q}}{3 \lambda}r+\tdif{T}{r}=0
+\]
+\[
+T(r)=C-\frac{\rho \dot{q}}{6 \lambda} r^2
+\]
+\[
+T(0)=T(R)+{\rho \dot{q}}{6 \lambda}R^2=T_O+{\rho \dot{q} R^2}{6 \lambda}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Springende Murmel}{5,5}
+Eine Murmel der Masse $m$ hüpft die Treppe hinunter. Die Breite $b$ der Stufen ist gleich der Höhe der Stufen. Die Kugel hüpft so, dass sie auf jeder Stufe an der selben Stelle auftrifft. Die Steighöhe $h$ über dem jeweiligen Auftreffpunkt sei bei jeder Stufe gleich. Wie groß ist die horizontale Geschwindigkeit der Murmel und welcher Anteil der kinetischen Energie geht jeweils bei einem Stoß mit einer Stufe verloren?
+\begin{solution}
+\[
+T=\sqrt{\frac{2h}{g}}+\sqrt{\frac{2(h+b)}{g}}=\frac{b}{v_h}
+\]
+\[
+v_h=\frac{b\sqrt{\frac{g}{2}}}{\sqrt{h}+\sqrt{h+b}}
+\]
+\[
+1-\frac{E_A}{E_B}=1-\frac{v_h^2+2gh}{v_h^2+2g(h+b)}=\frac{2gb}{v_h^2+2g(h+b)}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Magnetfeld eines Drahtes}{5}
+\skizze{
+\psset{unit=0.35cm}
+\begin{pspicture}(-6.5,-6.5)(6.5,6.5)
+\psdots[dotsize=0.12cm](0,0)(2,0)
+\pscircle(0,0){6}
+\pscircle(2,0){2}
+\psline{->}(0,0)(2,0)
+\rput{120}(0,0){\psline{->}(0,0)(6,0)}
+\rput{30}(2,0){\psline{->}(0,0)(2,0)}
+\rput(1,0.5){$\vec{a}$}
+\rput(-2.5,2){$3a$}
+\rput(2.5,0.75){$a$}
+\psdots[dotsize=0.075cm](-2.5,-4)
+\pscircle(-2.5,-4){0.3}
+\uput[45](-2.5,-4){$\vec{I}$}
+\end{pspicture}
+}
+Ein unendlich langer gerader Draht hat einen kreisförmigen Durchschnitt des Radius $3a$, in dem stets ein Kreis des Radius $a$ im Abstand $\vec a$ von der Drahtachse fehlt. Der Draht wird entlang seiner selbst von einem homogenen Strom der Gesamtstärke $\vec I$ durchflossen. Man bestimme das vom Draht erzeugte Magnetfeld in jedem Punkt des Raumes.
+\begin{solution}
+Stromdichte im Draht beträgt
+\[
+\vec{j}:=\frac{1}{8\pi a^2}\vec{I}.
+\]
+Man fasse den Strom als überlagerung zweier entgegengerichteter zylinderförmiger Ströme auf. Es folgt für das Feld außerhalb des Drahtes
+\[
+\vec{B}=\frac{9 a^2 \mu_0}{2} \frac{\vec{j}\times\vec{r}}{r^2}-\frac{a^2 \mu_0}{2}\frac{\vec{j} \times (\vec{r}-\vec{a})}{(\vec{r}-\vec{a})^2},
+\]
+im Draht
+\[
+\vec{B}=\frac{\mu_0}{2} \vec{j}\times\vec{r}-\frac{a^2 \mu_0}{2}\frac{\vec{j} \times (\vec{r}-\vec{a})}{(\vec{r}-\vec{a})^2}
+\]
+und im Loch
+\[
+\vec{B}=\frac{\mu_0}{2} \vec{j}\times\vec{a}.
+\]
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

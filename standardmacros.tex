@@ -1,0 +1,60 @@
+\ifx \mpreamble \undefined
+\documentclass[12pt,a4paper]{article}
+\usepackage{answers}
+\usepackage{microtype}
+\usepackage[left=3cm,top=2cm,bottom=3cm,right=2cm,includehead,includefoot]{geometry}
+
+\usepackage{amsfonts,amsmath,amssymb,amsthm,graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+
+\ifx \envfinal \empty
+\usepackage{pst-pdf}
+\fi
+
+\usepackage{pstricks}
+\usepackage{pst-circ}
+\usepackage{pst-plot}
+
+\usepackage{booktabs}
+
+% Muss als letztes eingebunden werden
+%\usepackage[bookmarks=true,bookmarksnumbered,colorlinks=true,pdftitle={IPhO-Aufgaben},pdfstartview=FitH,pdfauthor={Pavel Zorin}]{hyperref}
+\usepackage[bookmarks=false,pdftitle={IPhO-Aufgabensammlung},pdfstartview=FitH,pdfauthor={Pavel Zorin}]{hyperref}
+
+%Times 10^n
+\newcommand{\ee}[1]{\cdot 10^{#1}}
+%Units
+\newcommand{\unit}[1]{\,\mathrm{#1}}
+%Differential d's
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\tdif}[2]{\frac{\dif#1}{\dif#2}}
+\newcommand{\pdif}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\ppdif}[2]{\frac{\partial^{2}#1}{\partial#2^{2}}}
+%Degree
+\newcommand{\degr}{^\circ}
+%Degree Celsius (C) symbol
+\newcommand{\cel}{\,^\circ\mathrm{C}}
+% Hinweis
+\newcommand{\hinweis}{\emph{Hinweis:} }
+% Aufgaben mit Buchstaben numerieren
+\newenvironment{abcenum}{\renewcommand{\labelenumi}{(\alph{enumi})} \begin{enumerate}}{\end{enumerate}\renewcommand{\labelenumi}{\theenumi .}}
+%%%%%%%%%% Skizzen %%%%%%%%%%%%
+\ifx \envfinal \empty
+\newcommand{\skizze}[1]{
+\begin{center}
+#1
+\end{center}
+}
+\else
+\newcommand{\skizze}[1]{
+\begin{figure}
+\begin{center}
+#1
+\end{center}
+\end{figure}
+}
+\fi
+
+\def \mpreamble {}
+\fi

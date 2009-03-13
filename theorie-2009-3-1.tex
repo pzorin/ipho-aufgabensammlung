@@ -1,0 +1,142 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2009 -- 3. Runde -- Theoretische Klausur I}
+
+\begin{problem}{Linse vor dem Spiegel}{4}
+Eine dünne Linse erzeugt ein Bild eines Objektes. Direkt hinter die Linse wird nun parallel zur selben ein flacher Spiegel gestellt. Die Größe, wenn nicht die Lage, des Bildes bleibt unverändert. Man bestimme die Vergrößerung.
+%\begin{solution}
+%\end{solution}
+\end{problem}
+
+\begin{problem}{Kondensatoren und Dioden}{5}
+\skizze{
+\psset{unit=0.75cm}
+\begin{pspicture}(-2,-1)(6,4)
+\pnode(0,0){Erde1}
+\pnode(2,0){Erde2}
+\pnode(4,0){Erde3}
+\pnode(0,3){U1}
+\pnode(2,3){A}
+\pnode(4,3){B}
+
+\tension[labeloffset=1](Erde1)(U1){$U(t)$}
+\capacitor[labeloffset=-1](U1)(A){$C$}
+\capacitor[labeloffset=-1](Erde3)(B){$2 C$}
+\diode(B)(A){}
+\diode(A)(Erde2){}
+\ground(Erde2)
+\wire(Erde1)(Erde2)
+\wire(Erde2)(Erde3)
+\nput{90}{A}{$A$}
+\nput{90}{B}{$B$}
+\end{pspicture}
+}
+An der dargestellten Schaltung wird eine Rechteckspannung $U(t)$ mit Grenzwerten $\pm U_0$ und Pulsdauer $\tau$ angelegt. Man bestimme das asymptotische Verhalten der Potentiale in der Punkten $A$, $B$ unter der Annahme dass die Kondensatoren und die Dioden ideal sind.
+%\begin{solution}
+%\end{solution}
+\end{problem}
+
+\begin{problem}{Erwärmung durch Strahlung}{3,5}
+Im Mittelpunkt eines wassergefüllten perfekt isolierten kugelförmigen Gefäßes befindet sich eine Probe eines radioaktiven Isotops, bei dessen Zerfall ein Elektron und ein Photon freigesetzt werden. Die Elektronen werden vom Wasser weitgehend komplett absorbiert, die Photonen nicht. Wie lange dauert es bis das Wasser anfängt zu sieden? Man nehme an, die Temperatur sei in dem Gefäß stets überall gleich, Druckausgleich zur Atmosphäre gegeben und das Volumen der Probe vernachlässigbar.
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Radius des Gefäßes & $r = 10 \unit{cm}$\\
+Stoffmenge der Probe & $n = 5 \unit{mol}$\\
+Halbwertszeit des Isotops & $T_{\frac12} = 5 \unit{a}$\\
+Energie der freigesetzten Elektronen & $E_\beta = 310 \unit{keV}$\\
+Energie der freigesetzten Photonen & $E_\gamma = 1200 \unit{keV}$\\
+Halbwertschicht der Photonen der Energie $E_\gamma$ in Wasser & $d_{\frac12} = 15 \unit{cm}$\\
+Spezifische Wärmekapazität von Wasser & $c = 4.19 \unit{kJ \cdot kg \cdot K^{-1}}$\\
+Dichte von Wasser & $\rho = 1000 \unit{kg \cdot m^{-3}}$
+\bottomrule
+\end{tabular}
+\end{center}
+%\begin{solution}
+%\end{solution}
+\end{problem}
+
+
+\begin{problem}{Die Stumme von Koeln}{5,5}
+Die 1878 aufgehängte Kaiserglocke des Kölner Doms war von zahlreichen technischen Problemen geplagt. Zunächst schien die falsche Tonlage das größte darzustellen, doch hat man nach dem Einbau gemerkt dass man nicht mal den falschen Ton erzeugen konnte, da sich der Klöppel beim Schwingen relativ zur Glocke kaum bewegte, was den Kölnern natürlich auch den misslichen Klang ersparte.\\
+Unter welchen Bedingungen an relevante Parameter bleibt der Klöppel bei kleinen Schwingungen relativ zur Glocke in Ruhe? Dieser ist innerhalb der Glocke auf der Symmetrieachse im Abstand $l$ vom Aufhängepunkt der Glocke aufgehängt. Die jeweiligen Massen $m_g$, $m_k$, Schwerpunktabstände zu den Aufhängepunkten $s_g$, $s_k$ sowie reduzierte Pendellängen $l_g$, $l_k$ der Glocke bzw. des Klöppels sind bekannt. \hinweis Die reduzierte Pendellänge ist die Länge eines idealisierten Pendels der die gleiche Schwingungsdauer besitzt wie das betrachtete Pendel. Die Masse des Klöppels ist klein verglichen  mit der Masse der Glocke.
+%Wie groß muss demnach $l$ gewesen sein?
+%%%% Hier wären noch Zahlenangaben %%%%%%
+\begin{solution}
+Wenn die beiden Pendel mit gleicher Frequenz schwingen schwingen sie praktisch unabhängig voneinander. Da die Schwingungsdauer die Pendellänge eindeutig bestimmt muss $l_g = l + l_k$ gelten.
+\end{solution}
+\end{problem}
+
+\begin{problem}{Flasche mit Unterdruck}{6}
+In einer Flasche befindet sich anfangs Luft bei Außentemperatur $T_0$ und halbem Außendruck $p_0$. Die Flasche wird kurz geöffnet sodass ein Druckausgleich stattfindet und gleich wieder verschlossen.
+\begin{abcenum}
+\item Welche Temperatur hat die Luft in der Flasche gleich danach?
+\item Welcher Druck stellt sich in der Flasche nach einiger Zeit ein?
+\end{abcenum}
+\begin{solution}
+Man bezeichne die Anzahl der Moleküle in der Flasche mit $N$, den Druck mit $p$, das Volumen mit $V$, die Energie mit $E$, die Temperatur mit $T$, die Zahl der Freiheitsgrade pro Molekül mit $\phi$. Dann gilt am Anfang
+\[
+N = \frac{p_0 V}{2 k T_0}, \quad p = \frac{p_0}{2}, \quad E = \frac{\phi}{2} N k T_0.
+\]
+Die Energieänderung bei Einströmen von $\dif N$ Molekülen ist
+\[
+\dif E = \underbrace{\frac\phi2 \dif N k T_0}_\mathrm{Waerme} + \underbrace{p_0 \frac{\dif N k T_0}{p_0}}_\mathrm{Mechanische Arbeit} = \frac{\phi+2}{2} k T_0 \dif N.
+\]
+Es gilt stets
+\[
+T=\frac{2 E}{\phi}\frac{1}{N k}, \quad  p = \frac{NkT}{V} = \frac{2 E}{\phi} \frac1V = \frac{2}{\phi V}  E
+\]
+Wenn man nun mit 0 den Anfangszustand, mit 1 den Zustand gleich nach dem Druckausgleich und mit 2 den Zustand nach dem Erreichen des thermischen Gleichgewichts bezeichnet, bekommt man
+\[
+N(2) = N(1) = N(0) + \frac{E(1) - E(0)}{\frac{\phi+2}{2} k T_0} = \frac{p_0 V}{2 k T_0} + \frac{p_0 V \frac{\phi}{2} - p_0 V \frac{\phi}{4}}{\frac{\phi+2}{2} k T_0} = \frac{p_0 V}{k T_0} \left( \frac12 + \frac1{2\gamma} \right)
+\]
+\[
+T(1) = \frac{2 E(1)}{\phi}\frac{1}{N(1) k} = \frac{V p(1)}{N(1) k} = \frac{V p_0}{N(1) k} = \frac{2 T_0}{1+1/\gamma}
+\]
+\[
+p(2) = \frac{N(2) k T(2)}{V} = \frac{p_0 V}{k T_0} \left( \frac12 + \frac1{2\gamma} \right) \frac{k T_0}{V} = p_0 \left( \frac12 + \frac1{2\gamma} \right)
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Verstopfter Abfluss}{6}
+Eine Badewanne hat einen kreisförmigen Abfluss (Radius $r = 2\unit{cm}$), den ein Korrektor mangels eines Stöpsels mit einem Ball (Radius $r = 5\unit{cm}$, Dichte $\rho$) zu verschließen versucht. Dies gelingt ihm anfangs nicht, weil der Ball bei einer bestimmten Wasser-(Dichte $\rho_W = 1000 \unit{kg \cdot m^{-3}}$)-höhe $h$ aufzusteigen beginnt. Nachdem der Badende resigniert beschließt den Ball die ganze Zeit über zu halten und die Badewanne füllt, stellt er verwundert fest, dass der Ball ab eier Wasserhöhe von $H = 15 \unit{cm}$ ohne zusätzlichen Halt am Platz bleibt.
+\begin{abcenum}
+\item Wie groß ist die Dichte des Balls?
+\item Ab welchem Füllstand $h$ muss man ihn vorübergehend halten?
+\end{abcenum}
+\hinweis Das Volumen einer Kugelkappe mit Krümmungsradius $R$ und Schnittflächenradius $r$ beträgt $\frac\pi3 \left( 2 R^3 - (2 R^2 + r^2) \sqrt{R^2 - r^2} \right)$.
+\begin{solution}
+Bei vollständiger Bedeckung wirkt auf den Ball außer seiner eigenen Gewichtskraft
+\[
+F_g = \frac43 \pi g \rho R^3
+\]
+die Gewichtskraft der Wassersäule direkt über dem Abfluss
+\[
+F_s = g \left( \pi r^2  \left( H - 2 \sqrt{ R^2  - r^2 } \right) - \frac\pi3 \left( {2 {R}^{3} } - \left( {2 {R}^{2} } + {r}^{2}  \right) {\sqrt{ {R}^{2}  - {r}^{2}  } } \right) \right) \rho_{W}
+\]
+sowie die Auftriebskraft des Teils des Balls der sich nicht direkt über dem Abfluss befindet
+\[
+F_a = {g \left( \frac43 \pi R^3 - 2 \frac\pi3 \left( {2 {R}^{3} } - \left( {2 {R}^{2} } + {r}^{2}  \right) {\sqrt{ {R}^{2}  - {r}^{2}  } } \right) - {{{2 \pi} {r}^{2} } \sqrt{ {R}^{2}  - {r}^{2}  }} \right)} \rho_{W}
+\]
+Aus dem Kräftegleichgewicht $F_g + F_s = F_a$ ergibt sich die Dichte des Balls zu
+\[
+\rho  =  \frac{\rho_{W}}{4 R^3 } \left( 2 R^3  + \sqrt{ R^2  - r^2  } \left( {2 {R}^{2} } + {r}^{2}  \right) - 3 H r^2 \right).
+\]
+Bei geringen Füllhöhen hat man für den Schnittflächenradius der Kugel an der Wasseroberfläche
+\[
+r_s = \sqrt{ {R}^{2}  - {\left( \sqrt{ {R}^{2}  - {r}^{2}  } - h \right)}^{2}} \approx \frac{{h \sqrt{ {R}^{2}  - {r}^{2}  }}}{r} + r
+\]
+und für die Auftriebskraft damit (in quadratischer Näherung)
+\[
+F_{ak} \approx \frac{\pi g h^2}{2 r^2 \sqrt{R^2 - r^2}} \left( 3 R^2 r^2 - 2 r^4 \right) \rho_{W}
+\]
+was mit $F_{ak} = F_g$ auf folgendes Ergebnis führt:
+\[
+h  =  2 R  \sqrt{ \frac{2 R \sqrt{R^2 - r^2} \rho}{3( 3 R^2 - 2 r^2 ) \rho_W } 
+\]
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}

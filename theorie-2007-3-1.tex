@@ -1,0 +1,130 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+%\subsection*{2007 -- 3. Runde -- Theoretische Klausur I (27.01.2007)}
+\begin{problem}{Magnetische Linse}{3,5}
+Durch ein Zylinder der Länge $L$ mit Radius $R$ fließt ein konstanter homogener Strom $I$ parallel zur Achse. Man zeige, dass ein parallel zur Achse in den Zylinder eintretender Teilchenstrahl, bestehend aus Teilchen mit positiver Ladung $q$, fokussiert wird. Man finde die Brennweite dieser Linse.
+\begin{solution}
+Feld innerhalb des Zylinders:
+\[
+B(r)=\frac{\mu_0 I}{2 \pi R^2}r
+\]
+Der auf ein Teilchen übertragene Impuls:
+\[
+p=Ft=(vBq)(\frac Lv)=LBq=\frac{\mu_0 I L q}{2 \pi R^2}r
+\]
+\[
+f=r\frac{v}{\frac pm}=mv \cdot \frac{2 \pi R^2}{q \mu_0 I L}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Fischbeobachtung}{6,5}
+Ein Fisch schwimmt in einem Aquarium in $10 \unit{cm}$ Tiefe. Ein Biologe beobachtet ihn durch eine aus einer bikonvexen Linse mit Krümmungsradien $25 \unit{cm}$ bestehende Lupe, die er horizontal $5 \unit{cm}$ über der Wasseroberfäche hält. Der Fisch befindet sich dabei auf der optischen Achse der Lupe.
+\begin{abcenum}
+\item Man finde die scheinbare Position des Fisches.
+\item Nun wird die untere Fläche der Lupe in Wasser eingetaucht. Wie verändert sich die scheinbare Position des Fisches?
+\end{abcenum}
+Der Brechungindex des Glasses sei dabei $1.5$, der des Wassers $\frac43$.
+\begin{solution}
+\begin{abcenum}
+\item
+\[
+h'=\frac{h}{n_{H_2O}}
+\]
+\[
+\frac 1f = (n-1)\left( \frac 1{R_1}+\frac 1{R_2} \right)
+\]
+\[
+b=-25 \unit{cm}
+\]
+\item
+Die Abbildungsgleichung einer kugelförmigen Übergangsfläche mit Radius $R$ zwischen Medien der optischen Dichten $n_1$ bzw. $n_2$ lautet
+\[
+b = \frac{R}{\frac{n_1}{n_2} \left( 1+\frac R g \right) -1}
+\]
+Wenn man diese Gleichung zwei Mal hitereinander anwendet, bekommt man für die scheinbare Tiefe $9.73 \unit{cm}$. Dabei ist zu beachten, dass an der zweiten Oberfläche die Krümmung bzw. der Krümmungsradius negativ ist.
+\end{abcenum}
+\end{solution}
+\end{problem}
+
+\begin{problem}{Schwingung}{3}
+Ein Gefäß mit Volumen $V$ endet mit einem Rohr (Radius $r$). Dieses Rohr wird mit einem Ball verschlossen, dessen Radius ebenfalls $r$ und dessen Masse $m$ beträgt. Nach dem Einstellen der Ruhelage wird der Ball ausgelenkt. Man finde die Schwingungsfrequenz.
+\begin{solution}
+\[
+pV^\gamma =\mathrm{const}
+\]
+\[
+\dif p V^\gamma + p \gamma V^{\gamma-1} \dif V=0
+\]
+\[
+F=A \Delta p
+\]
+\[
+f=\frac{r^2}{2}\left( \frac{\gamma (p_0+\frac{mg}{\pi r^2})}{Vm} \right)^{\frac 12}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Komet}{5,5}
+Ein Komet auf einer parabolischen Bahn nähert sich der Sonne. Im sonnennächsten Punkt beträgt der Abstand zur Sonne $\frac R3$, wobei $R$ den Radius der Erdbahn bezeichnet. Man finde die Zeit, innerhalb deren der Abstand des Kometen zur Sonne kleiner als der der Erde zur Sonne ist. Masse der Sonne $m_S$ und $R$ sind gegeben.\\
+\hinweis das Integral $\int \frac{x \dif x}{\sqrt{x-a}}=\frac 23 (x+2a) \sqrt{x-a}$, $x>a$, könnte helfen.
+\begin{solution}
+Energieerhaltung:
+\[
+\frac 12 m_K v^2=G \frac{m_K m_S}{r}
+\]
+Drehimpulserhaltung:
+\[
+v_T r=\mathrm{const}=\frac{R}{3}\sqrt{\frac{6 G m_S}{R}}
+\]
+Radialgeschwindigkeit:
+\[
+v_R=\sqrt{v^2-v_T^2}
+\]
+Zeit innerhalb der Erdbahn:
+\[
+T=2 \int\limits_\frac R3^R \frac{\dif r}{v_R}=\frac{10 R}{9} \sqrt{\frac{4 R}{3 G m_S}}
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Reflexion am bewegten Spiegel}{6,5}
+Ein vertikaler Spiegel bewegt sich nach rechts mit der Geschwindigkeit $v=\frac c2$. Ein Lichtstrahl trifft darauf unter dem Winkel $\alpha=\frac \pi 6$ zur Normalen. Man finde den Winkel, den der austretende Strahl mit der Normalen einschließt. Wie verändert sich die Frequenz des Lichtes bei der Reflexion?
+\begin{solution}
+siehe eine Aufgabe aus der 4. Runde 2006:
+\[
+\cos\beta=\frac{(1+(\frac{v}{c})^2)\cos\alpha-2\frac{v}{c}}{1-2\frac{v}{c}\cos\alpha+(\frac{v}{c})^2}
+\]
+Lösungsweg: 2x Lorentztransforamtion anwenden. Erg.: $\beta=10.2^\circ$.
+\[
+f' \approx 2.8 f
+\]
+\end{solution}
+\end{problem}
+
+\begin{problem}{Kugelkondensator}{5}
+\skizze{
+\psset{unit=0.75cm}
+\begin{pspicture}(-3.75,-2.6)(3.75,2.6)
+\pscircle[dimen=outer](0,0){2.5}
+\psarc{|-|}(0,0){2}{5.0}{355.0}
+\pscircle[dimen=outer](0,0){1.5}
+\psline(1.5,0.0)(2.5,0.0)
+\rput[0,0]{30}(0,0){\psline[linewidth=1pt]{->}(0,0)(2.5,0)}
+\rput[0,0]{330}(0,0){\psline[linewidth=1pt]{->}(0,0)(2.0,0)}
+\rput[0,0]{300}(0,0){\psline[linewidth=1pt]{->}(0,0)(1.5,0)}
+\rput{30}(0,0){\rput{-30}(1,0.25){$a$}}
+\rput[0,0]{330}(0,0){\rput{-330}(1,0.25){$b$}}
+\rput[0,0]{300}(0,0){\rput{-300}(1,-0.35){$d$}}
+\end{pspicture}
+}
+Ein Kugelkondensator, bestehend aus 3 metallischen Kugeln, von denen die äußere und die innere leitend verbunden sind, hat die in der Skizze angegebenen Maße. Man bestimme die Kapazität des Kondensators.
+\begin{solution}
+\[
+C=4\pi \varepsilon_0 \left( \frac{ab}{b-a}+\frac{bd}{d-b} \right)=4 \pi \varepsilon_0 \frac{b^2 (d-a)}{(d-b)(b-a)}
+\]
+\end{solution}
+\end{problem}
+
+\input{previewending.tex}
