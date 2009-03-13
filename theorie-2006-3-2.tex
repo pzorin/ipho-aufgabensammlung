@@ -5,15 +5,16 @@
 
 \begin{problem}{Temperaturmessung}{3}
 \skizze{
-\begin{pspicture}(-1.5,-2.8)(3,1)
-\pscircle(0,0){1}
-%\psframe[linecolor=white,fillstyle=solid,fillcolor=white](-0.2,0)(0.2,-1.1) 
+\begin{pspicture}(-1.5,-2.4)(3,1)
+\psarc(0,0){1}{-80}{260}
 
 \psline[linearc=0.2,linecolor=white,fillstyle=hlines](0.2,-0.98)(0.2,-1.8)(2.1,-1.8)(2.1,-0.98)(2.5,-0.98)(2.5,-2.2)(-0.2,-2.2)(-0.2,-0.98)
 
 \psline[linearc=0.2](0.2,-0.98)(0.2,-1.8)(2.1,-1.8)(2.1,0.7)
 \psline[linearc=0.2](-0.2,-0.98)(-0.2,-2.2)(2.5,-2.2)(2.5,0.7)
-\psline[linestyle=dashed](-0.2,-0.98)(2.5,-0.98)
+\psline(-0.2,-0.98)(0.2,-0.98)
+\psline(2.1,-0.98)(2.5,-0.98)
+\psline[linestyle=dashed](0.2,-0.98)(2.1,-0.98)
 \end{pspicture}
 }
 Eine Glaskugel mit einem Volumen von $7\unit{l}$ ist mit Luft bei einer Temperatur
