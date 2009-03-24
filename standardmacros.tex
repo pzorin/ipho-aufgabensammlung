@@ -1,20 +1,20 @@
 \ifx \mpreamble \undefined
 \documentclass[12pt,a4paper]{article}
 \usepackage{answers}
-\usepackage{microtype}
+%\usepackage{microtype}
 \usepackage[left=3cm,top=2cm,bottom=3cm,right=2cm,includehead,includefoot]{geometry}
 
 \usepackage{amsfonts,amsmath,amssymb,amsthm,graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{ngerman}
 
-\ifx \envfinal \empty
-\usepackage{pst-pdf}
-\fi
-
 \usepackage{pstricks}
 \usepackage{pst-circ}
 \usepackage{pst-plot}
+
+\ifx \envfinal \empty
+\usepackage{pst-pdf}
+\fi
 
 \usepackage{booktabs}
 
@@ -40,21 +40,13 @@
 % Aufgaben mit Buchstaben numerieren
 \newenvironment{abcenum}{\renewcommand{\labelenumi}{(\alph{enumi})} \begin{enumerate}}{\end{enumerate}\renewcommand{\labelenumi}{\theenumi .}}
 %%%%%%%%%% Skizzen %%%%%%%%%%%%
-\ifx \envfinal \empty
-\newcommand{\skizze}[1]{
-\begin{center}
-#1
-\end{center}
-}
-\else
-\newcommand{\skizze}[1]{
-\begin{figure}
-\begin{center}
-#1
-\end{center}
-\end{figure}
-}
-\fi
+%\ifx \envfinal \empty
+%%% Final
+%\else
+%%% Vorschau
+%\fi
 
 \def \mpreamble {}
+\else
+%\ref{test}
 \fi

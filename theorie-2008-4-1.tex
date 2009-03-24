@@ -138,10 +138,21 @@ Je nach Vorzeichen des Drehmoments bewegt sich die Rolle nach links (positiv) od
 In einer Tunneldiode sind die Anschlüsse durch zwei Potentialbarrieren im Abstand $l$ voneinander getrennt. Durch die Quantisierung möglicher Energieniveaus in dem dazwischenliegenden Potentialtopf können die Elektronen genau dann besonders leicht durch das System tunneln, wenn diese einen stationären Zustand im Potentialtopf einnehmen können. Wenn man an die Diode eine Spannung anlegt, wird diese in einem konstanten, diodenspezifischen Verhältnis aufgeteilt, wodurch die günstigen Energieniveaus relativ zu den ankommenden Elektronen verschoben werden können.
 \begin{abcenum}
 \item Welche Wellenlängen können die Elektronen im Potentialtopf haben? Wie groß sind die zugehörigen Energien? \hinweis Die effektive Masse des Elektrons $m^*$ kann sich i.\ A. von der freien Elektronenmasse $m_e$ unterscheiden.
-\begin{figure}[h]
-\centering
-\includegraphics{bilder/resonante_tunneldiode_1.eps}
-\end{figure}
+\skizze{
+\psset{xunit=10cm,yunit=1cm}
+\begin{pspicture}(-.15,-0.75)(0.75,4)
+\psaxes[arrows=->,Ox=0,Dx=0.1,dx=0.1,Dy=1,dy=1,ticksize=0.05](0,0)(0,0)(0.6,3.5)
+\uput[dr](0.6,0){$U,\ \unit{V}$}\uput[l](0,3.5){$I,\ \unit{A}$}
+\psplot[linewidth=0.8pt,plotpoints=2000]{0}{0.6}{
+6
+-0.0266
+0.5 1 200 x 0.34 sub dup mul mul add div add
+0.5 1 200 x 0.65 sub dup mul mul add div add
+mul
+}
+%-0.0266 + 0.5/(1 + 200 (x - 0.34)^2) + 0.5/(1 + 200 (x - 0.65)^2)
+\end{pspicture}
+}
 \item Die Abbildung zeigt das U-I-Diagramm einer GaAs-RTD mit $l=5 \unit{nm}$. Für diese gilt $m^* = 0.067 m_e$. Wie breit ist das Energiespektrum des links eintreffenden Elektronenstromes?
 \item Wie groß ist die Differenz zwischen den Energien der ersten beiden Niveaus? Reicht die thermische Energie bei Raumtemperatur um einen Großteil der Elektronen ins 2. Energieniveau zu bringen?
 \end{abcenum}
