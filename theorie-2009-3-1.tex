@@ -31,13 +31,29 @@ Eine dünne Linse erzeugt ein Bild eines Objektes. Direkt hinter die Linse wird 
 \nput{90}{A}{$A$}
 \nput{90}{B}{$B$}
 \end{pspicture}
+\psset{yunit=0.9cm}
+\begin{pspicture}(-1,-2)(7,2)
+   \psline{->}(0,-1.5)(0,1.75)\uput[l](0,1.75){$U$}
+   \psline{->}(0,0)(6.5,0)\uput[d](6.5,0){$t$}
+   \psline[linestyle=dashed](0,1)(6.5,1)\uput[l](0,1){$+ U_0$}
+   \psline[linestyle=dashed](0,-1)(6.5,-1)\uput[l](0,-1){$- U_0$}
+   \psline[linewidth=2pt](0,1)(2,1)
+\psline[linewidth=2pt](4,1)(6,1)
+\psline[linewidth=2pt](2,-1)(4,-1)
+\psline[linewidth=2pt](6,-1)(6.5,-1)
+   \psline[linestyle=dotted](2,-1)(2,1)
+   \psline[linestyle=dotted](4,-1)(4,1)
+   \psline[linestyle=dotted](6,-1)(6,1)
+   \psline{<->}(2,-1.1)(4,-1.1)
+   \uput[d](3,-1.1){$\tau$}
+\end{pspicture}
 }
-An der dargestellten Schaltung wird eine Rechteckspannung $U(t)$ mit Grenzwerten $\pm U_0$ und Pulsdauer $\tau$ angelegt. Man bestimme das asymptotische Verhalten der Potentiale in der Punkten $A$, $B$ unter der Annahme dass die Kondensatoren und die Dioden ideal sind.
+An der dargestellten Schaltung wird eine Rechteckspannung $U(t)$ mit$U_0 = 6 \unit{V}$ und Pulsdauer $\tau$ angelegt. Man bestimme das asymptotische Verhalten der Potentiale in der Punkten $A$, $B$ unter der Annahme dass die Kondensatoren und die Dioden ideal sind.
 %\begin{solution}
 %\end{solution}
 \end{problem}
 
-\begin{problem}{Erwärmung durch Strahlung}{3,5}
+\begin{problem}{Kochen mit Strahlung}{3,5}
 Im Mittelpunkt eines wassergefüllten perfekt isolierten kugelförmigen Gefäßes befindet sich eine Probe eines radioaktiven Isotops, bei dessen Zerfall ein Elektron und ein Photon freigesetzt werden. Die Elektronen werden vom Wasser weitgehend komplett absorbiert, die Photonen nicht. Wie lange dauert es bis das Wasser anfängt zu sieden? Man nehme an, die Temperatur sei in dem Gefäß stets überall gleich, Druckausgleich zur Atmosphäre gegeben und das Volumen der Probe vernachlässigbar.
 \begin{center}
 \begin{tabular}{lc}
@@ -60,9 +76,8 @@ Dichte von Wasser & $\rho = 1000 \unit{kg \cdot m^{-3}}$\\
 
 \begin{problem}{Die Stumme von Koeln}{5,5}
 Die 1878 aufgehängte Kaiserglocke des Kölner Doms war von zahlreichen technischen Problemen geplagt. Zunächst schien die falsche Tonlage das größte darzustellen, doch hat man nach dem Einbau gemerkt dass man nicht mal den falschen Ton erzeugen konnte, da sich der Klöppel beim Schwingen relativ zur Glocke kaum bewegte, was den Kölnern natürlich auch den misslichen Klang ersparte.\\
-Unter welchen Bedingungen an relevante Parameter bleibt der Klöppel bei kleinen Schwingungen relativ zur Glocke in Ruhe? Dieser ist innerhalb der Glocke auf der Symmetrieachse im Abstand $l$ vom Aufhängepunkt der Glocke aufgehängt. Die jeweiligen Massen $m_g$, $m_k$, Schwerpunktabstände zu den Aufhängepunkten $s_g$, $s_k$ sowie reduzierte Pendellängen $l_g$, $l_k$ der Glocke bzw. des Klöppels sind bekannt. \hinweis Die reduzierte Pendellänge ist die Länge eines idealisierten Pendels der die gleiche Schwingungsdauer besitzt wie das betrachtete Pendel. Die Masse des Klöppels ist klein verglichen  mit der Masse der Glocke.
-%Wie groß muss demnach $l$ gewesen sein?
-%%%% Hier wären noch Zahlenangaben %%%%%%
+Unter welchen Bedingungen an relevante Parameter bleibt der Klöppel bei kleinen Schwingungen relativ zur Glocke in Ruhe? Dieser ist innerhalb der Glocke auf der Symmetrieachse im Abstand $l$ vom Aufhängepunkt der Glocke aufgehängt. Die jeweiligen Massen $m_g$, $m_k$, Schwerpunktabstände zu den Aufhängepunkten $s_g$, $s_k$ sowie reduzierte Pendellängen $l_g$, $l_k$ der Glocke bzw. des Klöppels sind bekannt. \hinweis Die reduzierte Pendellänge ist die Länge eines idealisierten Pendels das die gleiche Schwingungsdauer besitzt wie das betrachtete Pendel. Die Masse des Klöppels ist klein verglichen  mit der Masse der Glocke.\\
+Wie groß muss demnach $l$ gewesen falls $m_1=36\unit{t},$ $m_2=720\unit{kg},$ $J_1=132780\unit{kg \cdot m^2},$ $l_2=2,65\unit{m},$ $s_1=1,15\unit{m},$ $s_2=2,5\unit{m}$ gegeben ist?
 \begin{solution}
 Wenn die beiden Pendel mit gleicher Frequenz schwingen schwingen sie praktisch unabhängig voneinander. Da die Schwingungsdauer die Pendellänge eindeutig bestimmt muss $l_g = l + l_k$ gelten.
 \end{solution}
@@ -101,7 +116,21 @@ p(2) = \frac{N(2) k T(2)}{V} = \frac{p_0 V}{k T_0} \left( \frac12 + \frac1{2\gam
 \end{problem}
 
 \begin{problem}{Verstopfter Abfluss}{6}
-Eine Badewanne hat einen kreisförmigen Abfluss (Radius $r = 2\unit{cm}$), den ein Korrektor mangels eines Stöpsels mit einem Ball (Radius $r = 5\unit{cm}$, Dichte $\rho$) zu verschließen versucht. Dies gelingt ihm anfangs nicht, weil der Ball bei einer bestimmten Wasser-(Dichte $\rho_W = 1000 \unit{kg \cdot m^{-3}}$)-höhe $h$ aufzusteigen beginnt. Nachdem der Badende resigniert beschließt den Ball die ganze Zeit über zu halten und die Badewanne füllt, stellt er verwundert fest, dass der Ball ab eier Wasserhöhe von $H = 15 \unit{cm}$ ohne zusätzlichen Halt am Platz bleibt.
+\skizze{
+\psset{unit=0.75cm}
+\begin{pspicture}(-5,0)(5,6.5)
+\psline[linestyle=none,fillstyle=hlines,hatchwidth=0.01,hatchsep=0.4](-4,6)(-4,0.5)(4,0.5)(4,6)
+\psline[linewidth=2pt](-4,0.5)(-1.323,0.5)(-1.323,0)
+\psline[linewidth=2pt](1.323,0)(1.323,0.5)(4,0.5)
+\psline(-4,6)(4,6)
+\pscircle[fillstyle=solid,fillcolor=white](0,2){2}
+\psline{->}(0,2)(-2,2)\uput[u](-1,2){$R$}
+\psline[linestyle=dotted,linewidth=0.5pt](0,0)(0,2)(-1.323,0.5)
+\psline{->}(0,0.5)(-1.323,0.5)\uput[u](-0.6,0.5){$r$}
+\psline{<->}(4.1,0.5)(4.1,6)\uput[r](4.1,3.25){$H$}
+\end{pspicture}
+}
+Eine Badewanne hat einen kreisförmigen Abfluss (Radius $r = 2\unit{cm}$), den ein Korrektor mangels eines Stöpsels mit einem Ball (Radius $R = 5\unit{cm}$, Dichte $\rho$) zu verschließen versucht. Dies gelingt ihm anfangs nicht, weil der Ball bei einer bestimmten Wasser-(Dichte $\rho_W = 1000 \unit{kg \cdot m^{-3}}$)-höhe $h$ aufzusteigen beginnt. Nachdem der Badende resigniert beschließt den Ball die ganze Zeit über zu halten und die Badewanne füllt, stellt er verwundert fest, dass der Ball ab einer Wasserhöhe von $H = 15 \unit{cm}$ ohne zusätzlichen Halt am Platz bleibt.
 \begin{abcenum}
 \item Wie groß ist die Dichte des Balls?
 \item Ab welchem Füllstand $h$ muss man ihn vorübergehend halten?

@@ -4,6 +4,20 @@
 %\subsection*{2009 -- 3. Runde -- Theoretische Klausur II}
 
 \begin{problem}{Federn am Haken}{3,5}
+\skizze{
+\psset{unit=1cm}
+\begin{pspicture}(0,0)(14,3)
+\psline{->}(1,0)(1,3)
+\psellipticarc{->}(1,2.5)(0.4,0.2){120}{65}\uput[u](1.75,2.25){$\omega$}
+\psline(1,1.5)(1.25,2)(1.75,1)(2.25,2)(2.75,1)(3.25,2)(3.75,1)(4,1.5)\uput[u](2.5,0.5){$k_1$}
+\pscircle*(4.5,1.5){0.5}\uput[u](4.5,0.5){$m$}
+\psline(5,1.5)(5.25,2)(5.75,1)(6.25,2)(6.75,1)(7.25,2)(7.75,1)(8,1.5)\uput[u](6.5,0.5){$k_2$}
+\pscircle*(8.5,1.5){0.5}\uput[u](8.5,0.5){$m$}
+\psline[linestyle=dashed](9,1.5)(9.25,2)(9.75,1)(10.25,2)(10.75,1)(11.25,2)(11.75,1)(12,1.5)\uput[u](10.5,0.5){$k_3$}
+\pscircle[linestyle=none,fillstyle=hlines](12.5,1.5){0.5}\uput[u](12.5,0.5){$m$}
+\psline[linestyle=dashed](13,1.5)(13.25,1)(13.75,2)(14,1.5)
+\end{pspicture}
+}
 Es werden $n$ identische Punktmassen $m$ durch ideale Federn der Ruhelänge $l$ und Federkonstanten $k_1,\dots, k_n$ in eine Kette verbunden sodass die erste Feder noch an einem Haken befestigt ist. Wenn die Kette im Weltall mit Winkelgeschwindigkeit $\omega$ um den Haken rotiert haben alle Federn wieder die gleiche Länge $L$. Man bestimme alle Federkonstanten.
 \begin{solution}
 Die Spannung der $i$-ten Feder ist
@@ -100,7 +114,7 @@ T_\mathrm{Boden} = \frac{ n_\Delta T_0 }{ n_0 \sin\alpha - 1 }
 
 
 \begin{problem}{Feder als Spule}{5}
-Durch eine spiralförmige Feder mit Radius $r = 5 \unit{cm}$, Federkonstante $k = 1 \unit{N/m}$) und $N = 400$ Windungen fließt ein Strom $I = 1 \unit{A}$. Die Länge der Feder beträgt dabei $L = 40 \unit{cm}$. Wie groß ist die Ruhelänge $l$ der Feder?
+Durch eine spiralförmige Feder mit Radius $r = 5 \unit{cm}$, Federkonstante $k = 1 \unit{N/m}$ und $N = 400$ Windungen fließt ein Strom $I = 1 \unit{A}$. Die Länge der Feder beträgt dabei $L = 40 \unit{cm}$. Wie groß ist die Ruhelänge $l$ der Feder?
 \begin{solution}
 Die Magnetische Feldstärke innerhalb der Spule ist in erster Näherung konstant
 \[
@@ -128,7 +142,7 @@ führt.
 
 
 \begin{problem}{Wasserrakete}{7,5}
-Eine Flasche (Volumen $V_g = 2  \unit{l}$, Masse $M = 200 \unit{g}$) wird zur Hälfte mit Wasser gefüllt. Der restliche Teil enthält komprimierte Luft. Die Flasche wird mit dem Verschluss (Radius $r = 1 \unit{cm}$) nach unten auf Meereshöhe aufgestellt. Dieser wird anschließend geöffnet.
+Eine Flasche (Volumen $V_g = 2  \unit{l}$, Masse $M = 200 \unit{g}$) wird zur Hälfte mit Wasser gefüllt. Der restliche Teil enthält komprimierte Luft ($c_v=720\unit{\frac{J}{kg \cdot K}}$, $c_p=1010\unit{\frac{J}{kg \cdot K}}$). Die Flasche wird mit dem Verschluss (Radius $r = 1 \unit{cm}$) nach unten auf Meereshöhe ($g=9.81\unit{\frac m{s^2}}$) aufgestellt. Dieser wird anschließend geöffnet.
 \begin{abcenum}
 \item Wie groß muss der Druck in der Flasche sein damit diese abhebt?
 \item Wie groß muss der Druck sein damit die Flasche weiter beschleunigt bis das Wasser ausgeht?
