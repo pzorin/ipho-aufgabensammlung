@@ -157,13 +157,41 @@ Ein Spiegel bewegt sich wie in der Skizze mit relativistischer Geschwindigkeit. 
 \[
 \cos \beta = \frac{(1+(\frac{v}{c})^2)\cos \alpha -2\frac{v}{c}}{1-2\frac{v}{c}\cos \alpha + (\frac{v}{c})^2}
 \]
-\item Entsprechend der 2. Skizze mit $v=0.6 c$ fällt Laserlicht der Frequenz $f$ unter einem Winkel von $\alpha=30^\circ$ ein. Wie groß ist dann die Frequenz des reflektierten Strahls, und wie groß ist die relative änderung $\frac{\Delta f}{f}$?
+\item Entsprechend der 2. Skizze mit $v=0.6 c$ fällt Laserlicht der Frequenz $f$ unter einem Winkel von $\alpha=30^\circ$ ein. Wie groß ist dann die Frequenz des reflektierten Strahls, und wie groß ist die relative Änderung $\frac{\Delta f}{f}$?
 \end{abcenum}
 
 \begin{solution}
-% ?
+Aus der gegebenen Abbildung entnimmt man schonmal dass $\theta=\frac \pi 2$ ist. Weiterhin ist zu beachten dass $v$ in negative Richtung zeigt. Mit $\delta := - \frac vc$ gilt also
 \[
-f' \approx 0.505 f, \qquad \frac{\Delta f}{f} \approx 49.5\,\%
+\sin\alpha-\sin\beta = \delta\sin(\alpha + \beta).
+\]
+Anwendung der Sätze über Summen von Winkelfunktionen liefert
+\[
+2\cos{\frac{\alpha+\beta}2}\sin{\frac{\alpha-\beta}2}=2\delta\sin{\frac{\alpha+\beta}2}\cos{\frac{\alpha+\beta}2},
+\]
+\[
+\sin{\frac{\alpha}2}\cos{\frac{\beta}2}-\sin{\frac{\beta}2}\cos{\frac{\alpha}2} = \delta(\sin{\frac{\alpha}2}\cos{\frac{\beta}2}+\sin{\frac{\beta}2}\cos{\frac{\alpha}2}),
+\]
+\[
+(1-\delta)\tan{\frac{\alpha}2}=(\delta +1)\tan{\frac{\beta}2}.
+\]
+Quadrieren und Anwendung der Halbwinkelbeziehung für den Tangens führt auf
+\[
+(1-\delta)^2 \tan^2{\frac{\alpha}2} = (1+\delta)^2 \frac{1-\cos\beta}{1+\cos\beta}.
+\]
+Umstellen nach $\cos\beta$ ergibt schließlich
+\[
+\begin{split}
+\cos\beta
+&= \frac{(1+\delta)^2 - (1-\delta)^2 \tan^2{\frac{\alpha}2}}{(1+\delta)^2+ (1-\delta)^2 \tan^2{\frac{\alpha}2}}\\
+&= \frac{(1+\delta)^2 (1+\cos\alpha) - (1-\delta)^2 (1-\cos\alpha)}{(1+\delta)^2 (1+\cos\alpha) + (1-\delta)^2 (1-\cos\alpha)}\\
+&= \frac{2(1+\delta^2)\cos\alpha+4\delta}{2(1+\delta^2)+4\delta\cos\alpha}\\
+&= \frac{(1+(\frac vc)^2)\cos\alpha - 2\frac vc}{(1+(\frac vc)^2) - 2\frac vc\cos\alpha}.
+\end{split}
+\]
+Im Teil b) erhält man
+\[
+f' \approx 0.505 f, \qquad \frac{\Delta f}{f} \approx 49.5\,\%.
 \]
 \end{solution}
 \end{problem}
