@@ -3,7 +3,19 @@
 
 
 \begin{problem}{Warme Glühwendel}{4}
-An ein Glühwendel, wird die Spannung $U_1$ angelegt und es hat die Temperatur $T_1$. Bei der doppelten Spannung hat es eine um $\Delta T=30\unit{K}$ höhere Temperatur. Der Widerstand des Glühwendels sei im Relevanten Temperaturbereich konstant. Die Umgebungstemperatur ist $\Theta=20\unit{\textcelcius}$
+An ein Glühwendel, wird die Spannung $U_1$ angelegt und es hat die Temperatur $T_1$. Bei der doppelten Spannung hat es eine um $\Delta T=30\unit{K}$ höhere Temperatur. Der Widerstand des Glühwendels sei im Relevanten Temperaturbereich konstant. Die Umgebungstemperatur ist $\Theta=20\unit{\degr C}$
+\begin{solution}
+$$P_1=\frac{U_1^2}R=\sigma A (T_1^4 - T_0^4)$$
+$$P_2=\frac{U_2^2}R=4\frac{U_1^2}R=\sigma A ((T_1+\Delta T)^4-T_0^4)$$
+$$\frac{P_1}{P_2}=\frac 14=\frac{T_1^4-T_0^4}{(T_1+\Delta T)^4-T_0^4}=\frac{(T_1^2-T_0^2)(T_1^2+T_0^2)}{((T_1+\Delta T)^2-T_0^2)((T_1+\Delta T)^2+T_0^2)}\approx\frac{T_1^2-T_0^2}{(T_1+\Delta T)^2-T_0^2)}$$
+$$(T_1+\Delta T)^2-T_0^2=4T_1^2-4T_0^2$$
+$$-3T_1^2+2T_1\Delta T+\Delta T^2+3T_0^2=0 \Rightarrow T_1^2-\frac 23 T_1\Delta T-\frac 13 \Delta T^2-T_0^2=0$$
+$$(T_1)_{1;2}=\frac 13\Delta T\pm\sqrt{\frac 49\Delta T^2+T_0^2}$$
+Da die Temperatur positiv sein muss, folgt: $(T_1)_1\approx 304\unit{K} \Rightarrow (\vartheta_1)_1 \approx 30,7\unit{\degr C}$
+Eine gültige Lösungsvariante (ohne wesentlichen Punktabzug) bestand darin, die abgegebene Leistung als proportional zur Temperaturdifferenz zu betrachten:
+$$P_1=k(T_1-T_0), P_2=k(T_1+\Delta T-T_0) \Rightarrow T_1+\Delta T-T_0=4T_1-4T_0$$
+$$\Rightarrow T_1=\frac 13(\Delta T+3T_0)\approx 303\unit{K}\Rightarrow \vartheta=30\unit{\degr C}$$
+\end{solution}
 \end{problem}
 
 \begin{problem}{Zerfallsreihe}{5}
@@ -20,6 +32,42 @@ Der $1,8\unit{m}$ hohe Indianer Pato betrachtet am Äquator, zur Tag- und Nachtg
 \end{problem}
 
 \begin{problem}{Unerwartete Schaltungen}{5}
+\skizze{
+\begin{pspicture}(-1,0)(5,5)
+  \pnode(1,1){phi2}
+  \pnode(1,4){phi1}
+  \pnode(3,1){A}
+  \pnode(3,4){B}
+  \pnode(4,1){C}
+  \pnode(4,4){D}
+  \pnode(4,2.5){S}
+  \wire(A)(C)
+  \wire(B)(D)
+  \wire(B)(phi1)
+  \resistor(C)(S){$R_1$}
+  \capacitor(A)(B){$C$}
+  \resistor(phi2)(A){$R_2$}
+  \switch(S)(D){}
+  \tension[labeloffset=-0.7](phi1)(phi2){$U_0e^{i\omega t}$}
+\end{pspicture}
+\begin{pspicture}(-1,0)(5,5)
+  \pnode(1,1){phi2}
+  \pnode(1,4){phi1}
+  \pnode(3,2){A}
+  \pnode(4,2){A2}
+  \pnode(4,1){B}
+  \pnode(4,4){C}
+  \pnode(3,4){D}
+  \coil(phi2)(B){$L$}
+  \capacitor(A)(D){$C$}
+  \resistor[labeloffset=-0.6](A2)(C){$R$}
+  \tension[labeloffset=-0.7](phi1)(phi2){$U_0e^{i\omega t}$}
+  \wire(C)(D)
+  \wire(D)(phi1)
+  \wire(A2)(A)
+  \wire(A2)(B)
+\end{pspicture}
+}
  \begin{abcenum}
   \item In der linken Schaltung ist der Widerstand $R_1$ so zu wählen, dass die Impedanz der Schaltung sowohl bei geöffnetem und geschlossenem Schalter gleich groß ist.
   \item In der rechten Schaltung ist die Kreisfrequenz so zu wählen, dass die Impedanz der Schaltung unabhängig vom Widerstand $R$ wird.

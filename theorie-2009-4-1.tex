@@ -3,6 +3,21 @@
 
 \begin{problem}{Neutrinomasse}{3}
 Bei der Explosion einer Supernovae (Entfernung rund $160000$ Lichtjahre) enstehen 2 Neutrinos, die mit einer Laufzeitdifferenz von $10\unit{s}$ die Erde erreichen. Man schätze die Masse eines Neutrinos nach oben ab, wenn die Energien der Neutrinos $10\unit{MeV}$ bzw. $20\unit{MeV}$ betrugen.
+\begin{solution}
+Da man nicht weiß, ob die Neutrinos eine Masse besitzen, rechnet man sinnigerweise, als ob die Gesamtenergien angegeben wären:
+$$E_1=m_nc^2\gamma_1=m_nc^2\left(1-\beta_1^2\right)^{-\frac 12}, E_2= m_nc^2\left(1-\beta_2^2\right)^{-\frac 12}$$
+mit $\frac lc\left(\frac 1{\beta_1}-\frac 1{\beta_2}\right)=\Delta t$
+mit 
+$$\left(1-\left(\frac{m_nc^2}{E_1}\right)^2\right)^{\frac 12}=\beta_1, \left(1-\left(\frac{m_nc^2}{E_2}\right)^2\right)^{\frac 12}=\beta_2$$
+Da die Ruheenergie klein gegen die Gesamtenergie sein wird, nähern wir mit der Bernoullschen Ungleichung und setzen in die Formel für die Zeitverschiebung ein:
+$$\left(1+\frac 12\left(\frac{m_nc^2}{E_1}\right)^2\right)-\left(1+\frac 12\left(\frac{m_nc^2}{E_2}\right)^2\right)=\frac{c\Delta t}{l}$$
+$$\frac 12\left(\left(\frac{m_nc^2}{E_1}\right)^2-\left(\frac{m_nc^2}{E_2}\right)^2\right)=\frac{c\Delta t}{l}$$
+Mit $E_2\approx 2E_1$ ergibt sich:
+$$\frac 34\frac{(m_nc^2)^2}{E_1^2}=2\frac{c\Delta t}l$$
+$$m_n=\sqrt{\frac 83 \frac{E_1^2}{c^3}\frac{\Delta t}{l} }\approx 7,8\cdot 10^{-34}\unit{kg}$$
+Andere Näherungen bringen:
+$$m_n=\sqrt{\frac 83\left(\frac{E_1}{c^2}\right)^2\frac{\frac{c\Delta t}l}{\left( 1+\frac 53 \frac{c\Delta t}{l}}\right)}}\approx 7,8\cdot 10^{-34}\unit{kg}$$
+\end{solution}
 \end{problem}
 
 \begin{problem}{Schwingende Linse}{6}
@@ -16,6 +31,12 @@ Für einen 1-dimensionalen Leiter lässt sich der minimale Widerstand mithilfe d
  \item Wie verändert sich die Leitfähigkeit, wenn die Elektrode aus Gold (Au) und Kupfer (Cu) besteht.
 \end{abcenum}
 Diese Aufgabe demonstriert mit einfachen Mitteln den Quanten-Hall Effekt.
+\begin{solution}
+\begin{abcenum}
+  \item $R_1=\frac UI=\frac{\frac{\Delta E}{e^-}}{\frac{e^-}{\Delta t}}=\frac{\Delta E \Delta t}{{e^-}^2}=\frac{h}{2{e^-}^2}\approx 12,9\unit{k\Omega}$
+  \item Einmal $3$ und einmal $4$ Valenzelektronen. Da die Spannung gleich bleibt, aber der Strom erhöht wird, verdrei- bzw. vervierfacht sich die Leitfähigkeit: $R_3=\frac {R_1}3, R_4=\frac{R_1}4$
+\end{abcenum}
+\end{solution}
 \end{problem}
 
 \begin{problem}{Umspannte Kugeln}{4}
