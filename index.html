@@ -15,23 +15,39 @@
 
 <h1>Kurzanleitung zur aktuellen Version</h1>
 
-Notwendige Pakete unter Debian installieren (ist zwar overkill, dafür aber einfach):
+Absolut notwendige Pakete unter Debian installieren (ist zwar overkill, dafür aber einfach):
 
 <pre><code># apt-get install git gitweb texlive-full</code></pre>
 
-Runterladen und PDF erstellen:
+<h2>Runterladen und PDF erstellen</h2>
 
 <pre><code>$ git clone git://github.com/pzorin/ipho-aufgabensammlung.git
 $ cd ipho-aufgabensammlung
 $ ./topdf</code></pre>
 
-<h2>Kurzanleitung Editieren:</h2>
+<h2>Lokales Editieren</h2>
 
-Einrichten unter Debian:
+Folgendes wurde vermutlich schon ausgeführt:
+
+<pre><code>$ git clone git://github.com/pzorin/ipho-aufgabensammlung.git
+$ cd ipho-aufgabensammlung</code></pre>
+
+Nun sollte ein lokaler Arbeitszweig erstellt und in diesen gewechselt werden:
+
+<pre><code>$ git branch mylocalbranch
+$ git checkout mylocalbranch</code></pre>
+
+Es wird empfohlen Emacs zu benutzen, da man damit Vorschau für alle Formeln und Skizzen bekommt:
 
 <pre><code># apt-get install emacs-gtk auctex preview-latex-style</code></pre>
 
-Nun gibt es in Emacs Vorschau für alle Formeln und Skizzen!
+*hackety hack* Nun ist es Zeit die Änderungen Git zu überlassen und einen Patch zu erstellen:
+
+<pre><code>$ git commit -a
+$ git format-patch -M -B master</code></pre>
+
+Den Patch könnt ihr mir schicken, pavel dot zorin at online dot de. Wer eventuell mehr machen möchte sollte sich überlegen ein eigenes Repository zu starten.
+
 
 <h2>Quellen online anschauen</h2>
 
