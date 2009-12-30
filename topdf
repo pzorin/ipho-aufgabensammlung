@@ -1,26 +1,20 @@
 #!/bin/zsh
 FILENAME1="ipho_aufgaben"
-DEBUG=0
+LATEXOPTIONS="-interaction=batchmode"
 
-echo $'\e[0;32m' 1 LATEX $' \e[0m'
-if [ $DEBUG -eq 0 ];then
-time latex -interaction=batchmode $FILENAME1.tex
-else
-time latex $FILENAME1.tex
-fi
+echo $'\e[0;32m' LaTeX $' \e[0m'
+time latex $LATEXOPTIONS $FILENAME1.tex
 
-echo $'\e[0;32m' 2 dvips+ps2pdf $' \e[0m'
+echo $'\e[0;32m' dvips $' \e[0m'
 time dvips -q -Ppdf -o $FILENAME1-pics.ps $FILENAME1.dvi
+
+echo $'\e[0;32m' ps2pdf $' \e[0m'
 time ps2pdf $FILENAME1-pics.ps $FILENAME1-pics.pdf
 
-echo $'\e[0;32m' 3 PDFLATEX $' \e[0m'
-if [ $DEBUG -eq 0 ];then
-time pdflatex -interaction=batchmode $FILENAME1.tex
-else
-pdflatex $FILENAME1.tex
-fi
+echo $'\e[0;32m' PDFLaTeX $' \e[0m'
+time pdflatex $LATEXOPTIONS $FILENAME1.tex
 
-echo $'\e[0;32m' 4 Delete junk $' \e[0m'
+echo $'\e[0;32m' Clean up $' \e[0m'
 rm $FILENAME1.aux $FILENAME1.dvi *.log $FILENAME1.toc $FILENAME1-pics.ps $FILENAME1-pics.pdf AUTO_LOESUNGSDATEI.tex AUTO_LOESUNGSDATEI_EXP.tex
 
 exit 0
