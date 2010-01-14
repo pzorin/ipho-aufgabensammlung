@@ -67,16 +67,19 @@ Halbwertszeit des Isotops & $T_{\frac12} = 5 \unit{a}$\\
 Energie der freigesetzten Elektronen & $E_\beta = 310 \unit{keV}$\\
 Energie der freigesetzten Photonen & $E_\gamma = 1200 \unit{keV}$\\
 Halbwertschicht der Photonen der Energie $E_\gamma$ in Wasser & $d_{\frac12} = 15 \unit{cm}$\\
-Spezifische Wärmekapazität von Wasser & $c = 4.19 \unit{kJ \cdot kg \cdot K^{-1}}$\\
+Spezifische Wärmekapazität von Wasser & $c = 4.19 \unit{kJ \cdot kg^{-1} \cdot K^{-1}}$\\
 Dichte von Wasser & $\rho = 1000 \unit{kg \cdot m^{-3}}$\\
 \bottomrule
 \end{tabular}
 \end{center}
 \begin{solution}
+Die Energieerhaltung liest sich folgendermaßen:
 \[
-Q=\left( E_{\beta}+\left(\frac{1}{2}\right)^{\left(\frac{10}{15}\right)}\cdot E_{\gamma}\right)\cdot \left(\frac{1}{2}\right)^{\left(\frac{T}{5a}\right)}
+\frac43 \pi r^3 \rho c \cdot 80 \unit{K} =
+\left( E_\beta+2^{- r / d_\frac12}\cdot E_\gamma \right)
+\left( 1 - 2^{- T / T_\frac12} \right) n.
 \]
-Das ergibt ca. 14,6 Minuten.
+Das ergibt $T \approx 2.08 \unit{min}$.
 \end{solution}
 \end{problem}
 
