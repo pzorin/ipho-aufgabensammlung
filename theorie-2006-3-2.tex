@@ -40,14 +40,53 @@ so dass sie sich wieder auf einer Kreisbahn bewegt.
 \item Bestimmen Sie $u/\tilde u$, wenn $\tilde u$ die Geschwindigkeit auf der neuen Kreisbahn ist. Ist das Verhältnis größer, kleiner oder gleich 1?
 \end{abcenum}
 \begin{solution}
-Energie- und Drehimpulserhaltung:
+Wähle Einheiten so, dass die Masse der Sonde und $G$ gleich $1$ sind.
+Für eine Kreisbahn gilt dann (Kräftegleichgewicht)
 \[
-\Delta u_2=\frac{(u^2+2u\Delta u_1-\Delta u_1^2)-u\sqrt{u^2+2u\Delta u_1-\Delta u_1^2}}{u-\Delta u_1}
+u^2 / R = M / R^2.
+\]
+Drehimpuls des Satelliten bzgl. des Planetenzentrums ist zu Beginn also
+\[
+L_0 = u_0 R_0 = M / u_0,
+\]
+Energie, mit Nullpunkt bei Ruhe im Unendlichen,
+\[
+E_0 = u_0^2 / 2 - M / R_0 = - u_0^2 / 2.
+\]
+Nach dem ersten Manöver betragen die Erhaltungsgrößen noch
+\[
+L_1 = (u_0 - \Delta u_1) R_0 = (u_0 - \Delta u_1) M / u_0^2,
 \]
 \[
-\frac{u}{\tilde{u}}=\frac{u-\Delta u_1}{\sqrt{u^2+2u\Delta u_1-\Delta u_1^2}}
+E_1 = (u_0 - \Delta u_1)^2 / 2 - M / R_0 = (u_0 - \Delta u_1)^2 / 2 - u_0^2.
 \]
-Es gilt $u/\tilde u<1$.
+Man bemerke, dass die Geschwindigkeit des Satelliten weiterhin tangential zu seiner ursprünglichen Bahn gerichtet ist. Aus Symmetriegründen wird dies nach einer halben Umdrehung ebenfalls der Fall sein. Die Geschwindigkeit und Abstand zum Zentrum des Planeten zu diesem Zeitpunkt müssen also folgendes erfüllen:
+\[
+L_1 = L_2 = u_2 R_2,
+\]
+\[
+E_1 = E_2 = u_2^2 / 2 - M / R_2,
+\]
+also
+\[
+u_2 = M/L \pm \sqrt{M^2/L^2 + 2E}, \quad R_2 = L_1/u_2.
+\]
+Nun beachte noch dass $u_2 \neq u_1$ ist, man wähle also die Lösung mit Plus. Damit die Sonde wieder eine Kreisbahn erreicht, muss nach der anschließenden Bremsung die schon erwähnte Kreibahngleichung
+\[
+(u_2 - \Delta u_2)^2 / R_2 = M / R_2^2
+\]
+gelten. Diese besitzt wiederum die Lösungen
+\[
+\Delta u_2 = u_2 \pm \sqrt{u_2 M / L_1},
+\]
+wobei die Lösung mit Plus dem unrealistischen Umkehren der Rotationsrichtung entspricht. Für die Lösung mit Minus bekommt man nach einer einfachen aber aufwendigen Rechnung
+\[
+\Delta u_2=\frac{(u^2+2u\Delta u_1-\Delta u_1^2)-u\sqrt{u^2+2u\Delta u_1-\Delta u_1^2}}{u-\Delta u_1},
+\]
+und für das Verhältnis der Geschwindigkeiten
+\[
+\frac{u}{\tilde{u}}=\frac{u-\Delta u_1}{\sqrt{u^2+2u\Delta u_1-\Delta u_1^2}} < 1.
+\]
 \end{solution}
 \end{problem}
 
