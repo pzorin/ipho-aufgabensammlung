@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>IPhO-Aufgabensammlung</title>
@@ -9,23 +9,29 @@
 
 <body>
 
-<h1>PDF (nicht garantiert up to date)</h1>
+<h1>Aufgaben konsumieren</h1>
 
-<a href="ipho_aufgaben.pdf">ipho_aufgaben.pdf</a>
+<p><a href="ipho_aufgaben.pdf">PDF (kann veraltet sein)</a></p>
 
-<h1>Kurzanleitung zur aktuellen Version</h1>
+<p><a href="http://github.com/pzorin/ipho-aufgabensammlung/tree/master">Quellen online anschauen</a></p>
 
-<h2>Software</h2>
+<h1>Aufgaben bearbeiten</h1>
 
-Nur um PDF zu erstellen (unter Debian) (texlive-full ist overkill, aber einfach):
+<h2>Benötigte Software</h2>
+
+<p>Angegeben sind Befehle für Debian und Ubuntu.</p>
+
+<h3>PDF erstellen</h3>
 
 <pre><code># apt-get install git gitweb texlive-full</code></pre>
 
-Editieren: in Emacs gibt es Vorschau für alle Formeln und Skizzen:
+<h3>Editieren</h3>
+
+<p>In Emacs gibt es Vorschau für alle Formeln.</p>
 
 <pre><code># apt-get install emacs auctex preview-latex-style</code></pre>
 
-<h2>Runterladen und PDF erstellen</h2>
+<h2>Aktuelle Version kompilieren</h2>
 
 <pre><code>$ git clone git://github.com/pzorin/ipho-aufgabensammlung.git
 $ cd ipho-aufgabensammlung
@@ -33,25 +39,20 @@ $ ./topdf</code></pre>
 
 <h2>Lokales Editieren</h2>
 
-Lokalen Arbeitszweig erstellen und in diesen wechseln:
+<p>Lokalen Arbeitszweig erstellen und in diesen wechseln:</p>
 
 <pre><code>$ cd ipho-aufgabensammlung
 $ git branch mylocalbranch
 $ git checkout mylocalbranch</code></pre>
 
-Änderungen in Git eingeben und einen Patch erstellen:
+<p>Änderungen in Git eingeben und einen Patch erstellen:</p>
 
 <pre><code>$ git commit -a
 $ git format-patch -M -B master</code></pre>
 
-Den Patch könnt ihr <a href="mailto:pavel.zorin@online.de">mir per e-Mail senden</a>.
+<p>Den Patch könnt ihr <a href="mailto:pavel.zorin@online.de">mir per e-Mail senden</a>.</p>
 
-Wer mehr machen möchte sollte sich überlegen ein eigenes Repository zu starten.
-
-
-<h2>Quellen online anschauen</h2>
-
-<a href="http://github.com/pzorin/ipho-aufgabensammlung/tree/master">Quellen auf Github</a>
+<p>Wer mehr machen möchte sollte ein eigenes Repository starten.</p>
 
 </body>
 </html>
