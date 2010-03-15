@@ -93,28 +93,6 @@ Man berechne den Wirkungsgrad dieser Maschine. Wo wird Wärme abgegeben bzw. auf
 \begin{solution}
 Bezeichne die Zustände mit $Z_1=(p_0,V_0)$, $Z_2=(2p_0,V_0)$ und $Z_3=(p_0,2V_0)$.
 
-
-
-Die Prozesse $Z_1 - Z_2$, $Z_3 - Z_1$ sind isochor beziehungsweise isobar.
-Hieraus folgt: $W_{12}=0J$, $Q_{12}=\Delta U_{12}=\frac f2 p_0V_0$, $W_{31}=-p_0(-V_0)=p_0V_0$, $Q_{31}=\Delta U_{31}-W_{31}=\frac f2 (p_0V_0-2p_0V_0)-p_0V_0=-\frac{f+2}2p_0V_0$.
-Der dritte Prozess $Z_2-Z_3$ hat die besonderheit, das die beiden Endpunkte auf einer Isothermen liegen, da es aber eine Strecke ist, nimmt die innere Energie erst zu und dann ab.
-Da sich das Gas ausdehnt, verrichtet das Gas arbeit, weshalb zuerst Wärme zugeführt werden muss und das Gas dann Wärme abgibt.
-Der Punkt an dem sich die Wärmezufuhr umkehrt, resultiert aus dem Berührpunkt zwischen der Gerade $Z_2Z_3$ und einer Adiabaten.
-Geradengleichung: $p_z(V_z)=-\frac{p_0}{V_0}V_z+3p_0$, Adiabatengleichung $p_z(C,V_z)=CV_z^{-\kappa}$. $CV_Z^{-\kappa}=-\frac{p_0}{V_0}V_z+3p_0$, was auf $CV_{z}^{-\kappa}+\frac{p_0}{V_0}V_z=3p_0$ führt.
-Man erhält $C=-\frac{p_0}{V_0}V_Z(\kappa+1)+3p_0V_z^{\kappa}$.
-Da $C$ eine Konstante ist (mit der wir die Adiabatenscharen definiert haben), fällt sie beim Ableiten nach $V$ heraus.
-$0=-\frac{p_0}{V_0}(\kappa+1)V_z^{\kappa}+3p_0\kappa V_z^{\kappa -1}$.
-Sodass sich $V_z=\frac{3\kappa}{\kappa+1}V_0$ ergibt.
-Hierraus folgt $Q_{23-zu}=\frac f2 p(V_z)V_Z-2p_0V_0+\int_{V_0}^{V_z}p(V)dV=\frac f2 (-\frac{p_0}{V_0}V_z+3p_0)V_z+[-\frac{p_0}{2V_0}V^2+3p_0V]_{V_0}^{V_z}$
-$$Q_{23-zu}=-\frac f2(-\frac{p_0}{V_0}V_z^2+3p_0V_z)-2p_0V_0-\frac{p_0}{2V_0}(V_z^2-V_0^2)+3p_0(V_z-V_0)$$
-$$Q_{23-zu}=\frac{p_0}{2V_0}V_z^2(f-1)+\frac {2-f}2 3p_0V_z-\frac 92 p_0V_0$$
-$$Q_{23-zu}=\frac{f-1}{2}p_0V_0\frac{9\kappa^2}{(\kappa+1)^2}+\frac {(2-f)9\kappa}{2(\kappa+1)} p_0V_0-\frac 92 p_0V_0$$
-$$Q_{23-zu}=\frac 92 p_0V_0((f-1)\frac{\kappa^2}{(\kappa+1)^2}-(f-2)\frac{\kappa}{\kappa +1}-1)$$
-$$Q_{23-zu}=\frac 92 p_0V_0\frac1{(\kappa+1)^2}(f\kappa^2-\kappa^2-f\kappa^2-f\kappa+2\kappa^2+2\kappa-\kappa^2-2\kappa - 1)$$
-$$Q_{23-zu}=-\frac 92 p_0V_0\frac{\kappa^2+1}{(\kappa+1)^2}$$
-
-\textbf{Version 2}
-
 Die Prozesse $Z_1 - Z_2$, $Z_3 - Z_1$ sind isochor beziehungsweise isobar. Hieraus folgt: $W_{12}=0J$, $Q_{12}=\Delta U_{12}=\frac f2 p_0V_0$, $W_{31}=-p_0(-V_0)=p_0V_0$, $Q_{31}=\Delta U_{31}-W_{31}=\frac f2 (p_0V_0-2p_0V_0)-p_0V_0=-\frac{f+2}2p_0V_0$. Der dritte Prozess $Z_2-Z_3$ hat die Besonderheit, dass die beiden Endpunkte auf einer Isothermen liegen. Da es sich aber um eine Strecke handelt, nimmt die innere Energie erst zu und dann ab. Da sich das Gas außerdem ausdehnt, verrichtet es Arbeit, weshalb zuerst Wärme zugeführt werden muss und das Gas dann Wärme abgibt. Der Punkt an dem sich die Wärmezufuhr umkehrt, resultiert aus dem Berührpunkt zwischen der Gerade $Z_2Z_3$ und einer der Adiabaten. Geradengleichung: $p_z(V_z)=-\frac{p_0}{V_0}V_z+3p_0$, Adiabatengleichung $p_z(C,V_z)=CV_z^{-\kappa}$. $CV_Z^{-\kappa}=-\frac{p_0}{V_0}V_z+3p_0$, was auf $CV_{z}^{-\kappa}+\frac{p_0}{V_0}V_z=3p_0$ führt. Man erhält $C=-\frac{p_0}{V_0}V_Z(\kappa+1)+3p_0V_z^{\kappa}$. Da $C$ konstante ist (mit der wir die Adiabatenscharen definiert haben), fällt sie beim Ableiten nach $V$ heraus. $0=-\frac{p_0}{V_0}(\kappa+1)V_z^{\kappa}+3p_0\kappa V_z^{\kappa -1}$. Sodass sich $V_z=\frac{3\kappa}{\kappa+1}V_0$. Hierraus folgt $Q_{23-zu}=\frac f2 (p(V_z)V_Z-2p_0V_0)+\int_{V_0}^{V_z}p(V)dV=\frac f2 ((-\frac{p_0}{V_0}V_z+3p_0)V_z-2p_0V_0)+[-\frac{p_0}{2V_0}V^2+3p_0V]_{V_0}^{V_z}$
 \begin{eqnarray}
 \nonumber Q_{23-zu}&=&-\frac f2\frac{p_0}{V_0}V_z^2+\frac f23p_0V_z-fp_0V_0-\frac{p_0}{2V_0}V_z^2+3p_0V_z-\frac 52p_0V_0\\
