@@ -2,14 +2,14 @@
 \input{previewmacros.tex}
 
 \begin{problem}{Neutrinomasse}{3}
-Bei der Explosion einer Supernovae (Entfernung rund $160000$ Lichtjahre) enstehen 2 Neutrinos, die mit einer Laufzeitdifferenz von $10\unit{s}$ die Erde erreichen. Man schätze die Masse eines Neutrinos nach oben ab, wenn die Energien der Neutrinos $10\unit{MeV}$ bzw. $20\unit{MeV}$ betrugen.
+Bei der Explosion einer Supernova (Entfernung rund $160000$ Lichtjahre) entstehen 2 Neutrinos, die mit einer Laufzeitdifferenz von $10\unit{s}$ die Erde erreichen. Man schätze die Masse eines Neutrinos nach oben ab, wenn die Energien der Neutrinos $10\unit{MeV}$ bzw. $20\unit{MeV}$ betrugen.
 \begin{solution}
 Da man nicht weiß, ob die Neutrinos eine Masse besitzen, rechnet man sinnigerweise, als ob die Gesamtenergien angegeben wären:
 $$E_1=m_nc^2\gamma_1=m_nc^2\left(1-\beta_1^2\right)^{-\frac 12}, E_2= m_nc^2\left(1-\beta_2^2\right)^{-\frac 12}$$
 mit $\frac lc\left(\frac 1{\beta_1}-\frac 1{\beta_2}\right)=\Delta t$
 mit 
 $$\left(1-\left(\frac{m_nc^2}{E_1}\right)^2\right)^{\frac 12}=\beta_1, \left(1-\left(\frac{m_nc^2}{E_2}\right)^2\right)^{\frac 12}=\beta_2$$
-Da die Ruheenergie klein gegen die Gesamtenergie sein wird, nähern wir mit der Bernoullschen Ungleichung und setzen in die Formel für die Zeitverschiebung ein:
+Da die Ruheenergie klein gegen die Gesamtenergie sein wird, nähern wir mit der Bernoullischen Ungleichung und setzen in die Formel für die Zeitverschiebung ein:
 $$\left(1+\frac 12\left(\frac{m_nc^2}{E_1}\right)^2\right)-\left(1+\frac 12\left(\frac{m_nc^2}{E_2}\right)^2\right)=\frac{c\Delta t}{l}$$
 $$\frac 12\left(\left(\frac{m_nc^2}{E_1}\right)^2-\left(\frac{m_nc^2}{E_2}\right)^2\right)=\frac{c\Delta t}{l}$$
 Mit $E_2\approx 2E_1$ ergibt sich:
@@ -21,11 +21,11 @@ $$m_n=\sqrt{\frac 83\left(\frac{E_1}{c^2}\right)^2\frac{\frac{c\Delta t}l}{\left
 \end{problem}
 
 \begin{problem}{Schwingende Linse}{6}
-Zu beiden Seiten einer dünnen Sammellinse (Brennweite $f$, Durchmesser $d$) befinden sich im Abstand $l$ auf der optischen Achse punktförmige Lichtquellen der Leistung $P$. Man bestimme die Schwingungsdauer der Linse bei kleinen Ausgelenkungen unter der Annahme $l<<d<<f$.
+Zu beiden Seiten einer dünnen Sammellinse (Brennweite $f$, Durchmesser $d$) befinden sich im Abstand $l$ auf der optischen Achse punktförmige Lichtquellen der Leistung $P$. Man bestimme die Schwingungsdauer der Linse bei kleinen Auslenkungen unter der Annahme $l<<d<<f$.
 \begin{solution}
-Wir betrachten erst einen Teil des Problems, nähmlich die Kraftwirkung einer Lichtquelle auf die Linse. Die gesamte Lösung erhalten ergibt sich durch lineare Superposition.
+Wir betrachten erst einen Teil des Problems, nämlich die Kraftwirkung einer Lichtquelle auf die Linse. Die gesamte Lösung erhalten ergibt sich durch lineare Superposition.
  
-Da die Lichtquellen sehr weit voneinander entfernt sind, und der Linsenradius klein im Vergleich zur Entfernung ist, sind die ankommenden Strahlen näherungsweise parallel und achsennah und werden in den Brennpunkt gebrochen. Wir nehmen, an dass die Linse nur kleine Schwingungen vollführt und somit die Änderung der Wellenlänge des Lichtes vernachlässigbar ist. Da das Problem weiterhin rotationssymmetrisch um die optische Achse ist, sind nur Kraftanteile in Richtung der optischen Achse zu berücksichtigen. Die horizontale Komponente des Impulses der Photenen ändert sich in einem Kreisring $2\pi r dr$ mit dem Abstand $r$ von optischen Achse gleich stark um:
+Da die Lichtquellen sehr weit voneinander entfernt sind, und der Linsenradius klein im Vergleich zur Entfernung ist, sind die ankommenden Strahlen näherungsweise parallel und achsennah und werden in den Brennpunkt gebrochen. Wir nehmen, an dass die Linse nur kleine Schwingungen vollführt und somit die Änderung der Wellenlänge des Lichtes vernachlässigbar ist. Da das Problem weiterhin rotationssymmetrisch um die optische Achse ist, sind nur Kraftanteile in Richtung der optischen Achse zu berücksichtigen. Die horizontale Komponente des Impulses der Photonen ändert sich in einem Kreisring $2\pi r dr$ mit dem Abstand $r$ von optischen Achse gleich stark um:
 $$dF=d\frac{dp_I}{dt}=\frac{2\pi rIdr}{c}(1-\cos{\arctan\frac{r}{f}})\approx\frac{\pi rIdr}{c}\frac{r^2}{f^2}$$
 Nun gilt für die Intensität: $I=\frac{P}{4\pi l^2}$ und die Gesamtkraft ergibt sich zu:
 $$F=\frac{R^4P}{16l_l^2f^2c}-\frac{R^4P}{16l_r^2f^2c},\quad l_l=l_r \Rightarrow F=0$$
@@ -93,7 +93,7 @@ Man berechne den Wirkungsgrad dieser Maschine. Wo wird Wärme abgegeben bzw. auf
 \begin{solution}
 Bezeichne die Zustände mit $Z_1=(p_0,V_0)$, $Z_2=(2p_0,V_0)$ und $Z_3=(p_0,2V_0)$.
 
-Die Prozesse $Z_1 - Z_2$, $Z_3 - Z_1$ sind isochor beziehungsweise isobar. Hieraus folgt: $W_{12}=0J$, $Q_{12}=\Delta U_{12}=\frac f2 p_0V_0$, $W_{31}=-p_0(-V_0)=p_0V_0$, $Q_{31}=\Delta U_{31}-W_{31}=\frac f2 (p_0V_0-2p_0V_0)-p_0V_0=-\frac{f+2}2p_0V_0$. Der dritte Prozess $Z_2-Z_3$ hat die Besonderheit, dass die beiden Endpunkte auf einer Isothermen liegen. Da es sich aber um eine Strecke handelt, nimmt die innere Energie erst zu und dann ab. Da sich das Gas außerdem ausdehnt, verrichtet es Arbeit, weshalb zuerst Wärme zugeführt werden muss und das Gas dann Wärme abgibt. Der Punkt an dem sich die Wärmezufuhr umkehrt, resultiert aus dem Berührpunkt zwischen der Gerade $Z_2Z_3$ und einer der Adiabaten. Geradengleichung: $p_z(V_z)=-\frac{p_0}{V_0}V_z+3p_0$, Adiabatengleichung $p_z(C,V_z)=CV_z^{-\kappa}$. $CV_Z^{-\kappa}=-\frac{p_0}{V_0}V_z+3p_0$, was auf $CV_{z}^{-\kappa}+\frac{p_0}{V_0}V_z=3p_0$ führt. Man erhält $C=-\frac{p_0}{V_0}V_Z(\kappa+1)+3p_0V_z^{\kappa}$. Da $C$ konstante ist (mit der wir die Adiabatenscharen definiert haben), fällt sie beim Ableiten nach $V$ heraus. $0=-\frac{p_0}{V_0}(\kappa+1)V_z^{\kappa}+3p_0\kappa V_z^{\kappa -1}$. Sodass sich $V_z=\frac{3\kappa}{\kappa+1}V_0$. Hierraus folgt $Q_{23-zu}=\frac f2 (p(V_z)V_Z-2p_0V_0)+\int_{V_0}^{V_z}p(V)dV=\frac f2 ((-\frac{p_0}{V_0}V_z+3p_0)V_z-2p_0V_0)+[-\frac{p_0}{2V_0}V^2+3p_0V]_{V_0}^{V_z}$
+Die Prozesse $Z_1 - Z_2$, $Z_3 - Z_1$ sind isochor beziehungsweise isobar. Hieraus folgt: $W_{12}=0J$, $Q_{12}=\Delta U_{12}=\frac f2 p_0V_0$, $W_{31}=-p_0(-V_0)=p_0V_0$, $Q_{31}=\Delta U_{31}-W_{31}=\frac f2 (p_0V_0-2p_0V_0)-p_0V_0=-\frac{f+2}2p_0V_0$. Der dritte Prozess $Z_2-Z_3$ hat die Besonderheit, dass die beiden Endpunkte auf einer Isothermen liegen. Da es sich aber um eine Strecke handelt, nimmt die innere Energie erst zu und dann ab. Da sich das Gas außerdem ausdehnt, verrichtet es Arbeit, weshalb zuerst Wärme zugeführt werden muss und das Gas dann Wärme abgibt. Der Punkt an dem sich die Wärmezufuhr umkehrt, resultiert aus dem Berührpunkt zwischen der Gerade $Z_2Z_3$ und einer der Adiabaten. Geradengleichung: $p_z(V_z)=-\frac{p_0}{V_0}V_z+3p_0$, Adiabatengleichung $p_z(C,V_z)=CV_z^{-\kappa}$. $CV_Z^{-\kappa}=-\frac{p_0}{V_0}V_z+3p_0$, was auf $CV_{z}^{-\kappa}+\frac{p_0}{V_0}V_z=3p_0$ führt. Man erhält $C=-\frac{p_0}{V_0}V_Z(\kappa+1)+3p_0V_z^{\kappa}$. Da $C$ konstante ist (mit der wir die Adiabatenscharen definiert haben), fällt sie beim Ableiten nach $V$ heraus. $0=-\frac{p_0}{V_0}(\kappa+1)V_z^{\kappa}+3p_0\kappa V_z^{\kappa -1}$. Sodass sich $V_z=\frac{3\kappa}{\kappa+1}V_0$. Hieraus folgt $Q_{23-zu}=\frac f2 (p(V_z)V_Z-2p_0V_0)+\int_{V_0}^{V_z}p(V)dV=\frac f2 ((-\frac{p_0}{V_0}V_z+3p_0)V_z-2p_0V_0)+[-\frac{p_0}{2V_0}V^2+3p_0V]_{V_0}^{V_z}$
 \begin{eqnarray}
 \nonumber Q_{23-zu}&=&-\frac f2\frac{p_0}{V_0}V_z^2+\frac f23p_0V_z-fp_0V_0-\frac{p_0}{2V_0}V_z^2+3p_0V_z-\frac 52p_0V_0\\
 \nonumber Q_{23-zu}&=&-\frac{f+1}2\frac{p_0}{V_0}V_z^2+\frac{f+2}23p_0V_z-\frac{5+2f}2p_0V_0
@@ -104,9 +104,9 @@ Mit $f=\frac 2{\kappa-1}$ ergibt sich:
 \nonumber Q_{23-zu}&=&p_0V_0\left(\frac{9\kappa^2-5\kappa^2-4\kappa+1}{2(\kappa^2-1)}\right)\\
 \nonumber Q_{23-zu}&=&\frac{(2\kappa-1)^2}{2(\kappa^2-1)}p_0V_0
 \end{eqnarray}
-Die Arbeit die in diesem Prozessschritt verrichtet wird ist: $W_{23}=-\frac 32p_0V_0$, da sich das Gas hier ausdehnt. Die gesamte Verrichtete Arbeit ist, also nur das Dreieck mit den Seitenlängen $p_0$ und $V_0$ und somit $W=-\frac 12p_0V_0$. Die gesammte zugeführte Energie ist: $Q_{zu}=(\frac 1{\kappa -1}+\frac{(2\kappa-1)^2}{2(\kappa^2-1)})p_0V_0$.
+Die Arbeit die in diesem Prozessschritt verrichtet wird ist: $W_{23}=-\frac 32p_0V_0$, da sich das Gas hier ausdehnt. Die gesamte Verrichtete Arbeit ist, also nur das Dreieck mit den Seitenlängen $p_0$ und $V_0$ und somit $W=-\frac 12p_0V_0$. Die gesamte zugeführte Energie ist: $Q_{zu}=(\frac 1{\kappa -1}+\frac{(2\kappa-1)^2}{2(\kappa^2-1)})p_0V_0$.
 $$\eta=\frac{-W}{Q_{zu}}=\frac 1{\frac 2{\kappa - 1}+\frac{(2\kappa-1)^2}{\kappa^2-1}}=\frac{\kappa^2-1}{4\kappa^2-2\kappa+3}$$
-Für ein Dreiatomiges Gas ergibt sich: $\eta=\frac {16}{97}\approx \frac 16$ ($\frac 16$ hätte sich auch ergeben, falls man nicht beachtet hätte, dass man auf dem Prozessweg $Z_2Z_3$ beachten muss, dass das Gas nicht nur Wärme abgibt, sondern auch aufnimmt. Die relative Abweichung vom korrekten Ergebnis beträgt ungefähr $1,04\%$.).
+Für ein dreiatomiges Gas ergibt sich: $\eta=\frac {16}{97}\approx \frac 16$ ($\frac 16$ hätte sich auch ergeben, falls man nicht beachtet hätte, dass man auf dem Prozessweg $Z_2Z_3$ beachten muss, dass das Gas nicht nur Wärme abgibt, sondern auch aufnimmt. Die relative Abweichung vom korrekten Ergebnis beträgt ungefähr $1,04\%$.).
 Für zweiatomige und dreiatomige Gase ergibt sich: $\eta_2=\frac 8{67}$ und $\eta_3=\frac 7{67}$.
 Falls man nicht in $\kappa$ sondern in Freiheitsgraden rechnet ergibt sich die Gleichungen $Q_{zu-23}=p_0V_0\frac{(f+4)^2}{8(f+1)}$ und $Q_{zu}=\frac{5f^2+12f+16}{8(f+1)}$. Der Wirkungsgrad ergibt sich dann zu: $\eta=\frac{4(f+1)}{5f^2+12f+16}$
 
@@ -116,14 +116,14 @@ Falls man nicht in $\kappa$ sondern in Freiheitsgraden rechnet ergibt sich die G
 \begin{problem}{Verloren im Weltraum}{6,5}
 Käptain Blaubär ist mal wieder blau und erzählt dem Heinz Blöd Geschichten:
 \begin{quote}
- Als ich noch jung war, wurde ich wegen meiner sportlichen Leistung, ich schaffte es mich im Raumanzug $25\unit{cm}$ von der Erde abzustoßen, gebeten die Sonnensegel der Internationalen Raumstation zu reparieren. Als ich nun da oben war, packte mich mein sportlicher Ehrgeiz und ich sprang in Flugrichtung mit voller Kraft ab. Die ISS wurde immer kleiner und mich überkam die Angst. Glücklicherweiße wurde sie auch wieder größer und mir gelang es, wieder zur ISS zu kommen.
+ Als ich noch jung war, wurde ich wegen meiner sportlichen Leistung, ich schaffte es mich im Raumanzug $25\unit{cm}$ von der Erde abzustoßen, gebeten die Sonnensegel der Internationalen Raumstation zu reparieren. Als ich nun da oben war, packte mich mein sportlicher Ehrgeiz und ich sprang in Flugrichtung mit voller Kraft ab. Die ISS wurde immer kleiner und mich überkam die Angst. Glücklicherweise wurde sie auch wieder größer und mir gelang es, wieder zur ISS zu kommen.
 \end{quote}
 \begin{abcenum}
  \item Helfen Sie dem Blödmann Heinz herauszufinden ob der blaue Blaubär Kapitän Seemannsgarn erzählt. Nehmen Sie dazu an, dass der Erdradius $6730\unit{km}$ und die Orbitalhöhe der ISS $300\unit{km}$ beträgt.
  \item Wann würde der Blaubär das nächste mal die Raumstation erreichen?
 \end{abcenum}
 \begin{solution}
-Sowie sich der Bär abstößt bewegt er sich mit einer Geschwindigkeit, die höher ist, als die die benötigt wird um eine Kreisbahn um die Erde zu behalten. Das heißt, dass er sich auf einer Ellipse bewegt. Da man annehmen kann, dass die Masse der Raumstation groß im vergleich zur Masse des Blaubären ist, wird diese ihre Geschwindigkeit kaum ändern und ihre Bahn ist als Kreisbahn zu nähern. Da sich der Kapitän in Bewegungsrichtung abstößt und seine Geschwindigkeit leicht größer ist als die der Raumstation wird er sich im Perihel der Ellipsenbahn befinden.
+Sowie sich der Bär abstoßt bewegt er sich mit einer Geschwindigkeit, die höher ist, als die die benötigt wird um eine Kreisbahn um die Erde zu behalten. Das heißt, dass er sich auf einer Ellipse bewegt. Da man annehmen kann, dass die Masse der Raumstation groß im Vergleich zur Masse des Blaubären ist, wird diese ihre Geschwindigkeit kaum ändern und ihre Bahn ist als Kreisbahn zu nähern. Da sich der Kapitän in Bewegungsrichtung abstoßt und seine Geschwindigkeit leicht größer ist als die der Raumstation wird er sich im Perihel der Ellipsenbahn befinden.
 
 Man findet durch einfache Rechnungen:
 \begin{description}
@@ -139,7 +139,7 @@ Man findet durch einfache Rechnungen:
 %This is a dirty hack! Try to elimate the identation bug!
 \end{description}
 
-Nun ist die Berechnung der wesentlichen Bahnparameter abgeschlossen, die man am besten numerisch vornimmt. Nun ist es wichtig die Bahn des Bären zu erhalten als Funktion der Zeit $\vec{r}_p(t)$. Die Bahn der ISS ist nicht schwer zu errechnen, da sie eine Kreisbahn ist: $\vec{r}_{ISS}=(r+h)\vec{e}_{r}$ (in Polarkoordinaten mit $\vec{e}_r=cos{\omega t}\vec{e}_x+\sin{\omega t}\vec{e}_y$. Da dies Kenntnisse der Lösung des Keplerproblems vorraussetzt und die analytischer Lösung zu schwer ist, begnügen wir uns mit einer Näherung. Wie leicht auszurechnen ist, folgt, dass die Exzentrizität sehr klein ist. Deshalb können wir auch annehmen, dass sich der Bär auf einer näherungsweise kreisförmigen Bahn bewegt. Da wir Ergebnisse brauchen, die zuerst für die Anfangszeit der Bewegung richtig sind, sei der Kreisbahnradius $r_p=a$ mit einem um $a-(r+h)$ verschobenen Rotationszentrum. Nun folgt für $\vec{r}_p(t)=((a-r-h)+a\cos{\omega_p t})\vec{e}_x+a\sin{\omega t}\vec{e}_y$ für ein: $\omega=\frac{v_p}{a}$. Die Bahn der ISS ist die Bahn von oben gegeben mit $\omega=\frac{v_r}{r+h}$ sodass sich als Abstand in Abhängigkeit von der Zeit ergibt: $d(t)=|\vec{r}_p(t)-\vec{r}_{ISS}(t)|=\sqrt{((a-r-h+a\cos{\omega_p t}-(r+h)\cos{\omega t})^2+(a\sin{\omega_p t}-(r+h)\sin{\omega t})^2}$. Dies kann man nach der Zeit differenzieren und Nullsetzen um die Minima zu finden. Allerdings sei hier eine nummerische Analyse empfohlen. Was sich ergibt ist, dass der Blaubär nicht nahe genug an die ISS wieder herankommt und auch keine zweite Chance erhalten wird.
+Nun ist die Berechnung der wesentlichen Bahnparameter abgeschlossen, die man am besten numerisch vornimmt. Nun ist es wichtig die Bahn des Bären zu erhalten als Funktion der Zeit $\vec{r}_p(t)$. Die Bahn der ISS ist nicht schwer zu errechnen, da sie eine Kreisbahn ist: $\vec{r}_{ISS}=(r+h)\vec{e}_{r}$ (in Polarkoordinaten mit $\vec{e}_r=cos{\omega t}\vec{e}_x+\sin{\omega t}\vec{e}_y$. Da dies Kenntnisse der Lösung des Keplerproblems voraussetzt und die analytischer Lösung zu schwer ist, begnügen wir uns mit einer Näherung. Wie leicht auszurechnen ist, folgt, dass die Exzentrizität sehr klein ist. Deshalb können wir auch annehmen, dass sich der Bär auf einer näherungsweise kreisförmigen Bahn bewegt. Da wir Ergebnisse brauchen, die zuerst für die Anfangszeit der Bewegung richtig sind, sei der Kreisbahnradius $r_p=a$ mit einem um $a-(r+h)$ verschobenen Rotationszentrum. Nun folgt für $\vec{r}_p(t)=((a-r-h)+a\cos{\omega_p t})\vec{e}_x+a\sin{\omega t}\vec{e}_y$ für ein: $\omega=\frac{v_p}{a}$. Die Bahn der ISS ist die Bahn von oben gegeben mit $\omega=\frac{v_r}{r+h}$ sodass sich als Abstand in Abhängigkeit von der Zeit ergibt: $d(t)=|\vec{r}_p(t)-\vec{r}_{ISS}(t)|=\sqrt{((a-r-h+a\cos{\omega_p t}-(r+h)\cos{\omega t})^2+(a\sin{\omega_p t}-(r+h)\sin{\omega t})^2}$. Dies kann man nach der Zeit differenzieren und Nullsetzen um die Minima zu finden. Allerdings sei hier eine nummerische Analyse empfohlen. Was sich ergibt ist, dass der Blaubär nicht nahe genug an die ISS wieder herankommt und auch keine zweite Chance erhalten wird.
 \end{solution}
 \end{problem}
 
