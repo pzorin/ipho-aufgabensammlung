@@ -20,20 +20,22 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newcommand{aufgabentitel}[1]{\vspace{1cm} {\large\bf \noindent #1} \vspace{.35cm}\\}
-\newcounter{numlabel}
-\setcounter{numlabel}{0}
-%\newenvironment{problem}[2]{\stepcounter{numlabel} \vspace{10ex} {\bf \noindent Aufgabe \the\value{numlabel}: #1 \emph{(#2 Punkte)}} \vspace{1ex}\\ \renewcommand{\Currentlabel}{Aufgabe \the\value{numlabel}: #1}}{
-\newenvironment{problem}[2]{\stepcounter{numlabel} \vspace{1ex} \subsubsection*{Aufgabe \the\value{numlabel}: #1 \emph{(#2 Punkte)}} \renewcommand{\Currentlabel}{Aufgabe \the\value{numlabel}: #1}}{
-
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\def\solTitle<#1><#2>{
+\renewcommand{\thesubsection}{#1}
+\subsection{#2}
+\renewcommand{\thesubsection}{\arabic{subsection}}
 }
+
+\newenvironment{problem}[2]{
+\subsection{#1 \emph{(#2 Punkte)}}
+\renewcommand{\Currentlabel}{<\thesubsection><#1>}
+}{}
 \Newassociation{solution}{Soln}{solutions}
 \Newassociation{expsolution}{Soln}{expsolutions}
-%\renewenvironment{Soln}[1]{\vspace{5ex} {\bf \noindent Lösung zur #1} \vspace{1ex}\\}{
-%\renewenvironment{Soln}[1]{\vspace{5ex} {\bf \noindent #1} \vspace{1ex}\\}{
-\renewenvironment{Soln}[1]{\subsubsection*{#1}}{
-
-}
+\renewenvironment{Soln}[1]{
+\solTitle #1
+}{}
 
 \title{IPhO-Aufgabensammlung}
 \author{Zusammengestellt von Pavel Zorin\\
@@ -55,7 +57,7 @@ Die 3. und die 4. Runde bestehen jeweils aus 2 theoretischen und 2 praktischen K
 
 Die Aufgaben werden nicht offiziell herausgegeben. Deshalb sind die Aufgaben aus dem Gedächtnis niedergeschrieben. Dies bedeutet natürlich, dass die Inhalte nicht unbedingt mit den Originalen übereinstimmen. Insbesondere die Ergebnisse müssen deshalb auch nicht korrekt und vollständig sein.
 
-\section*{Theoretische Aufgaben}
+\section{Theoretische Aufgaben}
 
 \Opensolutionfile{solutions}[AUTO_LOESUNGSDATEI]
 \input{theorie-2006-3-1.tex}
@@ -81,12 +83,11 @@ Die Aufgaben werden nicht offiziell herausgegeben. Deshalb sind die Aufgaben aus
 
 
 
-\section*{Experimentelle Aufgaben}
+\section{Experimentelle Aufgaben}
 
 Bei den experimentellen Aufgaben ist generell davon auszugehen, dass Millimeterpapier und Zeichengerät gegeben sind. Wenn es um Stromkreise geht, stehen immer ausreichend viele Kabel, Krokodilklemmen, etc. zu Verfügung.\\
 Die Zeichnungen der Blackboxen werden in den Klausuren selbstverständlich nicht angegeben.
 
-\setcounter{numlabel}{0}
 \Opensolutionfile{expsolutions}[AUTO_LOESUNGSDATEI_EXP]
 \input{experiment.tex}
 \Closesolutionfile{expsolutions}
@@ -96,11 +97,11 @@ Die Zeichnungen der Blackboxen werden in den Klausuren selbstverständlich nicht
 
 
 %\newpage
-\section*{Lösungsvorschläge zu theoretischen Aufgaben}
+\section{Lösungen theoretischer Aufgaben}
 \Readsolutionfile{solutions}
 
 
-\section*{Lösungsvorschläge zu experimentellen Aufgaben}
+\section{Lösungen experimenteller Aufgaben}
 \Readsolutionfile{expsolutions}
 
 

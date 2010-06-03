@@ -13,17 +13,14 @@
 
 
 %\documentclass[12pt,a4paper]{article}
-\newcounter{numlabel}
-\setcounter{numlabel}{0}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
 
-\newcommand{\problemlabel}{}
 \newenvironment{problem}[2]{
-\stepcounter{numlabel}
-\renewcommand{\problemlabel}{Aufgabe \the\value{numlabel}: #1}
-\subsubsection*{\problemlabel \emph{(#2 Punkte)}}
+\subsection{#1 \emph{(#2 Punkte)}}
 }{}
-\newenvironment{solution}{\subsubsection*{\problemlabel}}{}
-\newenvironment{expsolution}{\subsubsection*{\problemlabel}}{}
+\newenvironment{solution}{\subsection{Lösung}}{}
+\newenvironment{expsolution}{\subsection*{Lösung}}{}
 
 \begin{document}
 

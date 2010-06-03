@@ -11,10 +11,13 @@ time dvips -q -Ppdf -o $FILENAME1-pics.ps $FILENAME1.dvi
 echo $'\e[0;32m' ps2pdf $' \e[0m'
 time ps2pdf $FILENAME1-pics.ps $FILENAME1-pics.pdf
 
+echo $'\e[0;32m' PDFLaTeX, generate bookmarks $' \e[0m'
+time pdflatex $LATEXOPTIONS $FILENAME1.tex
+
 echo $'\e[0;32m' PDFLaTeX $' \e[0m'
 time pdflatex $LATEXOPTIONS $FILENAME1.tex
 
 echo $'\e[0;32m' Clean up $' \e[0m'
-rm $FILENAME1.aux $FILENAME1.dvi *.log $FILENAME1.toc $FILENAME1-pics.ps $FILENAME1-pics.pdf AUTO_LOESUNGSDATEI.tex AUTO_LOESUNGSDATEI_EXP.tex
+rm $FILENAME1.out $FILENAME1.aux $FILENAME1.dvi *.log $FILENAME1.toc $FILENAME1-pics.ps $FILENAME1-pics.pdf AUTO_LOESUNGSDATEI.tex AUTO_LOESUNGSDATEI_EXP.tex
 
 exit 0

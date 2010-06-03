@@ -13,16 +13,27 @@
 \usepackage{pst-circ}
 \usepackage{pst-plot}
 %\usepackage{pst-node}
+\usepackage{booktabs}
 
 \ifx \envfinal \empty
 \usepackage{pst-pdf}
+
+\usepackage{hyperref}
+\hypersetup{
+bookmarks=true,
+pdfpagemode=UseNone,
+pdfstartview=FitH,
+pdfdisplaydoctitle=true,
+pdflang=de-DE,
+pdfborder={0 0 0}, % No link borders
+unicode=true,
+pdftitle={IPhO-Aufgabensammlung},
+pdfauthor={Pavel Zorin},
+pdfsubject={Aufgaben der 3. und 4. Runden deutscher Auswahl zur IPhO},
+pdfkeywords={}
+}
+
 \fi
-
-\usepackage{booktabs}
-
-% Muss als letztes eingebunden werden
-%\usepackage[bookmarks=true,bookmarksnumbered,colorlinks=true,pdftitle={IPhO-Aufgaben},pdfstartview=FitH,pdfauthor={Pavel Zorin}]{hyperref}
-\usepackage[bookmarks=false,pdftitle={IPhO-Aufgabensammlung},pdfstartview=FitH,pdfauthor={Pavel Zorin}]{hyperref}
 
 %Times 10^n
 \newcommand{\ee}[1]{\cdot 10^{#1}}
