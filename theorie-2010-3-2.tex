@@ -2,7 +2,7 @@
 \input{previewmacros.tex}
 
 \begin{problem}{Kosmische Geschwindigkeiten}{3,5}
-Als erste kosmische Geschwindigkeit wird die Geschwindigkeit bezeichnet, die ein Körper benötgit, um eine Kreisbahn um die Erde an der Erdoberfläche zu beschreiben.  Die zweite kosmische Geschwindigkeit ist hingegen notwendig, um dem Gravitationsfeld der Erde gerade ganz zu entfliehen.
+Als erste kosmische Geschwindigkeit wird die Geschwindigkeit bezeichnet, die ein Körper benötigt, um eine Kreisbahn um die Erde an der Erdoberfläche zu beschreiben.  Die zweite kosmische Geschwindigkeit ist hingegen notwendig, um dem Gravitationsfeld der Erde gerade ganz zu entfliehen.
 \begin{abcenum}
   \item Berechnen Sie das Verhältnis der zweiten zur ersten kosmischen Geschwindigkeit.
   \item Welchen Anteil der zweiten kosmischen Geschwindigkeit muss man einem Körper mitteilen, damit er, von der Erde aus startend, nach einem Jahr zur Erde zurückkehrt?
@@ -18,7 +18,7 @@ Folgende Werte können als bekannt vorausgesetzt werden:
 \begin{solution}
   \begin{abcenum}
     \item 1. Kosmische Geschwindigkeit: $mg=mGm_E r_E^{-2}=m\omega^2r_E\Rightarrow \frac{Gm_E}{r_E}=\omega^2r_E^2=v_1^2\Rightarrow v_1=\sqrt{\frac{Gm_E}{r_E}}$.  2. Kosmische Geschwindigkeit: $\frac 12mv_2^2=W_{Hub}=\lim\limits_{b\rightarrow mGm_e\infty}\int\limits_{r_E}^bdx\ \frac{1}{x^2}=mGm_E\lim\limits_{b\rightarrow \infty}\left(\frac 1{r_E}-\frac 1b\right)=mGm_Er_E^{-1}\Rightarrow v=\sqrt{\frac{2Gm_e}{r_E}}$
-  \item Sei also die Erde ein Inertialsystem und die Erdrotations folglich nicht vorhanden, dann gilt nach dem 3. Keplerschen Gesetz: $\left(\frac {a_1}{a_2}\right)^2= \left(\frac{T_1}{T_2}\right)^2$ wobei die Indizes zwei verschiedene geschlossene Ellipsenbahnen um die Erde bezeichnen und $T$ die Umlaufdauern und $a$ die großen Halbachsen bedeuten.  Eine Gerade, die beide Brennpunkte verbindet ist eine gestörte Form der Ellipse und sein nun mit Index $1$ behaftet.  Ein Kreis der direkt um den Erdradius geht ist auch eine gestörte Form der Ellipse und sei nun mit Index $2$ behaftet.  Dann ist $a_2=r_E; T_2=2\pi \frac 1{\omega}=2\pi\frac {r_E}{v_1}$, wobei $v$ hier die erste kosmische Geschwindigkeit ist und somit $T_2=\sqrt{4\pi^2\frac{r_E^3}{Gm_E}}$.  $T_1$ soll ein Jahr sein (Beachte es ist eine Näherung, da der andere Brennpunkt mit dem Erdmittelpunkt zusammenfällt).  Dann ergibt sich:
+  \item Sei also die Erde ein Inertialsystem und die Erdrotation folglich nicht vorhanden, dann gilt nach dem 3. Keplerschen Gesetz: $\left(\frac {a_1}{a_2}\right)^2= \left(\frac{T_1}{T_2}\right)^2$ wobei die Indizes zwei verschiedene geschlossene Ellipsenbahnen um die Erde bezeichnen und $T$ die Umlaufdauern und $a$ die großen Halbachsen bedeuten.  Eine Gerade, die beide Brennpunkte verbindet ist eine gestörte Form der Ellipse und sein nun mit Index $1$ behaftet.  Ein Kreis der direkt um den Erdradius geht ist auch eine gestörte Form der Ellipse und sei nun mit Index $2$ behaftet.  Dann ist $a_2=r_E; T_2=2\pi \frac 1{\omega}=2\pi\frac {r_E}{v_1}$, wobei $v$ hier die erste kosmische Geschwindigkeit ist und somit $T_2=\sqrt{4\pi^2\frac{r_E^3}{Gm_E}}$.  $T_1$ soll ein Jahr sein (Beachte es ist eine Näherung, da der andere Brennpunkt mit dem Erdmittelpunkt zusammenfällt).  Dann ergibt sich:
     \begin{equation*}
       h\approx a_1=\sqrt[3]{T_1^2\frac{Gm_E}{4\pi^2 r_E^3}r_E^3}=\sqrt[3]{T_1^2\frac{Gm_E}{4\pi^2}}\approx 2,15\cdot 10^{9}m
     \end{equation*}
@@ -29,7 +29,7 @@ $1\unit{y}=\int\limits_{r_E}^a\frac{dx}{\sqrt{\frac{2m}\left(mGm_E\left(\frac 1x
 \end{problem}
 
 \begin{problem}{Negativer Brechungsindex}{5}
-Bestimmte Materialien besitzen für einen engen Wellenlängenbereich der elektormagnetischen STrahlung einen negativen Brechungsindex.  Geht ein Lichtstrahl von einem Medium mit einem Brechungsindex $n_1>0$ in ein Medium mit einem Brechungsindex $n_2<0$ über, so gilt weiterhin das Snelliussche Brechungsgesetz:
+Bestimmte Materialien besitzen für einen engen Wellenlängenbereich der elektromagnetischen Strahlung einen negativen Brechungsindex.  Geht ein Lichtstrahl von einem Medium mit einem Brechungsindex $n_1>0$ in ein Medium mit einem Brechungsindex $n_2<0$ über, so gilt weiterhin das Snelliussche Brechungsgesetz:
 \begin{equation*}
   n_1\sin{\alpha_1}=n_2\sin{\alpha_2}
 \end{equation*}
@@ -38,11 +38,11 @@ Allerdings ist $\alpha_2$ dann negativ.
   \item Ein kleines Objekt befinde sich in einem Abstand $a$ vor einer großen Platte der Dicke $d$, die aus einem Material mit Brechungsindex $-1$ besteht.  Der Brechungsindex des übrigen Raumes sei $1$.
 
 Geben Sie an, wo sich das Bild des Objektes auf der anderen Seite der Platte befindet und welche Eigenschaften dieses Bild besitzt, d.h. geben Sie dessen Vergrößerung an und entscheiden Sie, ob das Bild reell bzw. virtuell, gespiegelt oder rotiert ist.
-  \item Ein kleines Objekt befinde sich in einem kartesischen Koordinatesystem bei $(a,-b,0)$, wobei $a$ und $b$ größer $0$ seien.  Der Raum mit $x>0$ und $y>0$ sei mit einem Material des Brechungsindexes $-1$ angefüllt und der Brechungsindex betrage $1$ für den üblichen Raum.
+  \item Ein kleines Objekt befinde sich in einem kartesischen Koordinatensystem bei $(a,-b,0)$, wobei $a$ und $b$ größer $0$ seien.  Der Raum mit $x>0$ und $y>0$ sei mit einem Material des Brechungsindexes $-1$ angefüllt und der Brechungsindex betrage $1$ für den üblichen Raum.
 
 Die nebenstehende Abbildung zeigt einen Schnitt durch den Raum für $z=0$.  Betrachten Sie im Folgenden nur diese Ebene.
 
-Untersuchen Sie die Strahlen, die vom Objekt kommen und aus dem Raum mit negativem Brechungsindex stammen.  BEstimmen Sie die Position, die Vergrößerung und die Eigenschaften des aus diesen STrahlen enstehenden Bildes.  Von welcher Position aus ist dieses Bild zu sehen?
+Untersuchen Sie die Strahlen, die vom Objekt kommen und aus dem Raum mit negativem Brechungsindex stammen.  Bestimmen Sie die Position, die Vergrößerung und die Eigenschaften des aus diesen Strahlen entstehenden Bildes.  Von welcher Position aus ist dieses Bild zu sehen?
 \end{abcenum}
   \begin{solution}
     
@@ -50,22 +50,22 @@ Untersuchen Sie die Strahlen, die vom Objekt kommen und aus dem Raum mit negativ
 \end{problem}
 
 \begin{problem}{Masse und Feder}{4}
-  Zwei Massestücke liegen auf einer waagerechten reibungsfreien Unterlage, das linke Massestück $m$ berühre eine Wand, das andere Massestück der Masse $3m$ ist durch eine Feder und einen Faden mit dem ersten verbunden.  Die Feder ist anfänglich um $4\unit{cm}$ gestaucht.  Dann wird der Faden durchtrennt.  Bestimmen Sie die maximale Dehnung der Feder im darauffolgenden Prozess!
+  Zwei Gewichte liegen auf einer waagerechten reibungsfreien Unterlage, das linke Gewicht $m$ berühre eine Wand, das andere Gewicht der Masse $3m$ ist durch eine Feder und einen Faden mit dem ersten verbunden.  Die Feder ist anfänglich um $4\unit{cm}$ gestaucht.  Dann wird der Faden durchtrennt.  Bestimmen Sie die maximale Dehnung der Feder im darauffolgenden Prozess!
   \begin{solution}
     Erste Phase:  Beschleunigung der Masse $3m$.  Da Zwangsbedingung und 3. Newtonsche Gesetz dazu führt, dass die Masse $m$ an Ort und Stelle verbleibt (Zwangsbedingung wirkt als Impulsreservoir).  Deshalb gibt es eine Beschleunigung des Schwerpunktes.  Die Schwerpunktsenergie ist $\frac 34$ der Gesamtenergie.  Diese Steckt also in einer Translationsenergie.  Für die Schwingung verbleibt also noch ein viertel der Gesamtenergie.  Das heißt $\hat{E}_{\pot}'=\frac 14\hat{E}_{\pot}$, wobei $\hat{E}_\pot'$ die maximale potentielle Energie der Feder nach dem Stoß ist.  Daraus folgt $\hat{l}'^2=\frac 14\hat{l}^2\Rightarrow \hat{l}'=\frac 12 \hat l=2\unit{cm}$.
   \end{solution}
 \end{problem}
 
-\begin{problem}{Housten, wir haben ein Problem}{5,5}
-An Bord eines Raumschiffes, das sich in weiter Entfernung von der Erde befindet, ist ein Problem aufgetreten.  Die Astronauten berichten, dass plötzlich ein Loch der Größe von $1\unit{mm^2}$ in der Hülle aufgetreten ist, durch welches Luft auströmt.  Offensichtlich ist nicht nur die Hülle beschädigt, denn direkt nach der Meldung fällt der Funkkontakt aus.
+\begin{problem}{Houston, wir haben ein Problem}{5,5}
+An Bord eines Raumschiffes, das sich in weiter Entfernung von der Erde befindet, ist ein Problem aufgetreten.  Die Astronauten berichten, dass plötzlich ein Loch der Größe von $1\unit{mm^2}$ in der Hülle aufgetreten ist, durch welches Luft ausströmt.  Offensichtlich ist nicht nur die Hülle beschädigt, denn direkt nach der Meldung fällt der Funkkontakt aus.
 \begin{abcenum}
-  \item Bestimemn Sie, wie lange es dauert, bis der Druck im Inneren des Raumschiffs auf die Hälfte des anfänglichen Druckes von $10^5\unit{Pa}$ abgefallen ist.  Nehmen Sie dazu an, dass die Druckänderung im RAumschiff isotherm abläuft und dass die Wand des Raumschiffes dünn ist.
+  \item Bestimmen Sie, wie lange es dauert, bis der Druck im Inneren des Raumschiffes auf die Hälfte des anfänglichen Druckes von $10^5\unit{Pa}$ abgefallen ist.  Nehmen Sie dazu an, dass die Druckänderung im Raumschiff isotherm abläuft und dass die Wand des Raumschiffes dünn ist.
   \item Berechnen Sie, um wie viel sich die Geschwindigkeit des Raumschiffes dabei ändert.
 \end{abcenum}
 Sie können folgende Werte für ihre Rechnungen verwenden:
 \begin{description}
 \item[Temperatur im Raumschiff:] $T=20\unit{\cel}$
-\item[Masse des Raumschiffs:] $m=2\cdot 10^4\unit{kg}$
+\item[Masse des Raumschiffes:] $m=2\cdot 10^4\unit{kg}$
 \item[Luftvolumen im Raumschiff:] $V=50\unit{m^3}$
 \item[Molare Masse von Luft:] $M_{Luft}=29,0\unit{g mol^{-1}}$
 \end{description}
@@ -94,17 +94,17 @@ Betrachten Sie einen einfachen Defibrillator bestehend aus einem Kondensator, de
 
 Bei mobilen Defibrillatoren, wie sie an einigen öffentlichen Plätzen zu finden sind, wird der Kondensator über eine Batterie aufgeladen.  Da die Spannung $U_=$ der Batterie geringer ist, als die notwendige Kondensatorspannung, muss sie hochgewandelt werden.  Eine Möglichkeit dazu bietet ein so genannter Aufwärtswandler, wie er nebenstehend skizziert ist.
 
-Der Schlater $S$ öffnet und schließt sich periodisch, wobei er einen Anteil $g$ einer sehr kurzen Periodendauer geschlossen udn einen Anteil $1-g$ offen ist.  $g$ wird in diesem Fall als Tastverhältnis bezeichnet.  Der eingezeichnete Widerstand soll sehr groß sein und das ohmsche Verhalten des Kondensators abbilden.  Nehmen Sie außerdem an, dass die Diode in Sperrichtung vollständig sperrt und in Durchlassrichtung keinen Spannungsabfall verursacht.
+Der Schlater $S$ öffnet und schließt sich periodisch, wobei er einen Anteil $g$ einer sehr kurzen Periodendauer geschlossen und einen Anteil $1-g$ offen ist.  $g$ wird in diesem Fall als Tastverhältnis bezeichnet.  Der eingezeichnete Widerstand soll sehr groß sein und das ohmsche Verhalten des Kondensators abbilden.  Nehmen Sie außerdem an, dass die Diode in Sperrrichtung vollständig sperrt und in Durchlassrichtung keinen Spannungsabfall verursacht.
 
 \begin{abcenum}
-  \item Leiten Sie einen Asudruck für die maximal erreichbare Kondensatorspannung in Abhängigkeit von den auftretenden Größen her.  Alle Bauteile dürfen als ideal angenommen werden.
-\item Bestimmen Sie, wie groß das Tastverhältnis gewählt werden muss, um einen Kondensator einer Kapazität von $100\unit{\micro F}$ mit einer $12\unit{V}$ Batterie auf eine Spannung von $500\unit{V}$ aufzuladen, wennd ie Induktivität der Spule $5\unit{mH}$ beträgt.
+  \item Leiten Sie einen Ausdruck für die maximal erreichbare Kondensatorspannung in Abhängigkeit von den auftretenden Größen her.  Alle Bauteile dürfen als ideal angenommen werden.
+\item Bestimmen Sie, wie groß das Tastverhältnis gewählt werden muss, um einen Kondensator einer Kapazität von $100\unit{\micro F}$ mit einer $12\unit{V}$ Batterie auf eine Spannung von $500\unit{V}$ aufzuladen, wenn die Induktivität der Spule $5\unit{mH}$ beträgt.
 \end{abcenum}
 
 \end{problem}
 
 \begin{problem}{Ein seltsamer Anblick}{5}
-Ein Raumschiff bewegt sich mit einer hohen GEschwindigkeit $v$ senkrecht zur Ebene der Milchstraße.  Aus Sicht eines Beobachters in der Milchstraße befindet er sich genau über dem galaktischen Zentrum in einer Entfernung $d$ zur galaktischen Ebene.
+Ein Raumschiff bewegt sich mit einer hohen Geschwindigkeit $v$ senkrecht zur Ebene der Milchstraße.  Aus Sicht eines Beobachters in der Milchstraße befindet er sich genau über dem galaktischen Zentrum in einer Entfernung $d$ zur galaktischen Ebene.
 
 Ein Beobachter in dem Raumschiff stellt erstaunt fest, dass er einen Teil der Galaxis nicht hinter, sondern vor sich sieht.
 \begin{abcenum}
@@ -112,7 +112,7 @@ Ein Beobachter in dem Raumschiff stellt erstaunt fest, dass er einen Teil der Ga
  \item Die Milchstraße besitzt eine Ausdehnung von etwa $100000\unit{ly}$ und das Raumschiff befindet sich in einer Entfernung von $d=20000\unit{ly}$ von ihr entfernt.  Bestimmen Sie die Geschwindigkeit, mit der sich das Raumschiff mindestens bewegen muss, wenn der Rand der Galaxie unter einem Winkel von $\theta'=150\unit{\cel}$ aus dem Raumschiff zu sehen ist.
 \end{abcenum}
 \begin{solution}
- Sei $\Sigma'$ das Bezugssystem des Raumschiffes und $\Sigma$ das Bezugssystem der Milchstraße.  Beide werden als Inertialssyteme behandelt.
+ Sei $\Sigma'$ das Bezugssystem des Raumschiffes und $\Sigma$ das Bezugssystem der Milchstraße.  Beide werden als Inertialsysteme behandelt.
   \begin{abcenum}
     \item $\cos \theta'=\frac{u_\perp'}{c}$, wobei $u'_\perp$ die Geschwindigkeit des Lichtes in $\Sigma'$ senkrecht zur Milchstraße ist.  Es gilt die rel. Geschwindigkeitsaddition:
       \begin{equation*}
