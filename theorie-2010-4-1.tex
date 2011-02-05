@@ -1,0 +1,58 @@
+\input{standardmacros.tex}
+\input{previewmacros.tex}
+
+\begin{problem}{Insektenverfolgung}{3,5}
+Eine Fledermaus fliegt mit $v_F=25\unit{\frac{km}{h}}$ in einem Medium mit einer Schallgeschwindigkeit von $c=340\unit{\frac{m}{s}}$.
+Sie sendet ein Signal mit der Frequenz $f_1=40\unit{kHz}$ aus, welches an einem Insekt reflektiert wird. Die Fledermaus empfängt das reflektierte Signal mit einer Frequenz von $f_2=40.4\unit{kHz}$. Bestimmen Sie die Geschwindigkeit $v_I$ des Insekts.
+\begin{solution}
+Die Fledermaus empfängt wegen des Dopplereffekts das Signal $f_2$ wie folgt:
+\[
+f_2=f_1\cdot \left(\dfrac{1+\frac{v_F}{c}}{1+\frac{v_I}{c}}\right)\cdot \left(\dfrac{1-\frac{v_I}{c}}{1-\frac{v_F}{c}}\right)=f_1\cdot \left(1+\dfrac{2c\cdot \Delta v}{c^2-v_F\cdot v_I-c\cdot \Delta v}\right)
+\]
+Dies ergibt $v_I\approx 18.9\unit{\frac{km}{h}}$.
+\end{solution}
+\end{problem}
+
+\begin{problem}{Batterieschaltung}{4}
+Eine Lampe soll unter Spannung $U=10\unit{V}$ betrieben werden. Ihre Leistung beträgt dabei $P_L=15\unit{W}$.
+Wie viele Batterien mit dem Innenwiderstand $R_i=2\unit{\Omega}$ und der Spannung $U_0=1.5\unit{V}$ sind dafür mindestens notwendig? Geben Sie eine Schaltung mit möglichst wenig Batterien an.
+\begin{solution}
+Die effektive Leistung einer Batterie ist
+\[
+P_B=I^2\cdot R=\left(\dfrac{U_0}{R+R_i}\right)^2\cdot R=\dfrac{U_0^2\cdot R}{R^2+2R_i\cdot R+R_i^2}.
+\]
+Diese wird maximiert wenn die Ableitung nach $R$ verschwindet. Dies ist bei $R=R_{i}$ der Fall.
+Also ist
+\[
+P_{max}=\dfrac{U_0^2}{4R_i}\approx 0.281 \unit{W}
+\]
+Für die minimale Zahl ergibt sich also $N_{min}=\lceil\dfrac{P_L}{P_{max}}\rceil=54$.\\
+Eine mögliche Schaltung (nicht minimal, war aber auch nicht gefordert) ist:
+Reihenschaltung von 10 Schaltungen, die jeweils 6 parallelgeschaltete Batterien enthalten. 60 Batterien.
+\end{solution}
+\end{problem}
+
+\begin{problem}{Faserkreisel}{4,5}
+Gegeben ist ein kreisförmiger Glasfaserring mit Radius R, der sich mit der Winkelgeschwindigkeit $\omega$ im Uhrzeigersinn dreht.
+An einer Stelle dringt Licht mit Wellenlänge $\lambda$ ein und geht in beide Richtungen.
+\begin{abcenum}
+\item Wie groß ist die Phasendifferenz nach dem Umlaufen von N Windungen am Startpunkt.
+\item Wieviele Windungen benötigt ein Faserkreisel am Nordpol mit $R=1\,m$ und $\lambda= 655\,nm$ (Tageslänge $24\,h$), damit destruktive Interferenz verursacht wird.
+\end{abcenum}
+\end{problem}
+
+\begin{problem}{Rollende Kegel}{7}
+Gegeben ist ein Doppelkegel mit Öffnungswinkel $\alpha$ an der Spitze, der Masse M und dem Radius $R$ der Grundseite. Er liegt am Anfang A  von zwei langen Stangen, die einen Winkel $\gamma$ zum Boden und einen Winkel $\beta$ untereinander besitzen. Beide Stangen beginnen bei A.
+\begin{abcenum}
+\item Unter welchen Umständen rollt der Zylinder in A los.
+\item Bestimmen Sie das Trägheitsmoment des Doppelzylinders.
+\item Gebe die Geschwindigkeit in Abhängigkeit vom Ort an.
+\item Wie weit rollt der Kegel? Bestimme die maximale Geschwindigkeit.
+\end{abcenum}
+\end{problem}
+
+\begin{problem}{Brennstoffzelle}{11}
+\textit{Diese Aufgabe wird niemals nachgeliefert, da sie sehr lang und vor allem hässlich ist.}
+\end{problem}
+
+\input{previewending.tex}
