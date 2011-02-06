@@ -1,0 +1,125 @@
+\ifx \mpreamble \undefined
+\documentclass[12pt,a4paper]{article}
+\usepackage{answers}
+\usepackage{microtype}
+\usepackage[left=3cm,top=2cm,bottom=3cm,right=2cm,includehead,includefoot]{geometry}
+
+\usepackage{amsfonts,amsmath,amssymb,amsthm,graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ngerman}
+
+\usepackage{pstricks}
+\usepackage{pst-circ}
+\usepackage{pst-plot}
+%\usepackage{pst-node}
+\usepackage{booktabs}
+
+\ifx \envfinal \empty
+\usepackage{pst-pdf}
+
+\usepackage{hyperref}
+\hypersetup{
+bookmarks=true,
+pdfpagemode=UseNone,
+pdfstartview=FitH,
+pdfdisplaydoctitle=true,
+pdflang=de-DE,
+pdfborder={0 0 0}, % No link borders
+unicode=true,
+pdftitle={IPhO-Aufgabensammlung},
+pdfauthor={Pavel Zorin},
+pdfsubject={Aufgaben der 3. und 4. Runden der deutschen Auswahl zur IPhO},
+pdfkeywords={}
+}
+
+\fi
+
+%Times 10^n
+\newcommand{\ee}[1]{\cdot 10^{#1}}
+%Units
+\newcommand{\unit}[1]{\,\mathrm{#1}}
+%Differential d's
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\tdif}[2]{\frac{\dif#1}{\dif#2}}
+\newcommand{\pdif}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\ppdif}[2]{\frac{\partial^{2}#1}{\partial#2^{2}}}
+%Degree
+\newcommand{\degr}{^\circ}
+%Degree Celsius (C) symbol
+\newcommand{\cel}{\unit{^\circ C}}
+% Hinweis
+\newcommand{\hinweis}{\emph{Hinweis:} }
+% Aufgaben mit Buchstaben numerieren
+\newenvironment{abcenum}{\renewcommand{\labelenumi}{(\alph{enumi})} \begin{enumerate}}{\end{enumerate}\renewcommand{\labelenumi}{\theenumi .}}
+
+\title{IPhO-Aufgabensammlung}
+\author{Zusammengestellt von Pavel Zorin\\
+unter Verwendung der Aufzeichungen von\\
+Bastian Hacker, Igor Gotlibovych, Tobias Holder,\\
+Patrick Steinmüller,\\
+sowie anonymer Quellen}
+
+\ifx \envfinal \undefined % Preview mode
+\newcommand{\skizze}[1]{
+\begin{figure}
+\begin{center}
+#1
+\end{center}
+\end{figure}
+}
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newenvironment{problem}[2]{
+\subsection{#1 \emph{(#2 Punkte)}}
+}{}
+\newenvironment{solution}{\subsection*{Lösung}}{}
+\newenvironment{expsolution}{\subsection*{Lösung}}{}
+
+\else % Final mode
+
+\newcommand{\skizze}[1]{
+\begin{center}
+#1
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Formatierung der Aufgaben/Lösungen
+%
+%     Anmerkung dazu: nicht-ASCII-Zeichen in Überschriften gehen aus rätselhaften Gründen
+%     nicht. Sie werden zwar bei der Aufgabe richtig angezeigt, in die Lösungsdatei wird
+%     aber eine unverständliche Sequenz geschrieben, die dann nicht wieder gelesen werden
+%     kann.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\def\solTitle<#1><#2>{
+\renewcommand{\thesubsection}{#1}
+\subsection{#2}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+}
+
+\newenvironment{problem}[2]{
+\subsection{#1 \emph{(#2 Punkte)}}
+\renewcommand{\Currentlabel}{<\thesubsection><#1>}
+}{}
+\Newassociation{solution}{Soln}{solutions}
+\Newassociation{expsolution}{Soln}{expsolutions}
+\renewenvironment{Soln}[1]{
+\solTitle #1
+}{}
+
+\fi
+
+\def \mpreamble {}
+\begin{document}
+
+\else
+%\ref{test}
+\fi

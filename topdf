@@ -1,5 +1,5 @@
 #!/bin/zsh
-FILENAME1="ipho_aufgaben"
+FILENAME1="ipho-aufgaben"
 LATEXOPTIONS="-interaction=batchmode"
 
 echo $'\e[0;32m' LaTeX $' \e[0m'

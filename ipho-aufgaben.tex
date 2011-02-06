@@ -1,50 +1,6 @@
 \def \envfinal {}
-\input{standardmacros.tex}
+\input{header.tex}
 
-
-\newcommand{\skizze}[1]{
-\begin{center}
-#1
-\end{center}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     Formatierung der Aufgaben/Lösungen
-%
-%     Anmerkung dazu: nicht-ASCII-Zeichen in Überschriften gehen aus rätselhaften Gründen
-%     nicht. Sie werden zwar bei der Aufgabe richtig angezeigt, in die Lösungsdatei wird
-%     aber eine unverständliche Sequenz geschrieben, die dann nicht wieder gelesen werden
-%     kann.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\thesubsection}{\arabic{subsection}}
-\def\solTitle<#1><#2>{
-\renewcommand{\thesubsection}{#1}
-\subsection{#2}
-\renewcommand{\thesubsection}{\arabic{subsection}}
-}
-
-\newenvironment{problem}[2]{
-\subsection{#1 \emph{(#2 Punkte)}}
-\renewcommand{\Currentlabel}{<\thesubsection><#1>}
-}{}
-\Newassociation{solution}{Soln}{solutions}
-\Newassociation{expsolution}{Soln}{expsolutions}
-\renewenvironment{Soln}[1]{
-\solTitle #1
-}{}
-
-\title{IPhO-Aufgabensammlung}
-\author{Zusammengestellt von Pavel Zorin\\
-unter Verwendung der Aufzeichungen von\\
-Bastian Hacker, Igor Gotlibovych, Tobias Holder,\\
-Patrick Steinmüller, Marcel,\\
-sowie anonymer Quellen}
-
-\begin{document}
 \maketitle
 
 %\frontmatter

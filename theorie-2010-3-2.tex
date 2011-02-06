@@ -1,5 +1,4 @@
-\input{standardmacros.tex}
-\input{previewmacros.tex}
+\input{header.tex}
 
 \begin{problem}{Kosmische Geschwindigkeiten}{3,5}
 Als erste kosmische Geschwindigkeit wird die Geschwindigkeit bezeichnet, die ein Körper benötigt, um eine Kreisbahn um die Erde an der Erdoberfläche zu beschreiben.  Die zweite kosmische Geschwindigkeit ist hingegen notwendig, um dem Gravitationsfeld der Erde gerade ganz zu entfliehen.
@@ -23,7 +22,7 @@ Folgende Werte können als bekannt vorausgesetzt werden:
       h\approx a_1=\sqrt[3]{T_1^2\frac{Gm_E}{4\pi^2 r_E^3}r_E^3}=\sqrt[3]{T_1^2\frac{Gm_E}{4\pi^2}}\approx 2,15\cdot 10^{9}m
     \end{equation*}
   $\frac{v}{v_{2}}=\sqrt{1-\frac {r_E}h}\approx 0,9985$.  $v$ ist also unwesentlich kleiner als $v_2$.  Es geht auch anders indem man im wesentlichen Kepler 3 nachrechnet: $v(x)=\sqrt{\frac 2m(E_{kin;0}+E_{pot;0}(x)-E_{pot}(x))}$, wobei $E_{pot}(r\rightarrow \infty)=0$ sei. Somit ist:
-$1\unit{y}=\int\limits_{r_E}^a\frac{dx}{\sqrt{\frac{2m}\left(mGm_E\left(\frac 1x-\frac 1a\right)\right)}}$, wobei $E_{kin;0}+E_{pot;0}=E_{pot}(a)$, wobei $a$ der Ort ist wo der Körper umkehrt, sodass $E_{kin;0}(a)=0$ ist.  Dieses Integral kann mit der Substitution $x=a\sin\phi$ gelöst werden.
+$1\unit{y}=\int\limits_{r_E}^a\frac{dx}{\sqrt{2m / \left(mGm_E\left(\frac 1x-\frac 1a\right)\right)}}$, wobei $E_{kin;0}+E_{pot;0}=E_{pot}(a)$, wobei $a$ der Ort ist wo der Körper umkehrt, sodass $E_{kin;0}(a)=0$ ist.  Dieses Integral kann mit der Substitution $x=a\sin\phi$ gelöst werden.
   \end{abcenum}
 \end{solution}
 \end{problem}
@@ -49,7 +48,7 @@ Untersuchen Sie die Strahlen, die vom Objekt kommen und aus dem Raum mit negativ
 \begin{problem}{Masse und Feder}{4}
   Zwei Gewichte liegen auf einer waagerechten reibungsfreien Unterlage, das linke Gewicht $m$ berühre eine Wand, das andere Gewicht der Masse $3m$ ist durch eine Feder und einen Faden mit dem ersten verbunden.  Die Feder ist anfänglich um $4\unit{cm}$ gestaucht.  Dann wird der Faden durchtrennt.  Bestimmen Sie die maximale Dehnung der Feder im darauffolgenden Prozess!
   \begin{solution}
-    Erste Phase:  Beschleunigung der Masse $3m$.  Da Zwangsbedingung und 3. Newtonsche Gesetz dazu führt, dass die Masse $m$ an Ort und Stelle verbleibt (Zwangsbedingung wirkt als Impulsreservoir).  Deshalb gibt es eine Beschleunigung des Schwerpunktes.  Die Schwerpunktsenergie ist $\frac 34$ der Gesamtenergie.  Diese Steckt also in einer Translationsenergie.  Für die Schwingung verbleibt also noch ein viertel der Gesamtenergie.  Das heißt $\hat{E}_{\pot}'=\frac 14\hat{E}_{\pot}$, wobei $\hat{E}_\pot'$ die maximale potentielle Energie der Feder nach dem Stoß ist.  Daraus folgt $\hat{l}'^2=\frac 14\hat{l}^2\Rightarrow \hat{l}'=\frac 12 \hat l=2\unit{cm}$.
+    Erste Phase:  Beschleunigung der Masse $3m$.  Da Zwangsbedingung und 3. Newtonsche Gesetz dazu führt, dass die Masse $m$ an Ort und Stelle verbleibt (Zwangsbedingung wirkt als Impulsreservoir).  Deshalb gibt es eine Beschleunigung des Schwerpunktes.  Die Schwerpunktsenergie ist $\frac 34$ der Gesamtenergie.  Diese Steckt also in einer Translationsenergie.  Für die Schwingung verbleibt also noch ein viertel der Gesamtenergie.  Das heißt $\hat{E}_{{pot}}'=\frac 14\hat{E}_{{pot}}$, wobei $\hat{E}_{pot}'$ die maximale potentielle Energie der Feder nach dem Stoß ist.  Daraus folgt $\hat{l}'^2=\frac 14\hat{l}^2\Rightarrow \hat{l}'=\frac 12 \hat l=2\unit{cm}$.
   \end{solution}
 \end{problem}
 
@@ -69,7 +68,7 @@ Sie können folgende Werte für ihre Rechnungen verwenden:
 \begin{solution}
 \begin{abcenum}
 \item
-  Bernoulli liefert: $v=\sqrt{\frac{2}{\rho(t)}p(t)}$.  Da $pV=nRT=\const$ und $V=\frac{m_G}{\rho}$ ergibt sich: $\frac{p}{\rho}=\frac{RT}{M_{Luft}}=\const$. $V$ bezeichnet hierbei das Volumen des Gases, wobei sich gedacht wird, dass es sich insgesamt isotherm ausdehnt. (Das das außerhalb der Raumsphäre nicht der Fall ist beeinflusst den isothermen Prozess innerhalb der Raumsphäre nicht).  Somit ist $v=\sqrt{2\frac{RT}{M_{Luft}}}=\sqrt{\frac{2kT}{m_{Luft}}}=\const$.  $\dot{p}=\frac{RT}{M_{Luft}}\dot{\rho}=\frac{RT}{M_{Luft}}\frac{\dot{m_i}}{V_K}$, wobei $V_K$ das Volumen der Raumkapsel ist, welches sich nicht ändert.  Das Gas im Raumschiff bewegt sich nicht, dehnt sich langsam aus, lediglich das Gas, dass direkt am Loch ist wird durch den Druckgradienten beschleunigt.  Da sich die Dichte des Gases in der Raumkapsel nur dadurch ändert, das Gas am Loch mit Dichte $\rho(t)$ ausgestoßen wird, muss die Änderung $\rho(t)$ der Gasmenge, die ausgestoßen wird, während des Austoßes derselben nicht berücksichtigt werden.  $\dot{m_i}=-Av\rho(t)=\frac{-AvpM_{Luft}}{RT}=-\frac{ApM_{Luft}}{RT}\sqrt{\frac {2RT}{M_{Luft}}}$.  Somit ergibt sich:
+  Bernoulli liefert: $v=\sqrt{\frac{2}{\rho(t)}p(t)}$.  Da $pV=nRT=\mathrm{const}$ und $V=\frac{m_G}{\rho}$ ergibt sich: $\frac{p}{\rho}=\frac{RT}{M_{Luft}}=\mathrm{const}$. $V$ bezeichnet hierbei das Volumen des Gases, wobei sich gedacht wird, dass es sich insgesamt isotherm ausdehnt. (Das das außerhalb der Raumsphäre nicht der Fall ist beeinflusst den isothermen Prozess innerhalb der Raumsphäre nicht).  Somit ist $v=\sqrt{2\frac{RT}{M_{Luft}}}=\sqrt{\frac{2kT}{m_{Luft}}}=\mathrm{const}$.  $\dot{p}=\frac{RT}{M_{Luft}}\dot{\rho}=\frac{RT}{M_{Luft}}\frac{\dot{m_i}}{V_K}$, wobei $V_K$ das Volumen der Raumkapsel ist, welches sich nicht ändert.  Das Gas im Raumschiff bewegt sich nicht, dehnt sich langsam aus, lediglich das Gas, dass direkt am Loch ist wird durch den Druckgradienten beschleunigt.  Da sich die Dichte des Gases in der Raumkapsel nur dadurch ändert, das Gas am Loch mit Dichte $\rho(t)$ ausgestoßen wird, muss die Änderung $\rho(t)$ der Gasmenge, die ausgestoßen wird, während des Austoßes derselben nicht berücksichtigt werden.  $\dot{m_i}=-Av\rho(t)=\frac{-AvpM_{Luft}}{RT}=-\frac{ApM_{Luft}}{RT}\sqrt{\frac {2RT}{M_{Luft}}}$.  Somit ergibt sich:
 
   \begin{align*}
     \dot{p}&=\frac{RT}{V_KM_{Luft}} \left(-\frac{ApM_{Luft}}{RT}\sqrt{\frac {2RT}{M_{Luft}}}\right)=-\frac{A}{V_K}\sqrt{\frac{2RT}{M_{Luft}}}p\\
@@ -77,6 +76,7 @@ Sie können folgende Werte für ihre Rechnungen verwenden:
   t_{\frac 12}&=\ln(2)\frac{V_K}{A}\sqrt{\frac {M_{Luft}}{2RT}}
   \end{align*}
 \item Es gilt Impulserhaltung: $\Delta m_{Gas} v=\frac {M_{Luft}\Delta pV_K}{RT}\sqrt{\frac{2RT}{M_{Luft}}}=\Delta pV_K\sqrt{\frac{2M_{Luft}}{RT}}\approx m\Delta v\Rightarrow \Delta v=\frac{\Delta pV_K}{m}\sqrt{\frac{2M_{Luft}}{RT}}$.
+\end{abcenum}
 \end{solution}
 \end{problem}
 
@@ -95,7 +95,7 @@ Der Schlater $S$ öffnet und schließt sich periodisch, wobei er einen Anteil $g
 
 \begin{abcenum}
   \item Leiten Sie einen Ausdruck für die maximal erreichbare Kondensatorspannung in Abhängigkeit von den auftretenden Größen her.  Alle Bauteile dürfen als ideal angenommen werden.
-\item Bestimmen Sie, wie groß das Tastverhältnis gewählt werden muss, um einen Kondensator einer Kapazität von $100\unit{\micro F}$ mit einer $12\unit{V}$ Batterie auf eine Spannung von $500\unit{V}$ aufzuladen, wenn die Induktivität der Spule $5\unit{mH}$ beträgt.
+\item Bestimmen Sie, wie groß das Tastverhältnis gewählt werden muss, um einen Kondensator einer Kapazität von $100\unit{\mu F}$ mit einer $12\unit{V}$ Batterie auf eine Spannung von $500\unit{V}$ aufzuladen, wenn die Induktivität der Spule $5\unit{mH}$ beträgt.
 \end{abcenum}
 
 \end{problem}
@@ -126,7 +126,7 @@ Ein Beobachter in dem Raumschiff stellt erstaunt fest, dass er einen Teil der Ga
         \cos\theta'-\cos\theta &= \beta(\cos\theta\cos\theta' -1)\\
         \beta &= \frac{\cos\theta-\cos\theta'}{1-\cos\theta\cos\theta'}
       \end{align*}
-      $\cos\theta'=\cos 150\unit{\cel}=-\cos 30\unit{\cel}=-\frac {\sqrt{3}}2$, $\cos\theta=\frac{20000\ly}{\frac 12 100000\ly}=\frac 25$.
+      $\cos\theta'=\cos 150\unit{\cel}=-\cos 30\unit{\cel}=-\frac {\sqrt{3}}2$, $\cos\theta=\frac{20000\unit{ly}}{\frac 12 100000\unit{ly}}=\frac 25$.
       \begin{equation*}
         \beta=\frac{\frac 25+\frac{\sqrt{3}}2}{1+\frac{\sqrt{3}}5}=\frac{\frac 25+\frac{\sqrt{3}}2-\frac{2\sqrt{3}}{25}-\frac 3{10}}{1-\frac 3{25}}=\frac{10-2\sqrt{3}-\frac{15}2+\frac{25\sqrt{3}}2}{22}=\frac{5+21\sqrt{3}}{44}
       \end{equation*}
@@ -136,4 +136,4 @@ Ein Beobachter in dem Raumschiff stellt erstaunt fest, dass er einen Teil der Ga
 \end{solution}
 \end{problem}
 
-\input{previewending.tex}
+\input{footer.tex}
