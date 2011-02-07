@@ -1,6 +1,6 @@
 #!/bin/zsh
 FILENAME1="ipho-aufgaben"
-LATEXOPTIONS="-interaction=batchmode"
+LATEXOPTIONS=""
 
 echo $'\e[0;32m' LaTeX $' \e[0m'
 time latex $LATEXOPTIONS $FILENAME1.tex

@@ -1,13 +1,13 @@
 \ifx \headertex \undefined
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper,oneside,openany]{memoir}
 \usepackage{answers}
 \usepackage{microtype}
 \usepackage[left=3cm,top=2cm,bottom=3cm,right=2cm,includehead,includefoot]{geometry}
 
-\usepackage{amsfonts,amsmath,amssymb,amsthm,graphicx}
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
 
 \usepackage{pstricks}
 \usepackage{pst-circ}
@@ -33,12 +33,7 @@
 % Aufgaben mit Buchstaben numerieren
 \newenvironment{abcenum}{\renewcommand{\labelenumi}{(\alph{enumi})} \begin{enumerate}}{\end{enumerate}\renewcommand{\labelenumi}{\theenumi .}}
 
-\title{IPhO-Aufgabensammlung}
-\author{Zusammengestellt von Pavel Zorin\\
-unter Verwendung der Aufzeichungen von\\
-Bastian Hacker, Igor Gotlibovych, Tobias Holder,\\
-Patrick Steinmüller,\\
-sowie anonymer Quellen}
+\setsecnumdepth{none}
 
 \ifx \envfinal \undefined % Preview mode
 \newcommand{\skizze}[1]{
@@ -62,9 +57,8 @@ sowie anonymer Quellen}
 
 \usepackage{pst-pdf}
 
-\usepackage{hyperref}
+\usepackage[bookmarks=true]{hyperref}
 \hypersetup{
-bookmarks=true,
 pdfpagemode=UseNone,
 pdfstartview=FitH,
 pdfdisplaydoctitle=true,
@@ -95,19 +89,18 @@ pdfkeywords={}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\thesubsection}{\arabic{subsection}}
-\def\solTitle<#1><#2>{
-\renewcommand{\thesubsection}{#1}
-\subsection{#2}
-\renewcommand{\thesubsection}{\arabic{subsection}}
-}
+\newcounter{problem}
 
 \newenvironment{problem}[2]{
-\subsection{#1 \emph{(#2 Punkte)}}
-\renewcommand{\Currentlabel}{<\thesubsection><#1>}
+\addtocounter{problem}{1}
+\subsection{Aufgabe \arabic{problem}: #1 \emph{(#2 Punkte)}}
+\renewcommand{\Currentlabel}{<\arabic{problem}><#1>}
 }{}
 \Newassociation{solution}{Soln}{solutions}
 \Newassociation{expsolution}{Soln}{expsolutions}
+\def\solTitle<#1><#2>{
+\subsection{Aufgabe #1: #2}
+}
 \renewenvironment{Soln}[1]{
 \solTitle #1
 }{}
