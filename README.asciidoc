@@ -7,7 +7,7 @@ IPhO-Aufgabensammlung
 Aufgaben konsumieren
 --------------------
 
-link:ipho-aufgaben.pdf[PDF (kann veraltet sein)]
+link:http://www.fa.uni-tuebingen.de/members/pazo/ipho-aufgaben.pdf[PDF (kann veraltet sein)]
 
 link:http://github.com/pzorin/ipho-aufgabensammlung/tree/master[Quellen online anschauen]
 
