@@ -1,0 +1,65 @@
+IPhO-Aufgabensammlung
+=====================
+:keywords:	IPhO
+:description:	Die Sammlung umfasst Aufgaben der 3. und 4. Runden +
+		der deutschen IPhO-Auswahl.
+
+Aufgaben konsumieren
+--------------------
+
+link:http://www.fa.uni-tuebingen.de/members/pazo/ipho-aufgaben.pdf[PDF (kann veraltet sein)]
+
+link:http://github.com/pzorin/ipho-aufgabensammlung/tree/master[Quellen online anschauen]
+
+Aufgaben bearbeiten
+-------------------
+
+Benötigte Software
+~~~~~~~~~~~~~~~~~~
+
+Angegebe Befehle für Debian und Ubuntu installieren die jeweiligen Programme.
+
+Die Quellen werden mit dem Versionskontrollsystem link:http://git-scm.com[Git] verwaltet.
+
+ # apt-get install git
+
+Die Formatierungssprache ist link:http://www.latex-project.org[LaTeX].
+
+ # apt-get install texlive-full
+
+Die Bearbeitung ist mit jedem Editor möglich. Ich benutze Emacs.
+
+ # apt-get install emacs auctex preview-latex-style
+
+Aktuelle Version kompilieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ $ git clone git://github.com/pzorin/ipho-aufgabensammlung.git
+ $ cd ipho-aufgabensammlung
+ $ ./topdf
+
+Lokales Editieren
+~~~~~~~~~~~~~~~~~
+
+Lokalen Arbeitszweig erstellen und in diesen wechseln.
+
+ $ cd ipho-aufgabensammlung
+ $ git branch mylocalbranch
+ $ git checkout mylocalbranch
+
+Änderungen Git anvertrauen und einen Patch erstellen.
+
+ $ git commit -a
+ $ git format-patch -M -B master
+
+Den Patch könnt ihr mir link:mailto:pazo@fa.uni-tuebingen.de[per e-Mail senden].
+
+Wer seine eigene Version öffentlich zugänglich machen will, kann Dienste wie link:http://github.com[Github] benutzen.
+
+Git-fu
+~~~~~~
+
+Patricks Repository hizufügen, seine Version herunterladen und seine Änderungen mergen.
+
+ $ git remote add Snake707 git://github.com/Snake707/ipho-aufgabensammlung.git
+ $ git fetch Snake707 master
+ $ git merge Snake707/master
