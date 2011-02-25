@@ -121,11 +121,13 @@ Die resultierende Kraft liegt in der Schleifenebene senkrecht zum Leiter, und ze
 
 
 \begin{problem}{Herunterfallende Kette}{7}
-Eine lose zusammengelegte offene Kette mit der Länge $1\unit{m}$ liegt auf einer Tischkante $1\unit{m}$ über dem Boden. Zum Zeitpunkt $t = 0$ fängt ein Ende der Kette an, reibungslos über die Tischkante nach unten zu gleiten.\\
-Nach welcher Zeit liegen beide Kettenenden auf dem Boden?\\
-Nehmen Sie an, dass die Beschleunigung der Kette konstant bleibt, während die Kette über die Tischkante gleitet.
+Eine lose zusammengelegte offene Kette der Länge $L = 1\unit{m}$ liegt auf einer Tischkante in der Höhe $h = L$ über dem Boden. Zum Zeitpunkt $t = 0$ fängt ein Ende der Kette an reibungslos über die Tischkante nach unten zu gleiten.
+
+Nach welcher Zeit liegen beide Kettenenden auf dem Boden?
+
+\hinweis Die Kette gleitet über die Tischkante mit konstanter Beschleunignung.
 \begin{solution}
-Man betrachte zunächst die Phase in der das obere Ende noch auf dem Tisch liegt und bezeichne die Höhe des Tisches und die Länge der Kette mit $h$, die lineare Dichte der Kette mit $\lambda$ und die Länge des bereits fallenden Abschnittes der Kette mit $l$. Impulserhaltung liefert
+Man betrachte zunächst die Phase in der das obere Ende noch auf dem Tisch liegt. Bezeichne die lineare Dichte der Kette mit $\lambda$ und die Länge des bereits fallenden Abschnittes der Kette mit $l$. Impulserhaltung liefert
 \[
 \lambda l g = \tdif{p}{t}  = \tdif{}{t} (\lambda l l'),
 \]
@@ -133,17 +135,17 @@ oder umgeschrieben
 \[
 g l = l l'' + l'^2.
 \]
-Eine Lösung dieser Gleichung ist
+Der Ansatz konstanter Beschleunigung $a$ liefert die Lösung
 \[
 l = \frac a2 t^2, \quad a = \frac g3.
 \]
-Man sieht leicht dass diese mit den Randbedingungen verträglich ist. $a$ ist die Beschleunigung, die die Kette in dieser Phase erfährt. Diese Phase dauert also
+Diese ist mit den Randbedingungen $l(0)=0$, $l'(0)=0$ verträglich. Diese Phase dauert also
 \[
 t_1 = \sqrt{\frac{2 h}{a}} = \sqrt{\frac{6 h}{g}}.
 \]
 Anschließend fällt das obere Ende der Kette frei mit der Beschleunigung $g$ und der Anfangsgeschwindigkeit $a t_1$ die Strecke $h$. Die dafür benötigte Zeit beträgt
 \[
-t_2 = \frac{-at_1 + \sqrt{a^2 t_1^2 + 2 g h}}{g} = \sqrt\frac{2 h}{3 g}
+t_2 = \frac{-at_1 + \sqrt{a^2 t_1^2 + 2 g h}}{g} = \sqrt\frac{2 h}{3 g},
 \]
 und die Gesamtzeit damit
 \[
