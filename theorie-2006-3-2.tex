@@ -91,22 +91,21 @@ und für das Verhältnis der Geschwindigkeiten
 
 
 \begin{problem}{Polarisatoren}{4}
-Zwischen zwei um $\frac{\pi}{2}$ gegeneinander verdrehte Polarisatoren werden $k$ ($k=0,1,2...$)
-weitere Polarisatoren gestellt, so dass jeder Polarisator gegenüber dem vorigen um
-$\frac{\pi}{2(k+1)}$ verdreht ist.\\
-Bestimmen Sie den Anteil vom auf den ersten Polarisator einfallenden unpolarisierten Licht,
-welcher durch das System durchgelassen wird.\\
-Betrachten Sie insbesondere die Grenzfälle.
+Zwischen zwei um $\frac{\pi}{2}$ gegeneinander verdrehten Polarisatoren werden $k=0,1,2,\dots$ weitere Polarisatoren so aufgestellt, dass jeder Polarisator gegenüber dem vorigen um $\frac{\pi}{2(k+1)}$ verdreht ist.
+
+Bestimmen Sie den Anteil $\alpha$ des auf den ersten Polarisator einfallenden unpolarisierten Lichts, welcher vom System durchgelassen wird.
+
+Betrachten Sie insbesondere die Grenzfälle $k=0$ und $k \to \infty$.
 \begin{solution}
+Das allgemeine Ergebnis lautet
 \[
-\alpha=\frac{1}{2}\left( \cos^2\frac{\pi}{2(k+1)} \right)^{k+1}
+\alpha(k)=\frac{1}{2}\left( \cos^2\frac{\pi}{2(k+1)} \right)^{k+1}.
 \]
+Im Fall $k=0$ bekommt man $\alpha(0)=0$. Im Fall $k \to \infty$ kann man die für konvergente Folgen $(s_{n})_{n}$ gültige Formel
 \[
-k=0 \implies \alpha=0
+\lim_{n \to \infty} (1 + s_{n}/n)^{n} = \exp ( \lim_{n \to \infty} s_{n})
 \]
-\[
-k\to\infty \implies \alpha=\frac{1}{2}
-\]
+benutzen, die unmittelbar $\lim_{k\to\infty} \alpha(k) = \frac{1}{2}$ liefert.
 \end{solution}
 \end{problem}
 
